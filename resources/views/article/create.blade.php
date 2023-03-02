@@ -10,17 +10,18 @@
                 <div class="alert alert-danger">
                     <ul>
                         @foreach ($errors->all() as $error)
-                            <li>{{$erorr}}</li>
+                            <li>{{$error}}</li>
                         @endforeach
                     </ul>
                 </div>
             @endif
           
-            <form method="POST" action="{{route('article.store')}}" enctype="multipart/form-data" class="card p-5 shadow"> 
+            <form method="post" action="{{route('article.store')}}" enctype="multipart/form-data" class="card p-5 shadow"> 
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">Titolo</label>
                         <input type="text" class="form-control" name="title" value="{{old('title')}}">
+                    
                     </div>
 
                     <div class="mb-3">

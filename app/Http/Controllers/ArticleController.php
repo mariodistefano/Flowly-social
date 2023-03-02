@@ -8,12 +8,18 @@ use Illuminate\Support\Facades\Auth;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth')->except('index', 'show');
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $articles = Article::all()->sortDesc();
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -33,15 +39,15 @@ class ArticleController extends Controller
             'title' => 'required|unique:articles|min:5',
             'subtitle' => 'required|unique:articles|min:5',
             'body' => 'required|min:10',
-            'img' => 'img|required',
+            // 'img' => 'img|required',
             'category' => 'required',
         ]);
 
-        Article::create([
+        $articles = Article::create([
             'title'=>$request->title,
             'subtitle'=>$request->subtitle,
             'body'=>$request->body,
-            'img'=>$request->file('img')->store('public/images'),
+            'img'=>$request->has('img') ? $request->file('img')->store('public') : '/images/default.jpg',
             'category_id'=>$request->category,
             'user_id'=>Auth::user()->id,
         ]);

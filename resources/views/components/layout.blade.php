@@ -11,11 +11,13 @@
     
     <x-navbar />
 
-    <div class="min-vh-100">
+    <div class="body">
+
         {{$slot}}
+        {{-- <x-footer /> --}}
     </div>
 
-    <x-footer />
+    
     
     {{-- fontawesome --}}
     <script src="https://kit.fontawesome.com/68b14aed80.js" crossorigin="anonymous"></script>
