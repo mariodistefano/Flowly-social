@@ -16,11 +16,11 @@
    
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label ps-3 font-bold">Email </label>
-        <input type="email"  class="form-control radius" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+        <input type="email"  class="border form-control radius" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label ps-3 font-bold">Password</label>
-        <input type="password"  class="form-control radius" id="exampleInputEmail1" aria-describedby="emailHelp" name="password">
+        <input type="password"  class="border form-control radius" id="exampleInputEmail1" aria-describedby="emailHelp" name="password">
       </div>
       
       <div class="mb-3 form-check">
