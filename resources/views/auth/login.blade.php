@@ -3,26 +3,34 @@
         title="Accedi"
     />
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 col-md-8 col-lg-6">
-                <form method="POST" action="{{route('login')}}" >
-                    @csrf
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input type="email" class="form-control" name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input type="password" class="form-control" name="password">
-                    </div>
+{{-- form giusto --}}
+<div class="row h-100 align-items-center min-vh-100 justify-content-center">
+  
+    <form method="POST" action="{{route('login')}}" id="form" class="col-12 formRegLog col-md-5 px-4">
+        @csrf
+      <div class="flex-column align-items-center justify-content-center">
+        <h3 class="mt-4 text-center pt-5">Sing up</h3>
+        <p class="text-center text-secondary">create a free account with your email</p>
+      </div>
+      <div class="px-md-5 p-0 pt-4">
    
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-        </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label ps-3 font-bold">Email </label>
+        <input type="email"  class="form-control radius" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label ps-3 font-bold">Password</label>
+        <input type="password"  class="form-control radius" id="exampleInputEmail1" aria-describedby="emailHelp" name="password">
+      </div>
+      
+      <div class="mb-3 form-check">
+        <label class="form-check-label" for="exampleCheck1">Have an account? <a class="font-bold" href="">Log in</a></label>
+        <button type="submit" class="btn ms-5 btn-primary">Submit</button>
+
+      </div>
     </div>
-</div>
+    </form>
 
-
+  </div>
 
 </x-layout>

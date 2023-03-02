@@ -71,7 +71,6 @@
         </div>
     </div>
 </nav>
-  <div class="gost"></div>
 
   <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasLabel">
       <div class="offcanvas-header">
