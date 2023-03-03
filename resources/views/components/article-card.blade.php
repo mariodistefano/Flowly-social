@@ -5,9 +5,12 @@
       <p class="card-text">{{$article->subtitle}}</p>
       <p class="card-text">{{$article->category->name}}</p>
       <p class="card-text">{{$article->body}}</p>
-      <p class="card-text"><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}}</small></p>
-      {{-- <a href="{{route('article.detail', ['title' => $article->title])}}" class="btn btn-success">Dettaglio</a> --}}
+      <div class="card-footer text-muted d-flex justify-content-between align-items-center">
+        Redatto il {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}}
+      </div>
+      {{-- <p class="card-text"><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}}</small></p> --}}
+      {{-- <a href="{{route('article.show', ['title' => $article->title])}}" class="btn btn-success">Dettaglio</a> --}}
 
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettaglio</a>
     </div>
 </div>

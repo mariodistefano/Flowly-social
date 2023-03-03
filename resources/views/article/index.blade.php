@@ -3,7 +3,7 @@
         title="Articoli"
     />
 
-    <div class="container">
+    <div class="container my-3">
         <div class="row">
                 @if ($articles->isNotEmpty())
                     @foreach ($articles as $article)

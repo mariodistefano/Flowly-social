@@ -18,7 +18,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::all()->sortDesc();
+        $articles = Article::orderBy('created_at', 'desc')->get();
+        // $articles = Article::all()->sortDesc();
         return view('article.index', compact('articles'));
     }
 
@@ -60,7 +61,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**

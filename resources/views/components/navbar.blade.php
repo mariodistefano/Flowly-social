@@ -56,7 +56,7 @@
                   </li>
                   <li> 
                       <button class="mb-5  ms-2 button"  >
-                        <a href="{{route('article.store')}}">Articolo</a>
+                        <a href="{{route('article.index')}}">Articoli</a>
                       </button>
                   </li>
                   <li>
@@ -88,7 +88,7 @@
                   <a href="{{route('article.create')}}">Crea Articolo</a>
                 </button>
                 <button class="col-12 button mt-3">
-                  <a href="{{route('article.index')}}">Articolo</a>
+                  <a href="{{route('article.index')}}">Articoli</a>
                 </button>
               <div>
                   <button class="m-5 text-start w-100  ms-2 button"  >
