@@ -29,7 +29,7 @@
           <h1> <strong>{{$article->title}}</strong></h1>
           <h6 class="text-secondary">{{$article->subtitle}}</h6>
           <p class="font-sizeS">{{$article->body}}</p>
-         <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettaglio</a></button>
+         <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-black font-bold">Dettaglio</a></button>
         </div>
           <div class="col-12 col-md-3 h-100 py-md-4 me-md-3 p-0">
             <img class="ImgCard p-3 me-2" src="{{Storage::url($article->img)}}" alt="immagine">
@@ -61,7 +61,7 @@
          <h6 class="text-secondary">{{$article->subtitle}}</h6>
          <p class="font-sizeS">{{$article->body}}</p>
         
-         <div class="d-flex justify-content-end"><button class="btnArticle me-2 "><a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettaglio</a></button></div>
+         <div class="d-flex justify-content-end"><button class="btnArticle me-2 "><a href="{{route('article.show', compact('article'))}}" class="text-black font-bold">Dettaglio</a></button></div>
        </div>
         
         
@@ -70,7 +70,6 @@
       </div> 
       
     </div>
-       
             @endforeach
 
         </div>

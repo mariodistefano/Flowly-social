@@ -7,7 +7,7 @@
             <div class="col-12">
               <ul class="h-100 navbar-nav flex-column justify-content-around">
                   <li >
-                      <h2>Aulab Post</h2>
+                    <button class="btnLogo"><h2 class="text-center">Aulab Post</h2></button>
                   </li>
                   <li> 
                       <button class="  ms-2 button " >
@@ -44,21 +44,22 @@
 
                   <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
 
+              
                   <li> 
-                      <button class="  ms-2 button"  >
-                        {{-- <a href="{{route('contacts')}}">Contattaci</a> --}}
-                      </button>
-                  </li>
-                  <li> 
-                      <button class="  ms-2 button"  >
+                      <button class="  ms-2 button">
                   <a href="{{route('article.create')}}">Crea Articolo</a>
                       </button>
                   </li>
                   <li> 
-                      <button class="mb-5  ms-2 button"  >
+                      <button class="mb-5  ms-2 button">
                         <a href="{{route('article.index')}}">Articoli</a>
                       </button>
                   </li>
+               {{--   <li> 
+                     <button class="  ms-2 button"  >
+                      <a href="{{route('contacts')}}">Contattaci</a>
+                    </button>
+                </li> --}}
                   <li>
                       <button class="m-5 text-start w-100  ms-2 button"  >
                         <li><a class="" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
