@@ -377,3 +377,45 @@ transition: all 0.4s ease-in-out;
 .margine-prova{
   margin-top: 500000px;
 }
+
+
+/* header */
+
+header{
+  height: 10vh;
+  }
+  .btnHEADER{
+    background-color: #F4F4ED;
+    border-radius: 20px;
+    border: solid 1px #F4F4ED;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
+    height: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+  .btnLINGUA{
+    background-color: #F4F4ED;
+    border-radius: 20px;
+    border: solid 1px #F4F4ED;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+  
+    height: 35px;
+  
+    width: auto;
+  }
+  .benvenuto{
+    font-weight: 800;
+    letter-spacing: .5px;
+  }
+  /* Rectangle 4 */
+  
+  .border-bottomMIO{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: #000 3px solid;
+  
+  }
+  
