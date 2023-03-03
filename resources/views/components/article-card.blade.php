@@ -1,8 +1,6 @@
 
 
 
-
-
 <!-- card -->
  <div class="container-fluid px-5 mt-5 d-none d-md-block margine-prova">
 <div class="row  justify-content-between  primacard ">
@@ -10,7 +8,7 @@
     <div class="col-3 cerchio my-4 ms-2 my-md-5 ms-md-3">
     </div>
     <!-- <div class="articleCellular"> -->
-    <span class="col-3"><h5 class="text-center pe-md-4 text-bold"> <a href="{{route('article.byUser')}}">{{$article->user->name}}</a></h5></span>
+    <span class="col-3"><h5 class="text-center pe-md-4 text-bold"> <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
     <span class="col-3"><p class="text-center text-secondary pe-md-4">categoria : {{$article->category->name}}</p></span>
     <span class="col-3"><p class="text-center pe-md-4">data inserimento: {{$article->created_at->format('d/m/y')}}</p></span>
   </div>
@@ -36,7 +34,7 @@
    <div class="col-3 cerchio my-4 ms-2 my-md-5 ms-md-3">
    </div>
    <div class="col-8 mt-5 flex-column">
-   <span class="col-3"><h5 class="text-center text-bold"><a href="{{route('article.byUser')}}">{{$article->user->name}}</a></h5></span>
+   <span class="col-3"><h5 class="text-center text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
    <span class="col-3"><p class="text-center text-secondary pe-md-4">categoria : {{$article->category->name}}</p></span>
    <span class="col-3"><p class="text-center pe-md-4">data inserimento:{{$article->created_at->format('d/m/y')}}</p></span>
  

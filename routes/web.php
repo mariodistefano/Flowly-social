@@ -21,6 +21,8 @@ Route::get('/', [PublicController::class, 'home'])->name('homepage');
 // rotta contattaci
 Route::get('/contattaci', [PublicController::class, 'contacts'])->name('contacts');
 
+
+
 // rotta articolo
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 // la rotta post di store salva nel database
@@ -32,5 +34,5 @@ Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name(
 // filtro per categoria
 Route::get('/article/category/{category}' , [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
-Route::get('/article/user/{user}' , [ArticleController::class, 'byUser'])->name('article.byUser');
+Route::get('/article/user{user}' , [ArticleController::class, 'byUser'])->name('article.byUser');
 

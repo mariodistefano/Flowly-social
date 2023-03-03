@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class PublicController extends Controller
@@ -15,4 +17,9 @@ class PublicController extends Controller
     public function contacts(){ // FUNZIONE PER CONTATTI
         return view('contacts');
     }
+
+
+
+
+
 }
