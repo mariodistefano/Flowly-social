@@ -22,7 +22,6 @@ Route::get('/', [PublicController::class, 'home'])->name('homepage');
 Route::get('/contattaci', [PublicController::class, 'contacts'])->name('contacts');
 
 
-
 // rotta articolo
 Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
 // la rotta post di store salva nel database

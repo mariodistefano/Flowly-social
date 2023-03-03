@@ -17,8 +17,6 @@
         {{-- <x-footer /> --}}
     </div>
 
-    
-    
     {{-- fontawesome --}}
     <script src="https://kit.fontawesome.com/68b14aed80.js" crossorigin="anonymous"></script>
 </body>
