@@ -23,8 +23,9 @@
                           <p class="card-text">{{$article->body}}</p>
                           <p class="card-text"><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}}</small></p>
                           {{-- <a href="{{route('article.detail', ['title' => $article->title])}}" class="btn btn-success">Dettaglio</a> --}}
-                    
-                          <a href="#" class="btn btn-primary">Dettaglio</a>
+                          <a href="{{route('article.show', compact('article'))}}" class="btn btn-primary">Dettaglio</a>
+                          <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="btn btn-primary small fst-italic text-capitalize">{{$article->category->name}}</a>
+                          <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="btn btn-primary small fst-italic text-capitalize">{{$article->user->name}}</a>
                         </div>
                     </div>
                 </div>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -86,5 +88,17 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+
+    public function byCategory(Category $category){
+        $articles = $category->articles->sortByDesc('created_at');
+        return view('article.byCategory' , compact('category' , 'articles'));
+
+    }
+
+    public function byUser(User $user){
+        $articles = $user->articles->sortByDesc('created_at');
+        return view('article.byUser' , compact('user' , 'articles'));
+
     }
 }

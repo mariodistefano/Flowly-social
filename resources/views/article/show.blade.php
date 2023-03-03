@@ -13,9 +13,7 @@
                   <p class="card-text">{{$article->subtitle}}</p>
                   <p class="card-text">{{$article->category->name}}</p>
                   <p class="card-text">{{$article->body}}</p>
-                  <p class="card-text"><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}}</small></p>
-                  {{-- <a href="{{route('article.show', ['title' => $article->title])}}" class="btn btn-success">Dettaglio</a> --}}
-            
+                  <p class="card-text"><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}} </small></p>
                   <a href="{{route('article.index')}}" class="btn btn-primary">Torna Indietro</a>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PublicController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,5 +29,8 @@ Route::post('/article/store', [ArticleController::class, 'store'])->name('articl
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 // Dettaglio articolo
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+// filtro per categoria
+Route::get('/article/category/{category}' , [ArticleController::class, 'byCategory'])->name('article.byCategory');
 
+Route::get('/article/user/{user}' , [ArticleController::class, 'byUser'])->name('article.byUser');
 
