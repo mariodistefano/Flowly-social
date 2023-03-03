@@ -212,3 +212,153 @@ transition: all 0.4s ease-in-out;
 .border{
   border: #000 solid 1px !important;
 }
+
+    /* cellulare */
+    @media screen and (max-width: 950px){
+
+      .padding{
+          margin-top: 70%;
+  
+        }
+  
+      .paddingL{
+          margin-top: 170%;
+          margin-bottom: 30%;
+  
+        }
+          .navbar-expand-lg .navbar-toggler {
+           display: flex;
+      }
+      .navbar-expand-lgMIA{
+          display: none;
+      }
+      .body{
+  
+        margin-left: 0%;
+       
+       }
+       .formRegLog{
+  
+        height: 75vh !important;
+        width: 90vw !important;
+      /* Rectangle 67 */
+      margin-top: auto;
+      margin-bottom: 9.5vh;
+      width: 67%;
+      height: 67vh;
+      
+      background: #D9D9D9;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      
+      
+      }
+    }
+  
+  
+/* card */
+
+.primacard {
+  margin-top: 1vh;
+    height: 54vh;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+   
+  }
+  .box-shadow{
+    box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.25);
+
+  }
+  .cerchio {
+    height: 17vh;
+    width: 17vh;
+    background-color: rgb(216, 210, 210);
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-image: url(./img/49D5ED6F-357F-44AC-AB2D-F32A622DF265.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  
+ 
+  
+  .ImgCard{
+      width: 100%;
+    height: 100%;
+    border-radius: 25px;
+
+  }
+  
+  /* h3 {
+    margin-left: 300px;
+  } */
+  
+  h3:hover{
+    color: #b398eb;
+  }
+
+
+  /* size */
+  .font-sizeS{
+    font-size: medium;
+  }
+  .btnArticle{
+    background-color: #FEACBB;
+    border-radius: 20px;
+    border: solid 1px #FEACBB;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.25);
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: auto;
+  }
+  /* articolo */
+  @media screen and (max-width: 950px){
+  
+  
+    .primacard {
+  
+      height: auto;
+      border-radius: 20px;
+      background-color: white;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     
+    }
+    .box-shadow{
+      box-shadow: -10px 20px 20px rgba(0, 0, 0, 0.25);
+  
+    }
+    .cerchio {
+      height: 15vh;
+      width: 15vh;
+      background-color: rgb(216, 210, 210);
+      border-radius: 50%;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      background-image: url(./img/49D5ED6F-357F-44AC-AB2D-F32A622DF265.jpg);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    
+    
+   .articleCellular{
+    display: flex;
+    justify-content: space-around;
+   }
+    
+    .ImgCard{
+        width: 100%;
+      height: 70%;
+      border-radius: 25px;
+  
+    }
+  
+  }
+
+
+.margine-prova{
+  margin-top: 500000px;
+}
