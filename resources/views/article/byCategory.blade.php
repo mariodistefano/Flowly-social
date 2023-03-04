@@ -2,7 +2,7 @@
     <x-header 
         title="Categoria: {{$category->name}}"
     />
-
+ 
     <div class="container-fluid my-3">
         <div class="row justify-content-center text-center">
             @foreach ($articles as $article)
