@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="col-12 col-md-5  mt-md-3 me-md-4">
-        <div class="col-12 col-md-3 h-100 py-md-4 me-md-3 p-0">
+        <div class="col-12 col-md-3 py-2 py-md-4 me-md-3 p-0">
           <img class="ImgCard p-1 me-2" src="{{Storage::url($article->img)}}" alt="immagine">
           <h1> <strong>{{$article->title}}</strong></h1>
           <h6 class="text-secondary">{{$article->subtitle}}</h6>

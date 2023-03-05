@@ -8,11 +8,21 @@
       {{session('message')}}
     </div>
   @endif
+  <div class="scrolling-wrapper px-5 pt-5">
+  @foreach ($articles as $article)
+      <div class="card">
+        <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a> 
+        <p class="text-center text-secondary">categoria : {{$article->category->name}}</p> 
+        <p class="text-center">data inserimento: {{$article->created_at->format('d/m/y')}}</p>
+      </div> 
+    @endforeach
+  </div>
 
     <div class="container my-3">
       <div class="row justify-content-center">
-
+    
         @foreach ($articles as $article)
+       
         <!-- card -->
         <div class="container-fluid px-5 mt-5 d-none d-md-block margine-prova">
           <div class="row  justify-content-between  primacard ">
@@ -67,5 +77,5 @@
 
       </div>
     </div>
-
+<div class="cerchioSF"></div>
 </x-layout>
