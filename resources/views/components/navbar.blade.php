@@ -68,7 +68,7 @@
     </div>
 </nav>
 
-<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasLabel">
+<div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasLabel">
   <div class="offcanvas-header">
     <h2 class="offcanvas-title" id="offcanvasLabel"><a href="{{route('homepage')}}">Aulab Post</a></h2>
     
