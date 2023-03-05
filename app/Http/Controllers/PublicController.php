@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class PublicController extends Controller
 {
     public function home() {
-        $articles = Article::orderBy('created_at', 'desc')->take(4)->get();
+        $articles = Article::orderBy('created_at', 'desc')->get();
         return view('welcome', compact('articles'));
     }
 
