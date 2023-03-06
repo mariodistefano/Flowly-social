@@ -75,6 +75,33 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body flex-column justify-content-center h-100">
+
+    @guest
+
+    {{-- LOGIN --}}
+    <li> 
+      <button class="  ms-2 button " >
+        <a href="{{route('register')}}">Registrati</a>
+      </button>
+    </li>
+    <li> 
+      <button class="  ms-2 button " >
+        <a href="{{route('login')}}">Accedi</a>
+      </button>
+    </li>
+    
+    @else
+
+    <li> 
+      <button class="  ms-2 button"  >
+        <a class="nav-link" href="#" role="button">
+          Benvenuto {{Auth::user()->name}}
+        </a>
+      </button>
+    </li>
+
+    <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
+
       {{-- <button class="col-12 button mt-3">
         <a href="{{route('contacts')}}">Contattaci</a>
       </button> --}}
@@ -90,6 +117,8 @@
         </li>
       </button>
     </div>
+
+    @endguest
   </div>  
 </div>
 

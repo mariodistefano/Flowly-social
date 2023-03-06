@@ -7,10 +7,11 @@
           <h6 class="text-secondary ps-4 d-none d-md-block">sfoglia mille e oltre articoli fantastici</h6>
       </div>
 <!-- <div class="col-2 d-none d-md-block d-flex">    -->
-    <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3">Accedi</button>
-    <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3">Registrati</button>
-    <button class="btnLINGUA d-none d-md-block  mb-md-5 me-md-3">IT</button>
+    <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a href="{{route('login')}}"> Accedi</a></button>
+    <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a href="{{route('register')}}"> Registrati</a></button>
+    <button class="btnLINGUA d-none d-md-block  mb-md-5 me-md-3">  IT</button>
 <!-- </div> -->
 </div>
   
 </header> 
+
