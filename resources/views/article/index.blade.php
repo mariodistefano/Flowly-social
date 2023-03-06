@@ -4,15 +4,9 @@
     />
     <div class="scrolling-wrapper px-5 pt-5">
         @foreach ($articles as $article)
-                <div class="card position-relative">
-                        <img class="card " src="{{Storage::url($article->img)}}" alt="">
-                    <div class="posizioneCard background z-index h-100 w-100">
-                        <p class="font-card ps-1  text-white z-index">Titolo : {{$article->title}}</p>
-                        {{-- <h5 class="pt-5 mt-5 ps-1"> <a class="font-card text-white " href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a> </h5> --}}
-                        <p class="font-card ps-1  text-white z-index">categoria : {{$article->category->name}}</p>
-                        {{-- <p class=" font-card ps-1 text-white z-index">data inserimento: {{$article->created_at->format('d/m/y')}}</p> --}}
-                    </div>
-                </div> 
+    <x-CardScroll
+    :article=$article
+    />
           @endforeach
     </div>
     <div class="container my-3">

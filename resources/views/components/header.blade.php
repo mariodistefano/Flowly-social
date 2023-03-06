@@ -1,8 +1,8 @@
 
-<header class="container-fluid mb-5">
+<header class="container-fluid">
     <div class="row ">
       {{-- <h3 class="text-center mt-2 d-md-none d-block  border-bottomMIO">Aulab.post</h3> --}}
-      <div class="col-md-6 mt-2">
+      <div class="col-md-6 mt-5">
           <h4 class=" benvenuto d-none d-md-block ps-4"> {{$title}}</h4>
           <h6 class="text-secondary ps-4 d-none d-md-block">sfoglia mille e oltre articoli</h6>
       </div>
