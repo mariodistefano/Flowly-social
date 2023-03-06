@@ -1,3 +1,11 @@
+:root{
+  --sfondochiaro: #F5F5F5;
+  --sfondoscuro: #242423;
+  --arancone: #F49F0A;
+  --grigiochiaro: #383837;
+  --giallo: #F9DD4D;
+}
+
 /* Selettori Generali */
 body {
   background-color: #D6EBF2;
