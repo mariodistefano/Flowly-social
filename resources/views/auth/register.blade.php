@@ -1,10 +1,20 @@
 <x-layout>
-  <x-header
-    title="Registrati"
+  <div>
+    <x-header
+    title="registrati"
   />
+  </div>
+
+  <div>
+    uisdhbfiuksenhbcijnseopicn
+  </div>
+ 
+
 
   {{-- form giusto --}}
-  <div class="row h-100 align-items-center min-vh-100 justify-content-center">
+  <div class="container">
+
+    <div class="row align-items-center min-vh-100 justify-content-center mt-1">
       <form method="POST" action="{{route('register')}}" id="form" class="col-12 formRegLog col-md-5 px-4">
         @csrf
         <div class="flex-column align-items-center justify-content-center">
@@ -36,5 +46,8 @@
       </form>
     <div id="preview" class="col-12 col-md-2 bg-success ms-md-5 preview d-none"></div>
   </div>
+
+  </div>
+
 
 </x-layout>

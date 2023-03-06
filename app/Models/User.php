@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use App\Models\Article;
+use App\Models\Comment;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -45,5 +46,9 @@ class User extends Authenticatable
 
     public function articles(){
         return $this->hasMany(Article::class);
+    }
+
+    public function comments(){
+        return $this->hasMany(Comment::class);
     }
 }

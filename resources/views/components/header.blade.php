@@ -1,10 +1,10 @@
 
 <header class="container-fluid ">
-    <div class="row h-100 align-items-center">
+    <div class="row align-items-center">
       <h3 class="text-center mt-2 d-md-none d-block  border-bottomMIO">Aulab.post</h3>
       <div class="col-md-8 ">
-          <h4 class="ps-4 benvenuto d-none d-md-block pt-5"> {{$title}}</h4>
-          <h6 class="text-secondary ps-4 d-none d-md-block">sfoglia mille e oltre articoli fantastici</h6>
+          <h4 class=" benvenuto d-none d-md-block"> {{$title}}</h4>
+          <h6 class="text-secondary ps-4 d-none d-md-block">sfoglia mille e oltre articoli</h6>
       </div>
 <!-- <div class="col-2 d-none d-md-block d-flex">    -->
     @guest

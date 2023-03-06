@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PublicController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
@@ -35,3 +36,5 @@ Route::get('/article/category/{category}' , [ArticleController::class, 'byCatego
 
 Route::get('/article/user{user}' , [ArticleController::class, 'byUser'])->name('article.byUser');
 
+Route::get('/comment/create', [CommentController::class, 'create'])->name('comment.create');
+Route::post('/comment/store', [CommentController::class, 'store'])->name('comment.store');

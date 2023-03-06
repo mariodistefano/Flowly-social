@@ -3,32 +3,25 @@
 namespace App\Models;
 
 use App\Models\User;
-use App\Models\Category;
+use App\Models\Article;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Article extends Model
+class Comment extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title',
-        'subtitle',
         'body',
-        'img',
         'user_id',
-        'category_id'
+        'article_id'
     ];
 
     public function user(){
         return $this->belongsTo(User::class);
     }
 
-    public function category(){
-        return $this->belongsTo(Category::class);
-    }
-
-    public function comments(){
-        return $this->hasMany(Comment::class);
+    public function article(){
+        return $this->belongsTo(Article::class);
     }
 }
