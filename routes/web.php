@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PublicController;
+use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +18,23 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PublicController::class, 'home'])->name('homepage');
+
+// rotta contattaci
+Route::get('/contattaci', [PublicController::class, 'contacts'])->name('contacts');
+
+
+// rotta articolo
+Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+// la rotta post di store salva nel database
+Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+
+Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
+// Dettaglio articolo
+Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+// filtro per categoria
+Route::get('/article/category/{category}' , [ArticleController::class, 'byCategory'])->name('article.byCategory');
+
+Route::get('/article/user{user}' , [ArticleController::class, 'byUser'])->name('article.byUser');
+
+Route::get('/comment/create', [CommentController::class, 'create'])->name('comment.create');
+Route::post('/comment/store', [CommentController::class, 'store'])->name('comment.store');
