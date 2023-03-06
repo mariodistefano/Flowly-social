@@ -21,7 +21,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::orderBy('created_at', 'desc')->get();
-        // $articles = Article::all()->sortDesc();
+      //  $articles = Article::all()->sortDesc();
         return view('article.index', compact('articles'));
     }
 

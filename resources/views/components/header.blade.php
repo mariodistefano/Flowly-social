@@ -7,9 +7,14 @@
           <h6 class="text-secondary ps-4 d-none d-md-block">sfoglia mille e oltre articoli fantastici</h6>
       </div>
 <!-- <div class="col-2 d-none d-md-block d-flex">    -->
+    @guest
     <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a href="{{route('login')}}"> Accedi</a></button>
     <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a href="{{route('register')}}"> Registrati</a></button>
-    <button class="btnLINGUA d-none d-md-block  mb-md-5 me-md-3">  IT</button>
+    @else
+    <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a class="text-black" href="{{route('article.create')}}">Crea Articolo</a></button>
+    <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a class="text-black" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();" href="{{route('logout')}} ">Logout</a></button>
+    <button class="btnLINGUA d-none d-md-block  mb-md-5 me-md-3">IT</button>
+    @endguest
 <!-- </div> -->
 </div>
   

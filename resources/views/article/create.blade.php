@@ -16,7 +16,7 @@
                     </div>
                 @endif
             
-                <form method="post" action="{{route('article.store')}}" enctype="multipart/form-data" class="card p-5 shadow"> 
+                <form method="post" action="{{route('article.store')}}" enctype="multipart/form-data" class="p-5"> 
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">Titolo</label>
