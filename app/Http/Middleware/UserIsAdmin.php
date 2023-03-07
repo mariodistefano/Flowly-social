@@ -16,7 +16,7 @@ class UserIsAdmin
      */
     public function handle(Request $request, Closure $next) //: Response
     {
-        if (Auth::use() && Auth::user()->is_admin) {
+        if (Auth::user() && Auth::user()->is_admin) {
             return $next($request);
         }
         return redirect(route('homepage'))->with('message', 'non sei autorizzato');

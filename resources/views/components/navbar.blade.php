@@ -8,9 +8,22 @@
           <ul class="h-100 navbar-nav flex-column justify-content-around">
               <li >
                 <button class="btnLogo"><h2 class="text-center"><a href="{{route('homepage')}}">Aulab Post</a></h2></button>
-                
               </li>
 
+              <li>
+                <button class="  ms-2 button"  >
+                  <a href="{{route('careers')}}">Lavora con Noi</a>
+                </button>
+              </li>
+
+              @auth
+                <li> 
+                  @if(Auth::user()->is_admin)
+                      <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+                  @endif
+                </li>
+              @endauth
+    
               @guest
 
               {{-- LOGIN --}}
@@ -24,7 +37,6 @@
                   <a href="{{route('login')}}">Accedi</a>
                 </button>
               </li>
-              
               @else
 
               <li> 
@@ -48,11 +60,9 @@
                     <a href="{{route('article.index')}}">Articoli</a>
                   </button>
               </li>
-              <li> 
-                  <button class="  ms-2 button"  >
-                  <a href="{{route('careers')}}">Contattaci</a>
-                </button>
-            </li>
+
+
+
               <li>
                   <button class="m-5 text-start ms-2 button"  >
                     <li><a class="" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
@@ -61,7 +71,7 @@
               </li>
 
               @endguest
-
+         
           </ul>
         </div>
       </div>
@@ -76,6 +86,20 @@
   </div>
   <div class="offcanvas-body flex-column justify-content-center h-100">
 
+    <li>
+      <button class="col-12 button mt-3">
+        <a href="{{route('careers')}}">Lavora con Noi</a>
+      </button>
+    </li>
+
+    @auth
+      <li> 
+        @if(Auth::user()->is_admin)
+          <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+        @endif
+      </li>
+    @endauth
+  
     @guest
 
     {{-- LOGIN --}}
@@ -89,7 +113,7 @@
         <a href="{{route('login')}}">Accedi</a>
       </button>
     </li>
-    
+
     @else
 
     <li> 
@@ -102,9 +126,8 @@
 
     <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
 
-      {{-- <button class="col-12 button mt-3">
-        <a href="{{route('contacts')}}">Contattaci</a>
-      </button> --}}
+     
+
       <button class="col-12 button mt-3">
         <a href="{{route('article.create')}}">Crea Articolo</a>
       </button>
@@ -119,6 +142,9 @@
     </div>
 
     @endguest
+
+
+
   </div>  
 </div>
 

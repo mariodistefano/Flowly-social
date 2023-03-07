@@ -14,4 +14,28 @@ class AdminController extends Controller
 
         return view('admin.dashboard', compact('adminRequests', 'revisorRequests', 'writerRequests'));
     }
+
+    public function setAdmin(User $user){
+        $user->update([
+            'is_admin'=> true,
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente reso Amministratore l'utente scelto");
+    }
+
+    public function setRevisor(User $user){
+        $user->update([
+            'is_revisor'=> true,
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente reso Revisore l'utente scelto");
+    }
+
+    public function setWriter(User $user){
+        $user->update([
+            'is_writer'=> true,
+        ]);
+
+        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente reso Redattore l'utente scelto");
+    }
 }

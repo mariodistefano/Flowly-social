@@ -42,6 +42,10 @@ Route::get('/article/user{user}' , [ArticleController::class, 'byUser'])->name('
 Route::get('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 Route::post('/comment/store', [CommentController::class, 'store'])->name('comment.store');
 
+// Rotte middleware
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::get('/admin/{uer}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
+    Route::get('/admin/{uer}/set-revisor', [AdminController::class, 'setRevisor'])->name('admin.setRevisor');
+    Route::get('/admin/{uer}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
 } );

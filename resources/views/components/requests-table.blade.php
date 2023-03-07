@@ -9,16 +9,28 @@
     </thead>
 
     <tbody>
+
         @foreach($roleRequests as $user)
         <tr>
             <th scope="row"> {{$users->id}} </th>
-                <td> {{$user->name}} </td>
-                <td> {{$user->email}} </td>
-                <td>
-                    <button class=" btn btn-into text-white">Attiva {{$role}}</button>
-                </td>
-            
+            <td> {{$user->name}} </td>
+            <td> {{$user->email}} </td>
+            <td>
+                @switch($role)
+                    @case('amministratore')
+                        <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                        @break
+                    @case('revisore')
+                        <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                        @break
+                    @case('redagttore')
+                        <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
+                        @break
+            @endswitch
+                {{-- <button class=" btn btn-into text-white">Attiva {{$role}}</button> --}}
+            </td>
         </tr>
         @endforeach
+
     </tbody>
 </table>
