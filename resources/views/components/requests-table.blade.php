@@ -12,7 +12,7 @@
 
         @foreach($roleRequests as $user)
         <tr>
-            <th scope="row"> {{$users->id}} </th>
+            <th scope="row"> {{$user->id}} </th>
             <td> {{$user->name}} </td>
             <td> {{$user->email}} </td>
             <td>
@@ -26,7 +26,8 @@
                     @case('redagttore')
                         <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-info text-white">Attiva {{$role}}</a>
                         @break
-            @endswitch
+                    @default
+                @endswitch
                 {{-- <button class=" btn btn-into text-white">Attiva {{$role}}</button> --}}
             </td>
         </tr>

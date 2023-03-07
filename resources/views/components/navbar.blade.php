@@ -22,6 +22,12 @@
                       <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
                   @endif
                 </li>
+
+                <li> 
+                  @if(Auth::user()->is_revisor)
+                      <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a></li>
+                  @endif
+                </li>
               @endauth
     
               @guest

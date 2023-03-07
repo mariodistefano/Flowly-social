@@ -1,6 +1,6 @@
 <x-layout>
     <x-header
-    title="Bentornato Amministratore"
+        title="Bentornato Revisore"
     />
     
     @if (session('message'))
@@ -12,8 +12,8 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Richieste del ruolo di Amministratore</h2>
-                <x-requests-table :roleRequests="$adminRequests" role="amministratore" />
+                <h2>Articolo da revisionare</h2>
+                <x-articles-table :articles="$unrevionedArticles" />
             </div>
         </div>
     </div>
@@ -21,8 +21,8 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Richieste del ruolo di Revisore</h2>
-                <x-requests-table :roleRequests="$adminRequests" role="amministratore" />
+                <h2>RArticolo pubblicati</h2>
+                <x-articles-table :articles="$acceptedArticles" />
             </div>
         </div>
     </div>
@@ -30,8 +30,8 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Richieste del ruolo di Redattore</h2>
-                <x-requests-table :roleRequests="$adminRequests" role="amministratore" />
+                <h2>RArticoli respinti</h2>
+                <x-articles-table :articles="$rejectedArticles" />
             </div>
         </div>
     </div>

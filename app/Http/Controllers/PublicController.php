@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Mail;
 class PublicController extends Controller
 {
     public function home() {
-        $articles = Article::orderBy('created_at', 'desc')->get()->take(10);
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->take(10)->get();
         return view('welcome', compact('articles'));
     }
     

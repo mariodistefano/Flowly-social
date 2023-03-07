@@ -15,6 +15,11 @@
                   <p class="card-text">{{$article->body}}</p>
                   <p class="card-text"><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}} </small></p>
                   <a href="{{route('article.index')}}" class="btn btn-primary">Torna Indietro</a>
+                    @if (Auth::user() && Auth::user()->is_revisor)
+                        <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white">Accetta l'articolo</a>
+                        <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-info text-white">Rifiuta l'articolo</a>
+                    @endif
+
                 </div>
             </div>
         </div>

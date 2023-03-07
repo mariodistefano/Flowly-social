@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\RevisorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,11 +27,6 @@ Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
 
 
-// rotta articolo
-Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
-// la rotta post di store salva nel database
-Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
-
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 // Dettaglio articolo
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
@@ -42,10 +38,26 @@ Route::get('/article/user{user}' , [ArticleController::class, 'byUser'])->name('
 Route::get('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 Route::post('/comment/store', [CommentController::class, 'store'])->name('comment.store');
 
+
+
 // Rotte middleware
 Route::middleware('admin')->group(function(){
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
-    Route::get('/admin/{uer}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
-    Route::get('/admin/{uer}/set-revisor', [AdminController::class, 'setRevisor'])->name('admin.setRevisor');
-    Route::get('/admin/{uer}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
-} );
+    Route::get('/admin/{user}/set-admin', [AdminController::class, 'setAdmin'])->name('admin.setAdmin');
+    Route::get('/admin/{user}/set-revisor', [AdminController::class, 'setRevisor'])->name('admin.setRevisor');
+    Route::get('/admin/{user}/set-writer', [AdminController::class, 'setWriter'])->name('admin.setWriter');
+});
+
+Route::middleware('revisor')->group(function(){
+    Route::get('/revisor/dashboard', [RevisorController::class, 'dashboard'])->name('revisor.dashboard');
+    Route::get('/revisor/{article}accept', [RevisorController::class, 'acceptArticle'])->name('revisor.acceptArticle');
+    Route::get('/revisor/{article}reject', [RevisorController::class, 'rejectArticle'])->name('revisor.rejectArticle');
+    Route::get('/revisor/{article}undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
+});
+
+Route::middleware('writer')->group(function(){
+    // rotta articolo
+    Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+    // la rotta post di store salva nel database
+    Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
+});
