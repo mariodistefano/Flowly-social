@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\CommentController;
-use App\Http\Controllers\PublicController;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::get('/', [PublicController::class, 'home'])->name('homepage');
 
 // rotta lavora con noi
 Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
+
 Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
 
 
@@ -39,3 +41,7 @@ Route::get('/article/user{user}' , [ArticleController::class, 'byUser'])->name('
 
 Route::get('/comment/create', [CommentController::class, 'create'])->name('comment.create');
 Route::post('/comment/store', [CommentController::class, 'store'])->name('comment.store');
+
+Route::middleware('admin')->group(function(){
+    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+} );
