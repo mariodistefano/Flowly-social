@@ -3,9 +3,9 @@
         title="Dettaglio Articolo: {{$article->title}}"
     />
 
-<div class="container my-3">
-    <div class="row">
-        <div class="col-12 col-md-8 col-lg-6">
+<div class="container-fluid my-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
             <div>
                 <img src="{{Storage::url($article->img)}}" class="card-img-top" alt="...">
                 <div class="card-body">
@@ -22,7 +22,7 @@
 </div>
 
 
-<a href="{{route('comment.create')}}" class="btn btn-primary">commenta</a>
+{{-- <a href="{{route('comment.create')}}" class="btn btn-primary">commenta</a> --}}
 
 {{-- @foreach ($comments as $comment)
 <div class="card">

@@ -54,7 +54,7 @@
                 </button>
             </li> --}}
               <li>
-                  <button class="m-5 text-start w-100  ms-2 button"  >
+                  <button class="m-5 text-start ms-2 button"  >
                     <li><a class="" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
                     </li>
                   </button>
