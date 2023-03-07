@@ -19,8 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PublicController::class, 'home'])->name('homepage');
 
-// rotta contattaci
-Route::get('/contattaci', [PublicController::class, 'contacts'])->name('contacts');
+// rotta lavora con noi
+Route::get('/careers', [PublicController::class, 'careers'])->name('careers');
+Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name('careers.submit');
 
 
 // rotta articolo

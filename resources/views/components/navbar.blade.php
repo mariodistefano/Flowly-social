@@ -48,11 +48,11 @@
                     <a href="{{route('article.index')}}">Articoli</a>
                   </button>
               </li>
-            {{--   <li> 
+              <li> 
                   <button class="  ms-2 button"  >
-                  <a href="{{route('contacts')}}">Contattaci</a>
+                  <a href="{{route('careers')}}">Contattaci</a>
                 </button>
-            </li> --}}
+            </li>
               <li>
                   <button class="m-5 text-start ms-2 button"  >
                     <li><a class="" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>

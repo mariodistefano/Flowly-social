@@ -14,8 +14,21 @@ class PublicController extends Controller
         return view('welcome', compact('articles'));
     }
 
-    public function contacts(){ // FUNZIONE PER CONTATTI
-        return view('contacts');
+    public function __construct(){
+        $this->middleware('auth')->except('homepage');
+    }
+    
+    public function careers(){ // FUNZIONE PER CONTATTI
+        return view('careers');
+    }
+
+    public function careersSubmit(Request $request){
+        $request->validate([
+            'role' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+        // dd($request->all());
     }
 
 
