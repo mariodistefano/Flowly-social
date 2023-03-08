@@ -20,7 +20,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        $articles = Article::orderBy('created_at', 'desc')->get();
+        $articles = Article::where('is_accepted', true)->orderBy('created_at', 'desc')->get();
       //  $articles = Article::all()->sortDesc();
         return view('article.index', compact('articles'));
     }
@@ -54,7 +54,7 @@ class ArticleController extends Controller
             'user_id'=>Auth::user()->id,
         ]);
 
-        return redirect(route('homepage'))->with('message', 'Il tuo articolo è stato pubblicato');
+        return redirect(route('homepage'))->with('message', 'Il tuo articolo è stato inoltrato al Revisore');
     }
 
     /**
@@ -90,13 +90,17 @@ class ArticleController extends Controller
     }
 
     public function byCategory(Category $category){
-        $articles = $category->articles->sortByDesc('created_at');
+        $articles = $category->articles->sortByDesc('created_at')->filter(function($article){
+            return $article->is_accepted == true;
+        });
         return view('article.byCategory' , compact('category' , 'articles'));
 
     }
 
     public function byUser(User $user){
-        $articles = $user->articles->sortByDesc('created_at');
+        $articles = $user->articles->sortByDesc('created_at')->filter(function($article){
+            return $article->is_accepted == true;
+        });
         return view('article.byUser' , compact('user' , 'articles'));
 
     }

@@ -5,13 +5,41 @@
     <div class="container h-100">
       <div class="row h-100 align-items-around" class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="col-12">
-          <ul class="h-100 navbar-nav flex-column justify-content-center">
+          <ul class="h-100 navbar-nav flex-column justify-content-around">
+            {{-- sezione libero accesso --}}
               <li >
                 <button class="btnLogo"><h2 class="text-center"><a href="{{route('homepage')}}">Aulab Post</a></h2></button>
-                
               </li>
 
-              @guest
+              <li>
+                <button class="  ms-2 button"  >
+                  <a href="{{route('careers')}}">Lavora con Noi</a>
+                </button>
+              </li>
+
+              <li> 
+                <button class="mb-5  ms-2 button">
+                  <a href="{{route('article.index')}}">Articoli</a>
+                </button>
+             </li>
+
+
+             {{-- sezione dashboard admin e revisor --}}
+             @auth
+                <li> 
+                  @if(Auth::user()->is_admin)
+                      <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+                  @endif
+                </li>
+
+                <li> 
+                  @if(Auth::user()->is_revisor)
+                      <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a></li>
+                  @endif
+                </li>
+             @endauth
+    
+            @guest
 
               {{-- LOGIN --}}
               <li> 
@@ -24,7 +52,6 @@
                   <a href="{{route('login')}}">Accedi</a>
                 </button>
               </li>
-              
               @else
 
               <li> 
@@ -43,25 +70,16 @@
                     <a href="{{route('article.create')}}">Crea Articolo</a>
                   </button>
               </li>
-              <li> 
-                  <button class="pt-3 mb-5  ms-2 button">
-                    <a href="{{route('article.index')}}">Articoli</a>
-                  </button>
-              </li>
-            {{--   <li> 
-                  <button class="pt-3   ms-2 button"  >
-                  <a href="{{route('contacts')}}">Contattaci</a>
-                </button>
-            </li> --}}
+
               <li>
-                  <button class="pt-3 m-5 text-start w-100 mt-5 ms-2 button"  >
+                  <button class="m-5 text-start ms-2 button"  >
                     <li><a class="" href="#" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">Logout</a>
                     </li>
                   </button>
               </li>
 
-              @endguest
-
+            @endguest
+         
           </ul>
         </div>
       </div>
@@ -76,6 +94,20 @@
   </div>
   <div class="offcanvas-body flex-column justify-content-center h-100">
 
+    <li>
+      <button class="col-12 button mt-3">
+        <a href="{{route('careers')}}">Lavora con Noi</a>
+      </button>
+    </li>
+
+    @auth
+      <li> 
+        @if(Auth::user()->is_admin)
+          <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+        @endif
+      </li>
+    @endauth
+  
     @guest
 
     {{-- LOGIN --}}
@@ -89,7 +121,7 @@
         <a href="{{route('login')}}">Accedi</a>
       </button>
     </li>
-    
+
     @else
 
     <li> 
@@ -102,9 +134,8 @@
 
     <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
 
-      {{-- <button class="col-12 button mt-3">
-        <a href="{{route('contacts')}}">Contattaci</a>
-      </button> --}}
+     
+
       <button class="col-12 button mt-3">
         <a href="{{route('article.create')}}">Crea Articolo</a>
       </button>
@@ -119,6 +150,9 @@
     </div>
 
     @endguest
+
+
+
   </div>  
 </div>
 

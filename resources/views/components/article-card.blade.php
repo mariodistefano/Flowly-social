@@ -1,7 +1,6 @@
 <!-- card -->
-<div class="container px-5 d-none d-md-block my-3">
-<div class="px-3 mt-5 primacard">
-  <div class="row  justify-content-between">
+<div class="container-fluid d-none px-3 mt-5 d-md-block ">
+  <div class="row  justify-content-between primacard">
     <div class="col-12 flex-column articleCellular justify-content-center aling-items-center col-md-3">
       <div class="col-3 cerchio m-1 m-md-3">
       </div>
@@ -12,9 +11,9 @@
     </div>
       <!-- </div> -->
     <div class="col-12 col-md-5 pt-3 mt-md-3 me-md-3">
-      <h1> <strong>{{$article->title}}</strong></h1>
-      <h6 class="text-secondary">{{$article->subtitle}}</h6>
-      <p class="font-sizeS">{{$article->body}}</p>
+      <h3> <strong>{{substr($article->title, 0, 25)}}</strong></h3>
+      <h6 class="text-secondary">{{substr($article->subtitle, 0, 25)}}</h6>
+      <p class="font-sizeS">{{substr($article->body, 0, 150)}} ...</p>
       <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-black font-bold">Dettaglio</a></button>
     </div>
     <div class="col-12 col-md-3 h-100 py-md-2 p-0">
