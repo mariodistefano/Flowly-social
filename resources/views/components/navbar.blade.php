@@ -6,6 +6,7 @@
       <div class="row h-100 align-items-around" class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="col-12">
           <ul class="h-100 navbar-nav flex-column justify-content-around">
+            {{-- sezione libero accesso --}}
               <li >
                 <button class="btnLogo"><h2 class="text-center"><a href="{{route('homepage')}}">Aulab Post</a></h2></button>
               </li>
@@ -16,7 +17,15 @@
                 </button>
               </li>
 
-              @auth
+              <li> 
+                <button class="mb-5  ms-2 button">
+                  <a href="{{route('article.index')}}">Articoli</a>
+                </button>
+             </li>
+
+
+             {{-- sezione dashboard admin e revisor --}}
+             @auth
                 <li> 
                   @if(Auth::user()->is_admin)
                       <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
@@ -28,9 +37,9 @@
                       <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a></li>
                   @endif
                 </li>
-              @endauth
+             @endauth
     
-              @guest
+            @guest
 
               {{-- LOGIN --}}
               <li> 
@@ -61,13 +70,6 @@
                     <a href="{{route('article.create')}}">Crea Articolo</a>
                   </button>
               </li>
-              <li> 
-                  <button class="mb-5  ms-2 button">
-                    <a href="{{route('article.index')}}">Articoli</a>
-                  </button>
-              </li>
-
-
 
               <li>
                   <button class="m-5 text-start ms-2 button"  >
@@ -76,7 +78,7 @@
                   </button>
               </li>
 
-              @endguest
+            @endguest
          
           </ul>
         </div>

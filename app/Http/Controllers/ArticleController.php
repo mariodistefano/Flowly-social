@@ -54,7 +54,7 @@ class ArticleController extends Controller
             'user_id'=>Auth::user()->id,
         ]);
 
-        return redirect(route('homepage'))->with('message', 'Il tuo articolo è stato pubblicato');
+        return redirect(route('homepage'))->with('message', 'Il tuo articolo è stato inoltrato al Revisore');
     }
 
     /**

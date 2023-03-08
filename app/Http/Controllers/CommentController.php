@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,7 +38,7 @@ class CommentController extends Controller
             'body' => 'required',
         ]);
 
-        $articles = Comment::create([
+        $comments = Comment::create([
             'body'=>$request->body,
             'article_id'=>$request->article,
             'user_id'=>Auth::user()->id,
@@ -76,5 +77,13 @@ class CommentController extends Controller
     public function destroy(Comment $comment)
     {
         //
+    }
+
+    public function byArticle(Article $article){
+        $comments = $article->comments->sortByDesc('created_at')->filter(function($comment){
+            return $comment->is_accepted == true;
+        });
+        return view('comment.byArticle' , compact('article' , 'comments'));
+
     }
 }

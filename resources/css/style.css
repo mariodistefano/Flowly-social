@@ -240,6 +240,8 @@ a {
 /* Size */
 .font-sizeS {
   font-size: medium;
+  /* word-break: break-all; */  
+  /* serve a mandare a capo anche parole intere troncandole */
 }
 
 .btnArticle {

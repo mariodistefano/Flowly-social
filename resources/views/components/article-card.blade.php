@@ -13,7 +13,7 @@
     <div class="col-12 col-md-5 pt-3 mt-md-3 me-md-3">
       <h3> <strong>{{substr($article->title, 0, 25)}}</strong></h3>
       <h6 class="text-secondary">{{substr($article->subtitle, 0, 25)}}</h6>
-      <p class="font-sizeS">{{substr($article->body, 0, 250)}} ...</p>
+      <p class="font-sizeS">{{substr($article->body, 0, 150)}} ...</p>
       <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-black font-bold">Dettaglio</a></button>
     </div>
     <div class="col-12 col-md-3 h-100 py-md-2 p-0">
