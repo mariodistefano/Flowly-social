@@ -76,8 +76,7 @@
         <p class="font-sizeS">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad tempora aliquam enim officia nihil possimus
           veniam et ducimus, non sit debitis consequuntur! Repellendus quisquam totam, blanditiis repudiandae sapiente
           ipsum aliquid!</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At facere, alias veniam voluptatum nam illo magni
-          doloremque inventore dolorem eius quas! Illo labore id iure harum ex reiciendis excepturi hic!</p>
+      
        <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-black font-bold">Dettaglio</a></button>
       </div>
         <div class="col-12 col-md-3 h-100 py-md-4 me-md-3 p-0">
