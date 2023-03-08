@@ -51,6 +51,10 @@
               <i class='bx bx-bar-chart-square' ></i>
               <span class="nav__name">Articoli</span>
           </a>
+          <a href="{{route('careers')}}" class="navlink">
+            <i class='bx bx-bar-chart-square' ></i>
+            <span class="navname">Lavora con noi</span>
+          </a>
 
           <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
 

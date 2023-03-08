@@ -2,7 +2,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       
     </button>
-      <div class="container h-100">
+      <div class="h-100">
         <div class="row h-100 align-items-around" class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="col-12">
             <ul class="h-100 navbar-nav flex-column justify-content-around">

@@ -1,5 +1,5 @@
 <!-- card -->
-<div class="container-fluid ">
+{{-- <div class="container-fluid ">
   <div class="row  justify-content-between primacard">
     <div class="col-12 flex-column articleCellular justify-content-center aling-items-center col-md-3">
       <div class="col-3 cerchio m-1 m-md-3">
@@ -27,7 +27,7 @@
     </div>
   </div> 
 </div>
-</div>
+</div> --}}
 
 <!-- article cellulare -->
 
@@ -54,3 +54,34 @@
       </div>
   </div>  
 </div>
+
+
+
+{{-- NON TOCCARE --}}
+
+<div class="container-fluid px-5 mt-5 d-none d-md-block margine-prova">
+  <div class="row sfondoCard justify-content-between  primacard ">
+    <div class="col-12 flex-column articleCellular justify-content-center aling-items-center col-md-3">
+      <div class="col-3 cerchio my-4 ms-2 my-md-5 ms-md-3">
+      </div>
+      <!-- <div class="articleCellular"> -->
+      <span class="col-3"><h5 class="text-center pe-md-4 text-bold">Mario Di Stefano</h5></span>
+      <span class="col-3"><p class="text-center text-secondary pe-md-4">Design di interni</p></span>
+      <span class="col-3"><p class="text-center pe-md-4">data inserimento: 03/03/23</p></span>
+    </div>
+  <!-- </div> -->
+      <div class="col-12 col-md-5 pt-5 mt-md-3 me-md-4">
+        <h1> <strong>Lorem</strong></h1>
+        <h6 class="text-secondary">Lorem ipsum</h6>
+        <p class="font-sizeS">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad tempora aliquam enim officia nihil possimus
+          veniam et ducimus, non sit debitis consequuntur! Repellendus quisquam totam, blanditiis repudiandae sapiente
+          ipsum aliquid!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At facere, alias veniam voluptatum nam illo magni
+          doloremque inventore dolorem eius quas! Illo labore id iure harum ex reiciendis excepturi hic!</p>
+       <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-black font-bold">Dettaglio</a></button>
+      </div>
+        <div class="col-12 col-md-3 h-100 py-md-4 me-md-3 p-0">
+          <img class="ImgCard p-3 me-2" src="./img/castle-g0578dbfee_1920.jpg" alt="immagine">
+        </div>
+     </div> 
+  </div>

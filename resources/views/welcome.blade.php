@@ -25,8 +25,8 @@
 
 {{-- card grandi --}}
 
-  <div class="container my-3">
-    <div class="row mx-5">
+  {{-- <div class="my-3">
+    <div class="row mx-5"> --}}
         @if ($articles->isNotEmpty())
              @foreach ($articles as $article)
                 <x-article-card
@@ -34,9 +34,13 @@
                 />
              @endforeach
         @endif
-    </div>
-  </div>
+    {{-- </div>
+  </div> --}}
 
 
   <div class="cerchioSF"></div>
+  <div class="cerchioSF1 d-none d-md-block"></div>
+<div class="cerchioSF2 d-none d-md-block"></div>
+<div class="cerchioSF3 d-none d-md-block"></div>
+<div class="cerchioSF4 d-none d-md-block"></div>
 </x-layout>
