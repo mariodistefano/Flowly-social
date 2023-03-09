@@ -5,17 +5,13 @@
       <div class="h-100">
         <div class="row h-100 align-items-around" class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="col-12">
-            <ul class="h-100 navbar-nav flex-column justify-content-around">
+            <ul class="h-100 navbar-nav flex-column justify-content-start">
               {{-- sezione libero accesso --}}
                 <li >
-                  <button class="btnLogo"><h2 class="text-center"><a href="{{route('homepage')}}">Aulab Post</a></h2></button>
+                  <button class="btnLogo mb-5"><h2 class="text-center"><a href="{{route('homepage')}}">Aulab Post</a></h2></button>
                 </li>
   
-                <li>
-                  <button class="  ms-2 button"  >
-                    <a href="{{route('careers')}}">Lavora con Noi</a>
-                  </button>
-                </li>
+                
   
                 <li> 
                   <button class="mb-5  ms-2 button">
@@ -28,13 +24,17 @@
                @auth
                   <li> 
                     @if(Auth::user()->is_admin)
+                    <button class="  ms-2 button " >
                         <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+                      </button>
                     @endif
                   </li>
   
                   <li> 
                     @if(Auth::user()->is_revisor)
+                    <button class="  ms-2 button " >
                         <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a></li>
+                      </button>
                     @endif
                   </li>
                @endauth
@@ -94,12 +94,6 @@
     </div>
     <div class="offcanvas-body flex-column justify-content-center h-100">
   
-      <li>
-        <button class="col-12 button mt-3">
-          <a href="{{route('careers')}}">Lavora con Noi</a>
-        </button>
-      </li>
-  
       @auth
         <li> 
           @if(Auth::user()->is_admin)
@@ -107,6 +101,12 @@
           @endif
         </li>
       @endauth
+
+      <li>
+        <button class="  ms-2 button"  >
+          <a href="{{route('careers')}}">Lavora con Noi</a>
+        </button>
+      </li>
     
       @guest
   
