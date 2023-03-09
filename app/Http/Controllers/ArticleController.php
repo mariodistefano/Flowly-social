@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tag;
 use App\Models\User;
 use App\Models\Article;
 use App\Models\Category;
@@ -43,9 +44,10 @@ class ArticleController extends Controller
             'subtitle' => 'required|unique:articles|min:5',
             'body' => 'required|min:10',
             'category' => 'required',
+            'tags' => 'required',
         ]);
-
-        $articles = Article::create([
+        // prima era articles
+        $article = Article::create([
             'title'=>$request->title,
             'subtitle'=>$request->subtitle,
             'body'=>$request->body,
@@ -53,6 +55,15 @@ class ArticleController extends Controller
             'category_id'=>$request->category,
             'user_id'=>Auth::user()->id,
         ]);
+
+        $tags = explode(', ', $request->tags);
+
+        foreach ($tags as $tag) {
+            $newTag = Tag::updateOrCreate([
+                'name' => $tag,
+            ]);
+            $article->tags()->attach($newTag);
+        }
 
         return redirect(route('homepage'))->with('message', 'Il tuo articolo è stato inoltrato al Revisore');
     }
