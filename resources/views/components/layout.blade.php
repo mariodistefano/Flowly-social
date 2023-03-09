@@ -18,9 +18,9 @@
 
 
                
-                    <x-nav2 />
+                    <x-navbar />
                     
-                <div class="body">
+                <div id="body-div" class="body">
                     {{$slot}}
                     {{-- <x-footer /> --}}
                 </div>
