@@ -25,7 +25,7 @@
                   <li> 
                     @if(Auth::user()->is_admin)
                     <button class="  ms-2 button " >
-                        <li><a class="dropdown-item" href="{{route('admin.dashboard')}}">Dashboard Admin</a></li>
+                        <a class="" href="{{route('admin.dashboard')}}">Dashboard Admin</a>
                       </button>
                     @endif
                   </li>
@@ -33,7 +33,7 @@
                   <li> 
                     @if(Auth::user()->is_revisor)
                     <button class="  ms-2 button " >
-                        <li><a class="dropdown-item" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a></li>
+                        <a class="" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
                       </button>
                     @endif
                   </li>
@@ -57,7 +57,7 @@
                 <li> 
                   <button class="  ms-2 button"  >
                     <a class="nav-link" href="#" role="button">
-                      Benvenuto {{Auth::user()->name}}
+                      Ciao: {{Auth::user()->name}}
                     </a>
                   </button>
                 </li>
