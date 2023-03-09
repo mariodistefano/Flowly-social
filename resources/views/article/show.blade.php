@@ -42,7 +42,7 @@
                   <p class="card-text text-black ">{{$article->body}}</p>
                   <p class="card-text text-black "><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}} </small></p>
                   <a href="{{route('article.index')}}" class="btnHEADER pt-1 me-3">Torna ad Articoli</a>
-                  <a href="{{route('comment.create')}}" class="btnHEADER pt-1">commenta</a>
+                  {{-- <a href="{{route('comment.create')}}" class="btnHEADER pt-1">commenta</a> --}}
                 </div>
                  <div class="col-12 col-md-4 flex-column align-items-center justify-content-center">
                  

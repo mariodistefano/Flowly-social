@@ -8,8 +8,11 @@
       </div>
 {{-- <div class="col-2 d-none d-md-block d-flex">     --}}
     @guest
-    <button class="btnHEADER d-none d-md-block "><a href="{{route('login')}}"> Accedi</a></button>
-    <button class="btnHEADER d-none d-md-block "><a href="{{route('register')}}"> Registrati</a></button>
+    <div class="col-md-4 d-flex mt-2">
+        <button class="btnHEADER d-none d-md-block "><a class="text-white" href="{{route('login')}}"> Accedi</a></button>
+        <button class="btnHEADER d-none d-md-block ms-2"><a class="text-white" href="{{route('register')}}"> Registrati</a></button>
+    </div>
+
     @else
     <div class="col-md-6 d-flex mt-3">
         <button class="ms-auto btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a class="text-black" href="{{route('article.create')}}">Crea Articolo</a></button>
