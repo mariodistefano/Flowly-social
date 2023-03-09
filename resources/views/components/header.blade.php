@@ -17,7 +17,7 @@
     <div class="col-md-6 d-flex mt-3">
         <button class="ms-auto btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a class="text-black" href="{{route('article.create')}}">Crea Articolo</a></button>
         <button class="btnHEADER d-none d-md-block  mb-md-5 me-md-3"><a class="text-black" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();" href="{{route('logout')}} ">Logout</a></button>
-        <button class="btnLINGUA d-none d-md-block  mb-md-5 me-md-3">IT</button>
+        {{-- <button class="btnLINGUA d-none d-md-block  mb-md-5 me-md-3">IT</button> --}}
     </div>
 
     @endguest

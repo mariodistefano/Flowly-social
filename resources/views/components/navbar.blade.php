@@ -11,6 +11,12 @@
       </a>
 
       <div class="nav__list">
+
+        <a href="{{route('careers')}}" class="navlink">
+          <i class='bx bx-bar-chart-square' ></i>
+          <span class="navname">Lavora con noi</span>
+        </a>
+
         @auth
           @if (Auth::user()->is_admin)
             <a href="{{route('admin.dashboard')}}" class="nav__link active-link">
@@ -51,10 +57,9 @@
               <i class='bx bx-bar-chart-square' ></i>
               <span class="nav__name">Articoli</span>
           </a>
-          <a href="{{route('careers')}}" class="navlink">
-            <i class='bx bx-bar-chart-square' ></i>
-            <span class="navname">Lavora con noi</span>
-          </a>
+
+         
+
 
           <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
 

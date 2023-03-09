@@ -23,9 +23,7 @@
                         <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-info text-white">Rifiuta l'articolo</a>
                     @endif
             </div>
-                
-            
-       
+        </div>
     </div>
 </div>
 
@@ -43,17 +41,15 @@
                   <p class="card-text text-black "><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}} </small></p>
                   <a href="{{route('article.index')}}" class="btnHEADER pt-1 me-3">Torna ad Articoli</a>
                   {{-- <a href="{{route('comment.create')}}" class="btnHEADER pt-1">commenta</a> --}}
+                  @if (Auth::user() && Auth::user()->is_revisor)
+                  <div class="mt-3">
+                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white">Accetta l'articolo</a>
+                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-info text-white">Rifiuta l'articolo</a>
+                  </div>
+                  @endif
                 </div>
-                 <div class="col-12 col-md-4 flex-column align-items-center justify-content-center">
-                 
-                 
-                 
-                </div>
-                  
-            
-                
-            
-       
+            </div>
+        </div>
     </div>
 </div>
 

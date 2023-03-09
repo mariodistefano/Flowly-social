@@ -38,6 +38,8 @@
                     @endif
                   </li>
                @endauth
+
+
       
               @guest
   
@@ -63,12 +65,20 @@
                 </li>
   
                 <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
+
+
   
             
                 <li> 
                     <button class="  ms-2 button">
                       <a href="{{route('article.create')}}">Crea Articolo</a>
                     </button>
+                </li>
+
+                <li>
+                  <button class="  ms-2 button"  >
+                    <a href="{{route('careers')}}">Lavora con Noi</a>
+                  </button>
                 </li>
   
                 <li>
@@ -102,11 +112,7 @@
         </li>
       @endauth
 
-      <li>
-        <button class="  ms-2 button"  >
-          <a href="{{route('careers')}}">Lavora con Noi</a>
-        </button>
-      </li>
+ 
     
       @guest
   
@@ -150,6 +156,8 @@
       </div>
   
       @endguest
+
+
   
   
   
