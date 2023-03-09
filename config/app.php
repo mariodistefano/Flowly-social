@@ -186,6 +186,8 @@ return [
          * Package Service Providers...
          */
         App\Providers\FortifyServiceProvider::class, // AGGIUNTO NOI
+        TeamTNT\Scout\TNTSearchScoutServiceProvider::class, // AGGIUNTO NOI
+        Laravel\Scout\ScoutServiceProvider::class, // AGGIUNTO NOI
         /*
          * Application Service Providers...
          */
