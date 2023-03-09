@@ -40,6 +40,13 @@ Route::middleware('writer')->group(function(){
     // la rotta post di store salva nel database
     Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 });
+// rotta tnt
+Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
+
+
+
+
+
 
 // Rotte middleware ADMIN
 Route::middleware('admin')->group(function(){

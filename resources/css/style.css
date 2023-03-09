@@ -295,7 +295,7 @@ color: white;
   white-space: nowrap;
 }
 
-.card {
+/* .card {
   display: inline-block;
   width: 150px;
   height: 200px;
@@ -304,7 +304,7 @@ color: white;
   color: white;
   border-radius: 20px;
   border: solid transparent 0px;
-}
+} */
 
 .background {
   margin-right: 10px;
@@ -957,7 +957,7 @@ color: white;
   white-space: nowrap;
 }
 
-.card {
+/* .card {
   display: inline-block;
   width: 150px;
   height: 200px;
@@ -966,7 +966,7 @@ color: white;
   color: white;
   border-radius: 20px;
   border: solid transparent 0px;
-}
+} */
 
 .background {
   margin-right: 10px;
