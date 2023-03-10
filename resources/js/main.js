@@ -19,6 +19,8 @@ function colorLink(){
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
+const navBody = document.querySelector ('#body-div')
+
 /*=============== SHOW HIDDEN MENU ===============*/
 const showMenu = (toggleId, navbarId) =>{
     const toggle = document.getElementById(toggleId),
@@ -30,6 +32,8 @@ const showMenu = (toggleId, navbarId) =>{
             navbar.classList.toggle('show-menu')
             /* Rotate toggle icon */
             toggle.classList.toggle('rotate-icon')
+
+            navBody.classList.toggle('margin-body')
         })
     }
 }

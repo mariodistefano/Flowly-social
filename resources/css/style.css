@@ -46,7 +46,14 @@ a {
 
 
 .body {
-  margin-left: 500px;
+  margin-left: 5.5rem;
+  transition: margin 0.2s ease-out;
+}
+
+.margin-body {
+  margin-left: 16.2rem;
+  transition: margin 0.2s ease-in;
+
 }
 
 

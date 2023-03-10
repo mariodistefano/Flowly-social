@@ -1,5 +1,5 @@
  <!--=============== NAV ===============-->
- <div class="nav" id="nav">
+ <div class="nav" id="nav" id="nav-index">
   <nav class="nav__content">
       <div class="nav__toggle" id="nav-toggle">
           <i class='bx bx-chevron-right' ></i>
