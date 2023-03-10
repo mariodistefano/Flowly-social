@@ -22,7 +22,7 @@ class AdminController extends Controller
             'is_admin'=> true,
         ]);
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente reso Amministratore l'utente scelto");
+        return redirect(route('admin.dashboard'))->with('message', "Hai reso Amministratore l'utente ' $user->name '");
     }
 
     public function setRevisor(User $user){
@@ -30,7 +30,7 @@ class AdminController extends Controller
             'is_revisor'=> true,
         ]);
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente reso Revisore l'utente scelto");
+        return redirect(route('admin.dashboard'))->with('message', "Hai reso Revisore l'utente ' $user->name '");
     }
 
     public function setWriter(User $user){
@@ -38,7 +38,7 @@ class AdminController extends Controller
             'is_writer'=> true,
         ]);
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente reso Redattore l'utente scelto");
+        return redirect(route('admin.dashboard'))->with('message', "Hai reso Redattore l'utente ' $user->name ' ");
     }
 
     public function editTag(Request $request, Tag $tag){
@@ -50,7 +50,7 @@ class AdminController extends Controller
             'name' => strtolower($request->name),
         ]);
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente aggiornato il tag");
+        return redirect(route('admin.dashboard'))->with('message', "Hai aggiornato il tag ' #$request->name '");
     }
 
     public function deleteTag(Tag $tag){
@@ -60,7 +60,7 @@ class AdminController extends Controller
 
         $tag->delete();
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente eliminato il tag");
+        return redirect(route('admin.dashboard'))->with('message', "Hai eliminato il tag ' #$tag->name '");
     }
 
     public function editCategory(Request $request, Category $category){
@@ -72,21 +72,21 @@ class AdminController extends Controller
             'name' => strtolower($request->name),
         ]);
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente aggiornato la categoria");
+        return redirect(route('admin.dashboard'))->with('message', "Hai aggiornato la categoria ' $category->name '");
     }
 
     public function deleteCategory(Category $category){
 
         $category->delete();
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente eliminato la categoria");
+        return redirect(route('admin.dashboard'))->with('message', "Hai eliminato la categoria: ' $category->name '");
     }
 
     public function storeCategory(Request $request){
-        Category::create([
+        $newName = Category::create([
             'name' => strtolower($request->name),
         ]);
 
-        return redirect(route('admin.dashboard'))->with('message', "Hai correttamente inserito la nuova categoria");
+        return redirect(route('admin.dashboard'))->with('message', "Hai aggiunto la categoria: ' $newName->name '");
     }
 }
