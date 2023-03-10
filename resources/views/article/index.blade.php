@@ -2,8 +2,8 @@
     <x-header 
         title="Tutti gli Articoli"
     />
-    <div class="scrolling-wrapper px-3 pt-1">
-        {{-- @foreach ($articles as $article)
+     <div class="scrolling-wrapper px-3 pt-1">
+     {{--   @foreach ($articles as $article)
            <div class="card position-relative">
                     <img class="card " src="{{Storage::url($article->img)}}" alt="immagine">
                     <img class="card " src="/public/img/default.jpg" alt="immagine">
