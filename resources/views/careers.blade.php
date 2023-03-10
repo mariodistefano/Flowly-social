@@ -3,8 +3,21 @@
         title="Lavoro con noi!"
     />
 
+    <div class="col-12 col-md-6">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{$error}}</li>
+                @endforeach
+            </ul>
+        </div>
+            
+        @endif
+    </div>
+
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
                 <h2>Lavora come amministratore</h2>
                 <p>Cosa farai: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae exercitationem earum animi, fugiat at delectus cumque placeat minus a suscipit excepturi explicabo, aspernatur, quaerat numquam? Nihil minus rem blanditiis ipsa.</p>
@@ -12,19 +25,11 @@
                 <p>Cosa farai:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quis natus dolorum sunt consectetur sequi numquam quo, earum facilis sint magni dolore explicabo amet ea distinctio delectus veniam deserunt. Tenetur!</p>
                 <h2>Lavora come redattore</h2>
                 <p>Cosa farai:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio fugiat omnis itaque asperiores architecto ea modi ipsam, ex sint praesentium voluptates fugit provident ut voluptatum commodi quos minus. Omnis, velit?</p>
-                </div>
-                <div class="col-12 col-md-6">
-                    @if ($errors->any())
-                    <div class="alert alert-danger">
-                        <ul>
-                            @foreach ($errors->all() as $error)
-                                <li>{{$error}}</li>
-                            @endforeach
-                        </ul>
-                    </div>
-                        
-                    @endif
-                </div>
+                
+
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-6">
                 <form method="POST" action="{{route('careers.submit')}}">
                     @csrf
                     <div class="mb-3">
@@ -49,8 +54,8 @@
                     </div>
                    
                 </form>
-
             </div>
+            
         </div>
     </div>
 

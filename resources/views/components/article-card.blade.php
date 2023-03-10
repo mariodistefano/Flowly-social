@@ -1,16 +1,24 @@
 
 <div class="projcard projcard-customcolor ms-5" style="--projcard-color: #F5AF41;">
   <div class="projcard-innerbox">
-    <img class="projcard-img" src="https://picsum.photos/800/600?image=943" />
+    <img class="projcard-img" src="{{Storage::url($article->img)}}" />
     <div class="projcard-textbox">
-      <div class="projcard-title">Last Card</div>
-      <div class="projcard-subtitle">That's the last one. Have a nice day!</div>
+      <div class="projcard-title">{{substr($article->title, 0, 25)}}</div>
+      <div class="projcard-subtitle">{{substr($article->subtitle, 0, 25)}}</div>
       <div class="projcard-bar"></div>
-      <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+      <div class="projcard-description">{{substr($article->body , 0 , 250)}}</div>
+
       <div class="projcard-tagbox">
-        <span class="projcard-tag">iOS</span>
-        <span class="projcard-tag">Android</span>
-        <span class="projcard-tag">Cordova</span>
+        <span class="projcard-tag">
+            @foreach ($article->tags as $tag)
+                #{{$tag->name}}
+            @endforeach
+        </span>
+        <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="projcard-tag indexprova">>{{$article->category->name}}</a>
+        <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="projcard-tag ">{{$article->user->name}}</a>
+        {{-- <a class="projcard-tag">Cordova</a> --}}
+     
+
       </div>
     </div>
   </div>
@@ -59,7 +67,7 @@
         <div class="col-8 mt-5 flex-column">
           <span class="col-3"><h5 class="ps-3 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
           {{-- Mettiamo un @if per le categorie per evitare problemi quando si modificano/elimonano --}}
-          @if ($article->category)
+          {{-- @if ($article->category)
               
           @endif
           <span class="col-3"><p class="ps-3 text-secondary pe-md-4">categoria : {{$article->category->name}}</p></span>
@@ -94,14 +102,16 @@
       <div class="col-3 cerchio my-4 ms-2 my-md-5 ms-md-3">
       </div> --}}
       <!-- <div class="articleCellular"> -->
-<<<<<<< HEAD
+
       {{-- <span class="col-3"><h5 class="text-center pe-md-4 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
       <span class="col-3"><p class="text-center text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p>
         </span>
 =======
       <span class="col-3"><h5 class="text-center pe-md-4 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
       {{-- Mettiamo un @if per le categorie per evitare problemi quando si modificano/elimonano --}}
-      @if ($article->category)
+
+
+      {{-- @if ($article->category)
         <span class="col-3"><p class="text-center text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p></span>
       @else
         <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
@@ -112,9 +122,11 @@
               #{{$tag->name}}
           @endforeach
         </p>
->>>>>>> 891e3492a0c899eecc5dc7f215d20fe9bd215098
+
       <span class="col-3"><p class="text-center pe-md-4">publicato: {{$article->created_at->format('d/m/y')}}</p></span>
     </div> --}}
+
+
   <!-- </div> -->
       {{-- <div class="col-12 col-md-5 pt-5 mt-md-3 me-md-4">
         <h2> <strong>{{substr($article->title, 0, 25)}}</strong></h2>
