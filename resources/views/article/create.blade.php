@@ -41,6 +41,13 @@
                             @endforeach
                         </select>
                     </div>
+                    {{-- TAGS --}}
+                    <div class="mb-3">
+                        <label for="tags" class="form-label">Tags:</label>
+                        <input name="tags" id="tags" class="form-label" value="{{old('tags')}}">
+                        <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+                        </select>
+                    </div>
 
                     <div class="mb-3">
                         <label class="form-label">Corpo Articolo</label>

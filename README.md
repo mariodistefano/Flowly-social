@@ -64,3 +64,21 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+
+
+<!-- i nostri appunti -->
+
+<!-- Se, per qualsiasi motivo, ci trovassimo a modificare il modello Article o la funzione `toSearchableArray()`, ricordiamoci prima di cancellare l’indicizzazione del nostro database con il comando:
+
+    php artisan scout:flush "App\Models\Article"
+
+Solo dopo, potremo rilanciare:
+
+    php artisan scout:import "App\Models\Article"  -->

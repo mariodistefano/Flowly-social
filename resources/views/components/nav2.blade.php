@@ -18,6 +18,11 @@
                     <a href="{{route('article.index')}}">Articoli</a>
                   </button>
                </li>
+
+               <form class="d-flex" method="GET" action="{{route('article.search')}}">
+                <input type="search" class="form-control me-2" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+                <button class="btn btn-outline-info" type="submit">Cerca</button>
+               </form>
   
   
                {{-- sezione dashboard admin e revisor --}}
@@ -65,10 +70,7 @@
                 </li>
   
                 <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
-
-
-  
-            
+              
                 <li> 
                     <button class="  ms-2 button">
                       <a href="{{route('article.create')}}">Crea Articolo</a>
@@ -156,6 +158,8 @@
       </div>
   
       @endguest
+
+
 
 
   
