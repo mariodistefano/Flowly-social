@@ -1,24 +1,26 @@
 
 <div class="projcard projcard-customcolor ms-5" style="--projcard-color: #F5AF41;">
   <div class="projcard-innerbox">
-    <img class="projcard-img" src="{{Storage::url($article->img)}}" />
-    <div class="projcard-textbox">
-      <div class="projcard-title">{{substr($article->title, 0, 25)}}</div>
-      <div class="projcard-subtitle">{{substr($article->subtitle, 0, 25)}}</div>
+    <img class="projcard-img" src="{{Storage::url($article->img)}}"/>
+     <div class="projcard-textbox">
+      <div class="projcard-title text-black">{{substr($article->title, 0, 25)}}</div>
+      <div class="projcard-subtitle">{{substr($article->subtitle, 0, 25)}}</div> 
       <div class="projcard-bar"></div>
-      <div class="projcard-description">{{substr($article->body , 0 , 250)}}</div>
-      <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="projcard-tag ">{{$article->user->name}}</a>
-      <div class="projcard-description">data inserimento: {{$article->created_at->format('d/m/y')}}</div>
-  <div class="projcard-tagbox">
-    <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="projcard-tag indexprova">>{{$article->category->name}}</a>
+       <div class="projcard-description">{{substr($article->body , 0 , 250)}}</div>
+
+  <div class="projcard-tagbox d-flex justify-content-between">
+   <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="projcard-tag indexprova">>{{$article->category->name}}</a>
+   <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="projcard-tag ">{{$article->user->name}}</a>
+
     <span class="projcard-tag">
         @foreach ($article->tags as $tag)
             #{{$tag->name}}
         @endforeach
     </span>
-    {{-- <a class="projcard-tag">Cordova</a> --}}
  
   </div>
+
+  <div class="projcard-description">data inserimento: {{$article->created_at->format('d/m/y')}}</div>
       
     </div>
   </div>
