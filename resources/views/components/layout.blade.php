@@ -10,29 +10,17 @@
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-</head>
-<body>
-    
-
-                
-
-
-               
-                    <x-nav2 />
-                    
-                <div class="body">
-                    {{$slot}}
-                    {{-- <x-footer /> --}}
-                </div>
-
-        
-    
-    
-  
-
-    
-
     {{-- fontawesome --}}
     <script src="https://kit.fontawesome.com/68b14aed80.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     
+    <x-nav2 />
+        
+    <div class="body">
+        {{$slot}}
+        {{-- <x-footer /> --}}
+    </div>
+
 </body>
 </html>
