@@ -7,19 +7,19 @@
       <div class="projcard-subtitle">{{substr($article->subtitle, 0, 25)}}</div>
       <div class="projcard-bar"></div>
       <div class="projcard-description">{{substr($article->body , 0 , 250)}}</div>
-
-      <div class="projcard-tagbox">
-        <span class="projcard-tag">
-            @foreach ($article->tags as $tag)
-                #{{$tag->name}}
-            @endforeach
-        </span>
-        <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="projcard-tag indexprova">>{{$article->category->name}}</a>
-        <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="projcard-tag ">{{$article->user->name}}</a>
-        {{-- <a class="projcard-tag">Cordova</a> --}}
-     
-
-      </div>
+      <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="projcard-tag ">{{$article->user->name}}</a>
+      <div class="projcard-description">data inserimento: {{$article->created_at->format('d/m/y')}}</div>
+  <div class="projcard-tagbox">
+    <a href="{{route('article.byCategory', ['category' => $article->category->id])}}" class="projcard-tag indexprova">>{{$article->category->name}}</a>
+    <span class="projcard-tag">
+        @foreach ($article->tags as $tag)
+            #{{$tag->name}}
+        @endforeach
+    </span>
+    {{-- <a class="projcard-tag">Cordova</a> --}}
+ 
+  </div>
+      
     </div>
   </div>
 </div>

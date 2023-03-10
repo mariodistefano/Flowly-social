@@ -102,6 +102,7 @@
 }
 .projcard-textbox * {
 	position: relative;
+	z-index: 999;
 }
 .projcard-title {
 	font-family: 'Voces', 'Open Sans', arial, sans-serif;
