@@ -11,7 +11,12 @@
                 <div class="col-10">
                   <h5 class="card-title text-center">{{$article->title}}</h5>
                   <p class="card-text text-black text-center">{{$article->subtitle}}</p>
-                  <p class="card-text text-black text-center">{{$article->category->name}}</p>
+                    @if ($article->category)
+                    <span class="col-3"><p class="text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p></span>
+                    @else
+                    <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                    @endif
+                  {{-- <p class="card-text text-black text-center">{{$article->category->name}}</p> --}}
                   <p class="card-text text-black text-center">{{$article->body}}</p>
                   <p class="card-text text-black text-center"><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}} </small></p>
                   <div class="col-12 d-flex justify-content-center">
@@ -36,7 +41,12 @@
                 <div class="col-10 col-md-6 d-none d-md-block">
                   <h5 class="card-title ">{{$article->title}}</h5>
                   <p class="card-text text-black ">{{$article->subtitle}}</p>
-                  <p class="card-text text-black ">{{$article->category->name}}</p>
+                  @if ($article->category)
+                  <span class="col-3"><p class="text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p></span>
+                  @else
+                  <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                  @endif
+                  {{-- <p class="card-text text-black ">{{$article->category->name}}</p> --}}
                   <p class="card-text text-black ">{{$article->body}}</p>
                   <p class="card-text text-black "><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}} </small></p>
                   <a href="{{route('article.index')}}" class="btnHEADER pt-1 me-3">Torna ad Articoli</a>

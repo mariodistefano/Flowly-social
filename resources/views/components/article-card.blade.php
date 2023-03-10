@@ -38,6 +38,10 @@
         </div>
         <div class="col-8 mt-5 flex-column">
           <span class="col-3"><h5 class="ps-3 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
+          {{-- Mettiamo un @if per le categorie per evitare problemi quando si modificano/elimonano --}}
+          @if ($article->category)
+              
+          @endif
           <span class="col-3"><p class="ps-3 text-secondary pe-md-4">categoria : {{$article->category->name}}</p></span>
           <p class="">
             @foreach ($article->tags as $tag)
@@ -71,9 +75,13 @@
       </div>
       <!-- <div class="articleCellular"> -->
       <span class="col-3"><h5 class="text-center pe-md-4 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
-      <span class="col-3"><p class="text-center text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p>
-        </span>
-
+      {{-- Mettiamo un @if per le categorie per evitare problemi quando si modificano/elimonano --}}
+      @if ($article->category)
+        <span class="col-3"><p class="text-center text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p></span>
+      @else
+        <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+      @endif
+      
         <p class="">
           @foreach ($article->tags as $tag)
               #{{$tag->name}}

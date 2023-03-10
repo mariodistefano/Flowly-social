@@ -47,7 +47,7 @@ class ArticleController extends Controller
             'tags' => 'required',
         ]);
         // prima era articles
-        $article = Article::create([
+        $articles = Article::create([
             'title'=>$request->title,
             'subtitle'=>$request->subtitle,
             'body'=>$request->body,
@@ -62,7 +62,7 @@ class ArticleController extends Controller
             $newTag = Tag::updateOrCreate([
                 'name' => $tag,
             ]);
-            $article->tags()->attach($newTag);
+            $articles->tags()->attach($newTag);
         }
 
         return redirect(route('homepage'))->with('message', 'Il tuo articolo è stato inoltrato al Revisore');
