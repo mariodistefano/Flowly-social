@@ -22,7 +22,8 @@
         </div>
         
         <div class="mb-3 form-check p-1">
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <label class="form-check-label text-secondary" for="exampleCheck1">Haven't an account? <a class="font-bold" href="{{route('register')}}">Register</a></label>
+          <button type="submit" class="btn ms-5 btn-primary">Submit</button>
         </div>
       </div>
     </form>

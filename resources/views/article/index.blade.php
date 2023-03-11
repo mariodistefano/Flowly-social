@@ -5,7 +5,7 @@
 
     <h1 class="text-bold p-5 text-center light">... è notte fonda e sono sveglio e voi dormite lossò... con la bolla al naso...<br> vi odio tutti...io odio il mondo!!!</h1>
 
-    <div class="scrolling-wrapper px-3 pt-1 mb-5">
+    {{-- <div class="scrolling-wrapper px-3 pt-1 mb-5"> --}}
         {{-- @foreach ($articles as $article)
            <div class="card position-relative">
                     <img class="card " src="{{Storage::url($article->img)}}" alt="immagine">
@@ -19,11 +19,13 @@
         <div class="container light py-5">
             <div class="row ">
                 @foreach ($categories as $category)
-                <x-card-scroll/>
+                    <x-card-scroll 
+                        :category="$category"
+                    />
                 @endforeach
             </div>
         </div>
-    </div>
+    {{-- </div> --}}
  
             @if ($articles->isNotEmpty())
                 @foreach ($articles as $article)

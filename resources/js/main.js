@@ -21,6 +21,8 @@ linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 const navBody = document.querySelector ('#body-div')
 
+// let navlente = document.getElementById('#navlente')
+// let navbarra = document.getElementById('#navbarra')
 /*=============== SHOW HIDDEN MENU ===============*/
 const showMenu = (toggleId, navbarId) =>{
     const toggle = document.getElementById(toggleId),
@@ -32,6 +34,9 @@ const showMenu = (toggleId, navbarId) =>{
             navbar.classList.toggle('show-menu')
             /* Rotate toggle icon */
             toggle.classList.toggle('rotate-icon')
+            // navlente.classList.toggle('d-none')
+            // navbarra.classList.toggle('d-none')
+
 
             navBody.classList.toggle('margin-body')
         })
