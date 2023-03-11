@@ -2,7 +2,10 @@
     <x-header 
         title="Tutti gli Articoli"
     />
-    <div class="scrolling-wrapper px-3 pt-1">
+
+    <h1 class="text-bold p-5 text-center light">... è notte fonda e sono sveglio e voi dormite lossò... con la bolla al naso...<br> vi odio tutti...io odio il mondo!!!</h1>
+
+    <div class="scrolling-wrapper px-3 pt-1 mb-5">
         {{-- @foreach ($articles as $article)
            <div class="card position-relative">
                     <img class="card " src="{{Storage::url($article->img)}}" alt="immagine">
@@ -13,16 +16,13 @@
            </div> 
         @endforeach --}}
 
-        @foreach ($categories as $category)
-        <div class="card position-relative">
-                 {{-- <img class="card " src="{{Storage::url($article->img)}}" alt="immagine"> --}}
-                 <img class="card " src="/public/img/default.jpg" alt="immagine">
-             <div class="posizioneCard background d-flex align-items-center pt-5 pe-4 justify-content-center z-index h-100 w-100">
-                 <h5> <a class="font-card1 text-white font-bold " href="{{route('article.byCategory', ['category' => $category->id])}}">{{$category->name}}</h5>
-             </div>
-        </div> 
-     @endforeach
-     
+        <div class="container light py-5">
+            <div class="row ">
+                @foreach ($categories as $category)
+                <x-card-scroll/>
+                @endforeach
+            </div>
+        </div>
     </div>
  
             @if ($articles->isNotEmpty())
@@ -32,11 +32,6 @@
                     />
                 @endforeach
             @endif
- 
-<div class="cerchioSF"></div>
-<div class="cerchioSF1 d-none d-md-block"></div>
-<div class="cerchioSF2 d-none d-md-block"></div>
-<div class="cerchioSF3 d-none d-md-block"></div>
-<div class="cerchioSF4 d-none d-md-block"></div>
+
     
 </x-layout>

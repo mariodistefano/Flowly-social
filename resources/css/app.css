@@ -1,7 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap';
 
-@import './style.css';
-
 @import './navbar.css';
 
 @import './article-card.css';
+
+@import './style.css';

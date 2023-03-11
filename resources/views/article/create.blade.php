@@ -24,7 +24,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Sottotitolo</label>
+                        <label class="form-label">Subtitle</label>
                         <input type="text" class="form-control" name="subtitle" value="{{old('subtitle')}}">
                     </div>
 
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Categorie</label>
+                        <label class="form-label">Category</label>
                         <select name="category" class="form-control text-capitalize" id="">
                             @foreach ($categories as $category)
                                 <option value="{{$category->id}}">{{$category->name}}</option>
@@ -45,16 +45,16 @@
                     <div class="mb-3">
                         <label for="tags" class="form-label">Tags:</label>
                         <input name="tags" id="tags" class="form-label" value="{{old('tags')}}">
-                        <span class="small fst-italic">Dividi ogni tag con una virgola</span>
+                        <span class="small fst-italic">Separate each tag with a comma</span>
                         </select>
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label">Corpo Articolo</label>
+                        <label class="form-label">Article</label>
                         <textarea name="body" id="" cols="30" rows="10" class="form-control">{{old('body')}}</textarea>
                     </div>
                 
-                    <button type="submit" class="btn btn-primary">Invia</button>
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </form>
             </div>
         </div>

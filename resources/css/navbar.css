@@ -127,6 +127,7 @@
       height: 100vh;
       padding: 2rem;
       transition: .3s;
+      z-index: 999;
     }
     .nav__logo {
       display: flex;

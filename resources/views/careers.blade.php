@@ -19,12 +19,12 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6">
-                <h2>Lavora come amministratore</h2>
-                <p>Cosa farai: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae exercitationem earum animi, fugiat at delectus cumque placeat minus a suscipit excepturi explicabo, aspernatur, quaerat numquam? Nihil minus rem blanditiis ipsa.</p>
-                <h2>Lavora come revisore</h2>
-                <p>Cosa farai:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quis natus dolorum sunt consectetur sequi numquam quo, earum facilis sint magni dolore explicabo amet ea distinctio delectus veniam deserunt. Tenetur!</p>
-                <h2>Lavora come redattore</h2>
-                <p>Cosa farai:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio fugiat omnis itaque asperiores architecto ea modi ipsam, ex sint praesentium voluptates fugit provident ut voluptatum commodi quos minus. Omnis, velit?</p>
+                <h2>Work as Administrator</h2>
+                <p>What will you do: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae exercitationem earum animi, fugiat at delectus cumque placeat minus a suscipit excepturi explicabo, aspernatur, quaerat numquam? Nihil minus rem blanditiis ipsa.</p>
+                <h2>Work as Revisor</h2>
+                <p>What will you do:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quis natus dolorum sunt consectetur sequi numquam quo, earum facilis sint magni dolore explicabo amet ea distinctio delectus veniam deserunt. Tenetur!</p>
+                <h2>Work as Redactor</h2>
+                <p>What will you do:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio fugiat omnis itaque asperiores architecto ea modi ipsam, ex sint praesentium voluptates fugit provident ut voluptatum commodi quos minus. Omnis, velit?</p>
                 
 
             </div>
@@ -33,12 +33,12 @@
                 <form method="POST" action="{{route('careers.submit')}}">
                     @csrf
                     <div class="mb-3">
-                        <label for="role" class="from-label">Per quale ruolo ti stai candidando?</label>
+                        <label for="role" class="from-label">What role you're raunning for?</label>
                       <select name="role" id="role" class="form-control">
                         <option value=""></option>
-                        <option value="admin">Amministratore</option>
-                        <option value="revisor">Revisore</option>
-                        <option value="writer">Redattore</option>
+                        <option value="admin">Administrator</option>
+                        <option value="revisor">Revisor</option>
+                        <option value="writer">Author</option>
                       </select>
                     </div>
                     <div class="mb-3">
@@ -46,11 +46,11 @@
                         <input name="email" type="email" class="form-control" id="email" value="{{old('email') ?? Auth::user()->email}}">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" for="message">Parlaci di te</label>
+                        <label class="form-label" for="message">About you</label>
                         <textarea name="message" cols="30" rows="7" class="form-control" id="message" >{{old('message')}}</textarea>
                     </div>
                     <div>
-                      <button type="submit" class="btn btn-primary">Invia candidatura</button>
+                      <button type="submit" class="btn btn-primary">Send your application</button>
                     </div>
                    
                 </form>

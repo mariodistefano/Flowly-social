@@ -32,8 +32,8 @@
                           </div>
                           <div class="col-8 mt-5 flex-column">
                             <span class="col-3"><h5 class="ps-3 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
-                            <span class="col-3"><p class="ps-3 text-secondary pe-md-4">categoria : {{$article->category->name}}</p></span>
-                            <span class="col-3"><p class="ps-3 pe-md-4">data inserimento:{{$article->created_at->format('d/m/y')}}</p></span>
+                            <span class="col-3"><p class="ps-3 text-secondary pe-md-4">category : {{$article->category->name}}</p></span>
+                            <span class="col-3"><p class="ps-3 pe-md-4">Date:{{$article->created_at->format('d/m/y')}}</p></span>
                           </div>
                         </div>
                         <div class="col-12 col-md-5  mt-md-3 me-md-4">
@@ -42,7 +42,7 @@
                             <h2> <strong>{{substr($article->title, 0, 25)}}</strong></h2>
                             <h6 class="text-secondary">{{substr($article->subtitle, 0, 25)}}</h6>
                             <p class="font-sizeS">{{substr($article->body , 0 , 50)}}</p>
-                            <div class="d-flex justify-content-end"><button class="btnArticle me-2 "><a href="{{route('article.show', compact('article'))}}" class="text-white">Dettaglio</a></button></div>
+                            <div class="d-flex justify-content-end"><button class="btnArticle me-2 "><a href="{{route('article.show', compact('article'))}}" class="text-white">Detail</a></button></div>
                           </div>
                             <!--qui  -->
                         </div>
@@ -62,7 +62,7 @@
                         <span class="col-3"><h5 class="text-center pe-md-4 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
                         <span class="col-3"><p class="text-center text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p>
                           </span>
-                        <span class="col-3"><p class="text-center pe-md-4">publicato: {{$article->created_at->format('d/m/y')}}</p></span>
+                        <span class="col-3"><p class="text-center pe-md-4">Date: {{$article->created_at->format('d/m/y')}}</p></span>
                       </div>
                     <!-- </div> -->
                         <div class="col-12 col-md-5 pt-5 mt-md-3 me-md-4">
@@ -70,7 +70,7 @@
                           <h6 class="text-secondary">{{substr($article->subtitle, 0, 25)}}</h6>
                           <p class="font-sizeS">{{substr($article->body , 0 , 150)}}</p>
                         
-                         <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-white font-bold">Dettaglio</a></button>
+                         <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-white font-bold">Detail</a></button>
                         </div>
                           <div class="col-12 col-md-3 h-100 py-md-4 me-md-3 p-0">
                             <img class="ImgCard p-3 me-2" src="{{Storage::url($article->img)}}" alt="immagine">

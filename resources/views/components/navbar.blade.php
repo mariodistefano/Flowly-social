@@ -7,14 +7,19 @@
 
       <a href="{{route('homepage')}}" class="nav__logo">
           <i class='bx bxs-heart' ></i>
-          <span class="nav__logo-name">Aulab Post</span>
+          <span class="nav__logo-name">The FooL</span>
       </a>
 
       <div class="nav__list">
 
+        <a href="{{route('article.index')}}" class="nav__link">
+          <i class='bx bx-bar-chart-square' ></i>
+          <span class="nav__name">The Facts</span>
+        </a>
+
         <a href="{{route('careers')}}" class="navlink">
           <i class='bx bx-bar-chart-square' ></i>
-          <span class="navname">Lavora con noi</span>
+          <span class="navname">Work with us</span>
         </a>
 
         @auth
@@ -35,31 +40,23 @@
         @guest
           <a href="{{route('register')}}" class="nav__link">
               <i class='bx bx-file'></i>
-              <span class="nav__name">registrati</span>
+              <span class="nav__name">Registration</span>
           </a>
           <a href="{{route('login')}}" class="nav__link">
             <i class='bx bx-file'></i>
-            <span class="nav__name">accedi</span>
+            <span class="nav__name">Sign in</span>
           </a>
 
         @else
           <a href="" class="nav__link active-link">
             <i class='bx bx-grid-alt'></i>
-            <span class="nav__name">Benvenuto {{Auth::user()->name}}</span>
+            <span class="nav__name">What's up {{Auth::user()->name}} ?</span>
           </a>    
 
           <a href="{{route('article.create')}}" class="nav__link">
               <i class='bx bx-envelope' ></i>
-              <span class="nav__name">Crea Articolo</span>
+              <span class="nav__name">Create Article</span>
           </a>
-
-          <a href="{{route('article.index')}}" class="nav__link">
-              <i class='bx bx-bar-chart-square' ></i>
-              <span class="nav__name">Articoli</span>
-          </a>
-
-         
-
 
           <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
 

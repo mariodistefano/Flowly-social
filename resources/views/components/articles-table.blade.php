@@ -2,10 +2,10 @@
     <thead class="table-dark text-center">
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Titolo</th>
-            <th scope="col">Sottotitolo</th>
-            <th scope="col">Redattore</th>
-            <th scope="col">Azioni</th>
+            <th scope="col">Title</th>
+            <th scope="col">Subtitle</th>
+            <th scope="col">Redactor</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
 
@@ -19,11 +19,11 @@
             <td>{{$article->user->name}}</td>
             <td>
                 @if (is_null($article->is_accepted))
-                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Leggi l'articolo</a>
-                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white">Accetta l'articolo</a>
-                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-info text-white">Rifiuta l'articolo</a>
+                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Read article</a>
+                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white">Accept article</a>
+                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-info text-white">Reject article</a>
                 @else
-                  <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white">Riporta in revisione</a>
+                  <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white">Return to review</a>
                 @endif
             </td>
         </tr>
