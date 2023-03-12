@@ -240,7 +240,7 @@ a{
   clear: both;
 }
 
-.btn {
+.btnshow {
   display: inline-block;
   padding: 6.6666666667px 10px;
   line-height: 1.2;
@@ -252,13 +252,13 @@ a{
   color: #fff;
 }
 
-.btn:hover, a .btn:hover, .btn.active {
+.btnshow:hover, a .btnshow:hover, .btn.active {
   background-color: #a4a4a4;
   border-color: #a4a4a4;
   text-decoration: none;
 }
 
-.btn-primary {
+.btnshow-primary {
   color: #fff;
 }
 
@@ -266,6 +266,7 @@ a{
   background-color: #9E9E9E;
   border-color: #9E9E9E;
   color: #fff;
+  border-radius: 17px;
 }
 
 .btn-secondary:hover, a .btn-secondary:hover, .btn-secondary.active {
@@ -273,11 +274,11 @@ a{
   border-color: #787878;
 }
 
-.btn:active, .btn.active {
+.btnshow:active, .btnshow.active {
   outline: 0;
 }
 
-.btn.disabled, .btn[disabled] {
+.btnshow.disabled, .btnshow[disabled] {
   pointer-events: none;
   cursor: not-allowed;
   opacity: 0.5;
@@ -285,7 +286,7 @@ a{
   box-shadow: none;
 }
 
-.btn.full {
+.btnshow.full {
   width: 100%;
 }
 
@@ -315,7 +316,7 @@ a{
   padding-left: 0;
 }
 
-.buttonshow, .btn {
+.buttonshow, .btnshow {
   cursor: pointer;
   text-align: center;
   vertical-align: middle;
@@ -323,7 +324,7 @@ a{
   -webkit-appearance: none;
 }
 
-.btn:last-child,
+.btnshow:last-child,
 input.btn {
   margin-right: 0;
 }
@@ -367,7 +368,7 @@ input.btn {
   box-shadow: 0px -10px 60px rgba(0, 0, 0, 0.25);
 }
 
-/*Important Pen Styles*/
+/*Important Styles*/
 .headershow {
   overflow: hidden;
   padding-bottom: 55%;

@@ -31,7 +31,7 @@
         </div>
         <div class="mb-3 form-check p-1">
           <label class="form-check-label text-secondary" for="exampleCheck1">Have an account? <a class="font-bold" href="{{route('login')}}">Log in</a></label>
-          <button type="submit" class="btn ms-5 btn-primary">Submit</button>
+          <button type="submit" class="btn ms-5 btn-secondary">Submit</button>
         </div>
       </div>
     </form>
