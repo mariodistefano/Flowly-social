@@ -1,10 +1,10 @@
 <x-layout>
-
+  {{-- spinner --}}
   <div class="loader"></div>
 
-  
+  {{-- error message --}}
   @if (session('message'))
-    <div class="alert alert-success text-center">
+    <div class="alert alert-info text-center">
       {{session('message')}}
     </div>
   @endif
@@ -16,17 +16,20 @@
         <h2 class="text-white text-center mt-5"> Facts of ours Lives </h2>
       </div>
       <div class="info">
+        <p href="" target="_b" class="author"></p>
         <h4><a href="#category">DESIGN</a></h4>
-            <p  href="" target="_b" class="author"></p><br>
-            By <a href="" target="_b" class="underlineTitol">4 Run Away From Home</a> on March 11, 2023
+            <p>
+              By 
+              <a href="" target="_b" class="underlineTitol">4 Run Away From Home</a> on March 11, 2023
+            </p>
             <p>...</p>
       </div>
     </div>
   </div>
 
   <x-header
-  title="Mi sono sminchiato totale ... tutta la notte davanti a sto coso...<br>ma io barcollo ma non mollo !!!!!!! xD"
-/>
+    title="Mi sono sminchiato totale ... tutta la notte davanti a sto coso...ma io barcollo ma non mollo !!!!!!! xD"
+   />
 
   {{-- articoli con scrol --}}
   {{-- <div class="scrolling-wrapper px-3 pt-1">
@@ -41,8 +44,8 @@
       @endforeach
   </div> --}}
 
-  {{-- card grandi --}}
 
+  {{-- card grandi --}}
   {{-- <div class="my-3">
     <div class="row mx-5"> --}}
         @if ($articles->isNotEmpty())
@@ -55,7 +58,8 @@
     {{-- </div>
   </div> --}}
 
-{{-- spinners --}}
+{{-- footer --}}
+<x-footer/>
 
  
 </x-layout>

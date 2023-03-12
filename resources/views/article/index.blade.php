@@ -3,7 +3,7 @@
     <x-waves/>
 
     <x-header
-    title="... è notte fonda e sono sveglio e voi dormite lossò... con la bolla al naso...<br> vi odio tutti...io odio il mondo!!!"
+      title="... è notte fonda e sono sveglio e voi dormite lossò... con la bolla al naso... vi odio tutti...io odio il mondo!!!"
     />
 
     {{-- <div class="scrolling-wrapper px-3 pt-1 mb-5"> --}}
