@@ -134,7 +134,7 @@ a{
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  height:50vw;
+  height:80vw;
   min-height:400px;
   max-height:550px;
   min-width:300px;
@@ -164,7 +164,7 @@ a{
   background:#1B2030 url(https://images.unsplash.com/photo-1571993142257-eae0b44cf0f1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ) 50% 0 no-repeat;
   background-size:100%;
   background-attachment:fixed;
-  animation: grow 360s  linear 10ms infinite;
+  animation: grow 230s  linear 10ms infinite;
   transition:all 0.4s ease-in-out;
   z-index:-2
 }

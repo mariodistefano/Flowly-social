@@ -25,8 +25,6 @@
                 <p>What will you do:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et quis natus dolorum sunt consectetur sequi numquam quo, earum facilis sint magni dolore explicabo amet ea distinctio delectus veniam deserunt. Tenetur!</p>
                 <h2>Work as Redactor</h2>
                 <p>What will you do:Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio fugiat omnis itaque asperiores architecto ea modi ipsam, ex sint praesentium voluptates fugit provident ut voluptatum commodi quos minus. Omnis, velit?</p>
-                
-
             </div>
 
             <div class="col-12 col-md-8 col-lg-6 text-secondary">

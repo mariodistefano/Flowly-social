@@ -1,6 +1,6 @@
 <x-layout>
     <x-header
-        title="Crea Articolo"
+        title="Write your Article"
     />
 
     <div class="container">
