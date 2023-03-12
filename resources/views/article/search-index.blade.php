@@ -1,4 +1,7 @@
 <x-layout>
+    
+    <x-waves/>
+
     <x-header
     title='Tutti gli articoli per: {{$query}}'
     />
@@ -26,7 +29,7 @@
 
                         <div class="card-footer text-muted d-flex justify-content-between align-content-center">
                             <a href="{{route('article.byUser' , ['user' => $article->user->id])}}">edited on {{$article->created_at->format('d/m/y')}} by {{$article->user->name}}</a>
-                            <a href="{{route('article.show' , compact('article'))}}" class="btn btn-info text-white">Read</a>
+                            <a href="{{route('article.show' , compact('article'))}}" class="btn btn-info text-white btn-radius">Read</a>
                         </div>
                     </div>
                 </div>

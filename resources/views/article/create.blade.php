@@ -1,4 +1,7 @@
 <x-layout>
+
+    <x-waves/>
+    
     <x-header
         title="Write your Article"
     />
@@ -54,7 +57,7 @@
                         <textarea name="body" id="" cols="30" rows="10" class="form-control">{{old('body')}}</textarea>
                     </div>
                 
-                    <button type="submit" class="btn btn-primary">Send</button>
+                    <button type="submit" class="btn btn-secondary">Send</button>
                 </form>
             </div>
         </div>

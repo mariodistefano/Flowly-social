@@ -1,5 +1,5 @@
 <table class="table table-striped table-hover border">
-    <thead class="table-dark text-center">
+    <thead class="table-secondary text-center">
         <tr>
             <th scope="col">#</th>
             <th scope="col">Title</th>
@@ -19,11 +19,11 @@
             <td>{{$article->user->name}}</td>
             <td>
                 @if (is_null($article->is_accepted))
-                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white">Read article</a>
-                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white">Accept article</a>
-                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-info text-white">Reject article</a>
+                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white btn-radius">Read article</a>
+                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white btn-radius">Accept article</a>
+                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-warning text-white btn-radius">Reject article</a>
                 @else
-                  <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white">Return to review</a>
+                  <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white btn-radius">Return to review</a>
                 @endif
             </td>
         </tr>

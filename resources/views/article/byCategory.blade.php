@@ -1,6 +1,11 @@
 <x-layout>
-    <x-header/>
-        {{-- title="{{$category->name}}" --}}
+
+    <x-waves/>
+
+    <x-header
+      title="{{$category->name}}"
+    />
+        
         
      @foreach ($articles as $article)
         <x-article-card

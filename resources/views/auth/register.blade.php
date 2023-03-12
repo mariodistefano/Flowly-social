@@ -1,7 +1,6 @@
 <x-layout>
-  <div>
-    <x-header/>
-  </div>
+  
+    <x-waves/>
  
   {{-- form giusto --}}
 

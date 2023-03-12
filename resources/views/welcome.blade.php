@@ -1,4 +1,7 @@
 <x-layout>
+
+  <div class="loader"></div>
+
   
   @if (session('message'))
     <div class="alert alert-success text-center">
@@ -52,5 +55,7 @@
     {{-- </div>
   </div> --}}
 
+{{-- spinners --}}
 
+ 
 </x-layout>

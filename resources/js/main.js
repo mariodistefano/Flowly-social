@@ -8,6 +8,24 @@ console.log('ciao');
 // });
 
 
+
+
+
+// spinner js
+
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+
+    loader.addEventListener("transitionend", () => {
+        loader.remove(".loader");
+    })
+})
+
+
+
+
+
 // js navbar
 /*=============== LINK ACTIVE ===============*/
 const linkColor = document.querySelectorAll('.nav__link')
@@ -45,17 +63,26 @@ const showMenu = (toggleId, navbarId) =>{
 showMenu('nav-toggle','nav')
 
 
+
+
+
+
+
 // show js
-$(window).scroll(function() {
-    let scroll = $(window).scrollTop();
-      $(".zoom-me img").css({
-          width: (100 + scroll/5)  + "%",
-          top: -(scroll/10)  + "%",
-          //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-          "-webkit-filter": "blur(" + (scroll/200) + "px)",
-          filter: "blur(" + (scroll/200) + "px)"
-      });
-  });
+// $(window).scroll(function() {
+//     let scroll = $(window).scrollTop();
+//       $(".zoom-me img").css({
+//           width: (100 + scroll/5)  + "%",
+//           top: -(scroll/10)  + "%",
+//           //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
+//           "-webkit-filter": "blur(" + (scroll/200) + "px)",
+//           filter: "blur(" + (scroll/200) + "px)"
+//       });
+//   });
   
 
-//   form js
+
+
+
+
+

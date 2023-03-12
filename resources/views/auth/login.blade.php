@@ -1,7 +1,6 @@
 <x-layout>
-  <x-header
-    title="Accedi"
-  />
+  
+  <x-waves/>
 
   {{-- form giusto --}}
   <div class="row align-items-center  justify-content-center">

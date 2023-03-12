@@ -1,5 +1,7 @@
 <x-layout>
-    <x-header/>
+    <x-header
+    title="{{$article->name}}"
+    />
         {{-- title="Dettaglio Articolo: {{$article->title}}" --}}
     
 
@@ -24,7 +26,7 @@
             <p>{{$article->body}}</p>
 
             <a href="{{route('article.index')}}" class="btnshow btnshow-primary pt-1 me-3">Torna ad Articoli</a>
-            @if (Auth::user() && Auth::user()->is_revisor)
+            @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted != 1)
                 <div class="mt-3">
                 <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btnshow btn-info text-white">Accetta l'articolo</a>
                 <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btnshow btn-info text-white">Rifiuta l'articolo</a>

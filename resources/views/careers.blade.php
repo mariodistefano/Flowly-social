@@ -1,7 +1,5 @@
 <x-layout>
-    <x-header
-        title="Lavoro con noi!"
-    />
+    <x-waves/>
 
     <div class="col-12 col-md-6">
         @if ($errors->any())
@@ -16,7 +14,7 @@
         @endif
     </div>
 
-    <div class="container">
+    <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8 col-lg-6 text-secondary">
                 <h2>Work as Administrator</h2>
@@ -48,7 +46,7 @@
                         <textarea name="message" cols="30" rows="7" class="form-control" id="message" >{{old('message')}}</textarea>
                     </div>
                     <div>
-                      <button type="submit" class="btn btn-primary">Send your application</button>
+                      <button type="submit" class="btn btn-secondary mb-5">Send your application</button>
                     </div>
                    
                 </form>

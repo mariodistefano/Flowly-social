@@ -78,7 +78,7 @@
         @else
           <a href="" class="nav__link">
             <i class="fa-regular fa-user"></i>
-            <span class="nav__name">What's up {{Auth::user()->name}} ?</span>
+            <span class="nav__name">What's up <b>{{Auth::user()->name}}</b> ?</span>
           </a>    
 
           <a href="{{route('article.create')}}" class="nav__link">

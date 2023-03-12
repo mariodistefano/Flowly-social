@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> {{$info['name']}} We have received your request</h1>
+    <h1>We have received your request</h1>
     <h4>for the role of {{$info['role']}}</h4>
     <p>sent by email {{$info['email']}}</p>
     
@@ -15,7 +15,7 @@
     <p> {{$info['message']}} </p>
 
     <form action="{{route('homepage')}}">
-        <button type="submit" class="btn btn-primary">Back to the site</button>
+        <button type="submit" class="btn btn-secondary">Back to the site</button>
     </form>
 
 </body>
