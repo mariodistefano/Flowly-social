@@ -15,7 +15,7 @@
     {{-- SNIPPED DEGLI ERRORI ????  --}}
     <div class="col-12 col-md-6">
         @if ($errors->any())
-        <div class="alert alert-danger">
+        <div class="alert alert-info">
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{$error}}</li>
