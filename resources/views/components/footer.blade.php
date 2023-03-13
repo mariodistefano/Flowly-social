@@ -1,7 +1,7 @@
 <footer>
   <div class="container-footer">
-      <div class="row riga d-flex justify-content-center px-5">
-          <div class="col-md-3 colonna informazioni ms-2 ">
+      <div class="row riga d-flex justify-content-center px-5 mx-5">
+          <div class="col-md-3 colonna informazioni ms-5 ps-1 ">
               <div class="underline"><p class="linea" id="movimento"></p></div>
               <i class="bi bi-geo-alt"></i><span class="ms-1">4 run away from home street</span><br>
               <i class="bi bi-telephone"></i> <span class="ms-1">392 602 XXXX</span><br>
@@ -11,8 +11,7 @@
               <div class="underline me-3"><p class="linea" id="movimento"></p></div>
               <a href="https://aulab.it/" rel="noopener noreferrer" target="_blank" class="indirizzo">Chi siamo</a><br>
               <a href="https://aulab.it/" rel="noopener noreferrer" target="_blank" class="indirizzo">Supporto</a><br>
-              <a href="https://aulab.it/"  rel="noopener noreferrer" target="_blank" class="indirizzo">Newsletter</a><br>
-              <a href="https://aulab.it/"  rel="noopener noreferrer" target="_blank" class="indirizzo">Link</a>
+              <a href="https://aulab.it/"  rel="noopener noreferrer" target="_blank" class="indirizzo">Newsletter</a>
           </div>
           <div class="col-md-3 colonna logofooter">
               <img class="immagine" src="logo-aulab-hackademy-horizontal.png" alt=""> {{--immagine logo--}}

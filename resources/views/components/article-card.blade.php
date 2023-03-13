@@ -12,21 +12,21 @@
           </h1>
           <div class="postcard__subtitle small">
             <p class="mb-0">
-              <i class="fas fa-calendar-alt mr-2"></i> {{$article->created_at->format('d/m/y')}} 
-              <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class=""> Da: {{$article->user->name}}
+              <i class="fas fa-calendar-alt mr-2"></i> {{$article->created_at->format('d/m/y')}} Da: 
+              <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="fs-6"> {{$article->user->name}}
               </a>
             </p>
           </div>
           <div class="postcard__bar"></div>
           <div class="postcard__preview-txt">{{substr($article->body, 0, 250)}}</div>
           <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>
+              <a href="{{route('article.byCategory', ['category' => $article->category->id])}}"> {{$article->category->name}}</a>
+            </li>
             <li class="tag__item"><i class="fas fa-tag mr-2"></i>
               @foreach ($article->tags as $tag)
                 #{{$tag->name}}
               @endforeach
-            </li>
-            <li class="tag__item"><i class="fas fa-clock mr-2"></i>
-              <a href="{{route('article.byCategory', ['category' => $article->category->id])}}"> {{$article->category->name}}</a>
             </li>
             <li class="tag__item play blue">
               <a href="{{route('article.show', compact('article'))}}">
@@ -44,21 +44,27 @@
       <div class="postcard__text t-dark">
         <h1 class="postcard__title yellow"><a href="#">{{$article->title}}</a></h1>
         <div class="postcard__subtitle small">
-          <time datetime="2020-05-25 12:00:00">
-            <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
-          </time>
+          <p class="mb-0">
+            <i class="fas fa-calendar-alt mr-2"></i> {{$article->created_at->format('d/m/y')}} Da: 
+            <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="fs-6"> {{$article->user->name}}
+            </a>
+          </p>
         </div>
         <div class="postcard__bar"></div>
         <div class="postcard__preview-txt">{{substr($article->body, 0, 250)}}</div>
         <ul class="postcard__tagbox">
+          <li class="tag__item"><i class="fas fa-clock mr-2"></i>
+            <a href="{{route('article.byCategory', ['category' => $article->category->id])}}"> {{$article->category->name}}</a>
+          </li>
           <li class="tag__item"><i class="fas fa-tag mr-2"></i>
             @foreach ($article->tags as $tag)
               #{{$tag->name}}
             @endforeach
           </li>
-          <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
-          <li class="tag__item play yellow">
-            <a href="{{route('article.show', compact('article'))}}"><i class="fas fa-play mr-2"></i>Read more</a>
+          <li class="tag__item play blue">
+            <a href="{{route('article.show', compact('article'))}}">
+              <i class="fas fa-play mr-2"></i> Read more
+            </a>
           </li>
         </ul>
       </div>

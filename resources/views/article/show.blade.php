@@ -10,7 +10,7 @@
 <div class=bodyshow>
     <header class="headershow" class="zoom-me">
         {{-- <img src="https://unsplash.it/1200/800?image=838"> --}}
-        <img src="{{Storage::url($article->img)}}" alt=""> 
+        <img class="" src="{{Storage::url($article->img)}}" alt=""> 
     </header>
     <main class="mainshow" role="main">
         <div class="containedshow">
@@ -32,10 +32,10 @@
                 <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btnshow btn-info text-white">Rifiuta l'articolo</a>
                 </div>
             @endif
-
-            {{-- <h2>Vehicula Euismod Aenean</h2> --}}
         </div>
+        
     </main>
+    <div class="vh100">hjh</div>
 </div>
 
 

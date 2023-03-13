@@ -5,7 +5,7 @@
     <div class="card l-bg-green-dark">
         <i class="fas fa-ticket-alt"></i> --}}
 
-    <div class="col-6 col-md-3">
+    <div class="col-6 col-md-2">
         <div class="card l-bg-blue-dark">
             <div class="card-statistic-3 p-4">
                 <div class="card-icon card-icon-large"><i class="fas fa-users pe-2"></i></div>
@@ -27,6 +27,3 @@
     </div>
 
 
-<div class="waveTitol">
-  <h1 class="">" Ours Facts "</h1>
-</div>

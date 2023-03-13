@@ -1,3 +1,4 @@
+/* css componenti importanti */
 :root{
   --sfondochiaro: #F5F5F5;
   --sfondoscuro: #242423;
@@ -7,7 +8,34 @@
 }
 
 .light{
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(235, 235, 239);
+}
+/* il nostro colore di sfondo card e footer */
+/* .naviconcolor{
+  background-color: #ced9e6;
+  background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.2), rgba(0, 118, 189, 0.2), transparent 50%);
+} */
+
+
+.body{
+  margin-left: 500px;
+}
+@media (max-width: 768px) {
+  .body{
+   margin-left: 0;
+   padding-left: 0;
+   margin-right: 1px;
+  }
+}
+
+@media screen and (max-width: 721px) {
+  .waves {
+    width: 300px;
+    height: 100px;
+  }
+  .sdnotshow{
+    display: none;
+  }
 }
 
 /* piccola card a scroll orrizzontale */
@@ -230,6 +258,13 @@ a{
 
 /* show css */
 
+.zoom-me {
+  overflow: hidden;
+}
+
+.zoom-me img {
+  transition: transform 0.2s ease-out;
+}
 .bodyshow {
   width: 100%;
   *zoom: 1;
@@ -401,6 +436,13 @@ input.btn {
 
 
 
+
+
+
+
+
+
+
 /* spinner css */
 .loader{
   position: fixed;
@@ -412,7 +454,7 @@ input.btn {
   justify-content: center;
   align-items: center;
   background-color: rgb(255, 255, 255);
-  transition: opacity 5s, visibility 5s;
+  transition: opacity 5s, visibility 3.5s;
 }
 
 .loader-hidden{
@@ -436,6 +478,8 @@ input.btn {
       transform: rotate(1turn)
   }
 }
+
+
 
 
 
@@ -588,3 +632,35 @@ footer{
   
 }
 
+
+
+
+/* meteo widget */
+.meteo{
+  position: absolute;
+  top: 460px;
+  right: 20px;
+  width: 250px;
+}
+.meteo2{
+  position: absolute;
+  top: 225px;
+  right: 20px;
+  width: 250px;
+}
+@media not screen and (min-width: 721px) {
+  .meteo{
+    position: static;
+    background-color: rgba(72, 70, 70, 0.487);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .meteo2{
+    position: static;
+    background-color: rgba(72, 70, 70, 0.487);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

@@ -69,16 +69,20 @@ showMenu('nav-toggle','nav')
 
 
 // show js
-// $(window).scroll(function() {
-//     let scroll = $(window).scrollTop();
-//       $(".zoom-me img").css({
-//           width: (100 + scroll/5)  + "%",
-//           top: -(scroll/10)  + "%",
-//           //Blur suggestion from @janwagner: https://codepen.io/janwagner/ in comments
-//           "-webkit-filter": "blur(" + (scroll/200) + "px)",
-//           filter: "blur(" + (scroll/200) + "px)"
-//       });
+// window.addEventListener('scroll', function() {
+//     let scroll = window.pageYOffset;
+//     let zoomImage = document.querySelector('.zoom-me img');
+//     zoomImage.style.width = (100 + scroll/5) + '%';
+//     zoomImage.style.top = -(scroll/10) + '%';
+//     zoomImage.style.webkitFilter = 'blur(' + (scroll/200) + 'px)';
+//     zoomImage.style.filter = 'blur(' + (scroll/200) + 'px)';
 //   });
+window.addEventListener('scroll', function() {
+    let scroll = window.pageYOffset;
+    let zoomImage = document.querySelector('.zoom-me img');
+    let zoom = 1 + scroll/1000;
+    zoomImage.style.transform = 'scale(' + zoom + ')';
+  });
   
 
 
