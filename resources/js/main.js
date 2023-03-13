@@ -38,6 +38,7 @@ function colorLink(){
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 const navBody = document.querySelector ('#body-div')
+const nascondiScritta = document.querySelector ('#none-scritta')
 
 // let navlente = document.getElementById('#navlente')
 // let navbarra = document.getElementById('#navbarra')
@@ -55,6 +56,7 @@ const showMenu = (toggleId, navbarId) =>{
             // navlente.classList.toggle('d-none')
             // navbarra.classList.toggle('d-none')
 
+            nascondiScritta.classList.remove('display')
 
             navBody.classList.toggle('margin-body')
         })

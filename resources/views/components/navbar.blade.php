@@ -17,7 +17,7 @@
             <i class="fa-solid fa-magnifying-glass"></i></a>
             <a href="" class="nav__link" id="navbarra">
             <form class="d-flex " method="GET" action="{{route('article.search')}}">
-              <input type="search" class=" form-control me-2 dropdown-item" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+              <input id="none-scritta" type="search" class=" form-control me-2 dropdown-item" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
             </form></a>
            {{-- <span class="nav__name">Search</span> --}}
           
