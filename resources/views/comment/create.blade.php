@@ -2,11 +2,11 @@
     @csrf
 
     <div class="mb-3">
-        <label class="form-label">Corpo Articolo</label>
+        <label class="form-label">Article</label>
         <textarea name="body" id="" cols="30" rows="10" class="form-control"></textarea>
     </div>
 
-    <button type="submit" class="btn btn-primary">Invia</button>
+    <button type="submit" class="btn btn-primary">Send</button>
 </form>
 
 {{-- @foreach ($comments as $comment)

@@ -20,7 +20,7 @@ class RevisorController extends Controller
             'is_accepted' => true,
         ]);
 
-        return redirect(route('revisor.dashboard'))->with('message', "Hai accettato l'articolo scelto");
+        return redirect(route('revisor.dashboard'))->with('message', "you have published the article");
     }
 
     public function rejectArticle(Article $article){
@@ -28,7 +28,7 @@ class RevisorController extends Controller
             'is_accepted' => false,
         ]);
 
-        return redirect(route('revisor.dashboard'))->with('message', "Hai rifiutato l'articolo scelto");
+        return redirect(route('revisor.dashboard'))->with('message', "you have rejected the article");
     }
 
     public function undoArticle(Article $article){
@@ -36,7 +36,7 @@ class RevisorController extends Controller
             'is_accepted' => NULL,
         ]);
 
-        return redirect(route('revisor.dashboard'))->with('message', "Hai riportato l'articolo scelto di nuovo in revisione");
+        return redirect(route('revisor.dashboard'))->with('message', "you have brought the article up for review");
     }
     
 }

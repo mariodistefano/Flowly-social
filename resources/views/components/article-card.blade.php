@@ -1,130 +1,168 @@
-
-<div class="projcard projcard-customcolor ms-5" style="--projcard-color: #F5AF41;">
-  <div class="projcard-innerbox">
-    <img class="projcard-img" src="https://picsum.photos/800/600?image=943" />
-    <div class="projcard-textbox">
-      <div class="projcard-title">Last Card</div>
-      <div class="projcard-subtitle">That's the last one. Have a nice day!</div>
-      <div class="projcard-bar"></div>
-      <div class="projcard-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
-      <div class="projcard-tagbox">
-        <span class="projcard-tag">iOS</span>
-        <span class="projcard-tag">Android</span>
-        <span class="projcard-tag">Cordova</span>
+ {{-- card light blue and card light yellow--}}
+<section class="light">
+  <div class="container py-3">
+    
+    <article class="postcard light blue">
+      <a class="postcard__img_link" href="#">
+        <img class="postcard__img" src="{{Storage::url($article->img)}}" alt="Image Title" />
+      </a>
+      <div class="postcard__text t-dark">
+          <h1 class="postcard__title blue">
+            <a href="{{route('article.show', compact('article'))}}">{{$article->title}}</a>
+          </h1>
+          <div class="postcard__subtitle small">
+            <p class="mb-0">
+              <i class="fas fa-calendar-alt mr-2"></i> {{$article->created_at->format('d/m/y')}} Da: 
+              <a href="{{route('article.byUser', ['user' => $article->user->id])}}" class="fs-6"> {{$article->user->name}}
+              </a>
+            </p>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">{{substr($article->body, 0, 250)}}</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>
+              <a href="{{route('article.byCategory', ['category' => $article->category->id])}}"> {{$article->category->name}}</a>
+            </li>
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>
+              @foreach ($article->tags as $tag)
+                #{{$tag->name}}
+              @endforeach
+            </li>
+            <li class="tag__item play blue">
+              <a href="{{route('article.show', compact('article'))}}">
+                <i class="fas fa-play mr-2"></i> Read more
+              </a>
+            </li>
+          </ul>
       </div>
+    </article>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+                        {{-- dark card yellow and dark card blue--}}
+
+  {{-- <section class="dark">
+    <div class="container py-4">
+
+      <article class="postcard dark blue">
+			<a class="postcard__img_link" href="#">
+				<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
+			</a>
+			<div class="postcard__text">
+				<h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
+				<div class="postcard__subtitle small">
+					<time datetime="2020-05-25 12:00:00">
+						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+					</time>
+				</div>
+				<div class="postcard__bar"></div>
+				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+				<ul class="postcard__tagbox">
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+					<li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+					<li class="tag__item play blue">
+						<a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+					</li>
+				</ul>
+			</div>
+		</article>
+  
+      <article class="postcard dark yellow">
+        <a class="postcard__img_link" href="#">
+          <img class="postcard__img" src="https://picsum.photos/501/501" alt="Image Title" />
+        </a>
+        <div class="postcard__text">
+          <h1 class="postcard__title yellow"><a href="#">Podcast Title</a></h1>
+          <div class="postcard__subtitle small">
+            <time datetime="2020-05-25 12:00:00">
+              <i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
+            </time>
+          </div>
+          <div class="postcard__bar"></div>
+          <div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+          <ul class="postcard__tagbox">
+            <li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+            <li class="tag__item"><i class="fas fa-clock mr-2"></i>55 mins.</li>
+            <li class="tag__item play yellow">
+              <a href="#"><i class="fas fa-play mr-2"></i>Play Episode</a>
+            </li>
+          </ul>
+        </div>
+      </article>
     </div>
+  </section> --}}
+
+
+
+
+
+
+
+
+
+
+
+                              {{-- card buona funzionante --}}
+
+{{-- <div class="blog-card">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-1.jpg)"></div>
+    <ul class="details">
+      <li class="author"><a href="#">John Doe</a></li>
+      <li class="date">Aug. 24, 2015</li>
+      <li class="tags">
+        <ul>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Code</a></li>
+          <li><a href="#">HTML</a></li>
+          <li><a href="#">CSS</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description">
+    <h1>Learning to Code</h1>
+    <h2>Opening a door to the future</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+    <p class="read-more">
+      <a href="#">Read More</a>
+    </p>
   </div>
 </div>
-
-
-
-<!-- card -->
-{{-- <div class="container-fluid ">
-  <div class="row  justify-content-between primacard">
-    <div class="col-12 flex-column articleCellular justify-content-center aling-items-center col-md-3">
-      <div class="col-3 cerchio m-1 m-md-3">
-      </div>
-      <!-- <div class="articleCellular"> -->
-      <span class="col-3"><h5 class="ps-3 text-bold"> <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
-      <span class="col-3"><p class="ps-3 text-secondary">categoria : {{$article->category->name}}</p></span>
-      <span class="col-3 pb-5"><p class="ps-3">data inserimento: {{$article->created_at->format('d/m/y')}}</p></span>
-    </div>
-      <!-- </div> -->
-    <div class="col-12 col-md-6 pt-3 mt-md-3 me-md-3">
-      <h3> <strong>{{substr($article->title, 0, 25)}}</strong></h3>
-      <h6 class="text-secondary">{{substr($article->subtitle, 0, 25)}}</h6>
-      <p class="font-sizeS">{{substr($article->body, 0, 150)}} ...</p>
-        <!-- <div class="articleCellular"> -->
-        <h5 class="text-semibold"> <a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5>
-        <p class="text-secondary">categoria : {{$article->category->name}}</p>
-        <p class="">data inserimento: {{$article->created_at->format('d/m/y')}}</p>
-    </div>
-
-      <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-black font-bold">Dettaglio</a></button>
-    </div>
-    <div class="col-12 col-md-3 h-100 py-md-2 p-0">
-      <img class="ImgCard p-3" src="{{Storage::url($article->img)}}" alt="immagine">
-    </div>
-  </div> 
-</div>
+<div class="blog-card alt">
+  <div class="meta">
+    <div class="photo" style="background-image: url(https://storage.googleapis.com/chydlx/codepen/blog-cards/image-2.jpg)"></div>
+    <ul class="details">
+      <li class="author"><a href="#">Jane Doe</a></li>
+      <li class="date">July. 15, 2015</li>
+      <li class="tags">
+        <ul>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Code</a></li>
+          <li><a href="#">JavaScript</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="description">
+    <h1>Mastering the Language</h1>
+    <h2>Java is not the same as JavaScript</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+    <p class="read-more">
+      <a href="#">Read More</a>
+    </p>
+  </div>
 </div> --}}
-
-<!-- article cellulare -->
-
-{{-- <div class="container-fluid my-2 mt-2 d-block d-md-none">
-  <div class="row  justify-content-between  primacard pb-4">
-      <div class="row  articleCellular justify-content-center aling-items-center ">
-        <div class="col-3 cerchio my-4 ms-2 my-md-5 ms-md-3">
-        </div>
-        <div class="col-8 mt-5 flex-column">
-          <span class="col-3"><h5 class="ps-3 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
-          {{-- Mettiamo un @if per le categorie per evitare problemi quando si modificano/elimonano --}}
-          @if ($article->category)
-              
-          @endif
-          <span class="col-3"><p class="ps-3 text-secondary pe-md-4">categoria : {{$article->category->name}}</p></span>
-          <p class="">
-            @foreach ($article->tags as $tag)
-                #{{$tag->name}}
-            @endforeach
-          </p>
-          <span class="col-3"><p class="ps-3 pe-md-4">data inserimento:{{$article->created_at->format('d/m/y')}}</p></span>
-        </div>
-      </div>
-      <div class="col-12 col-md-5  mt-md-3 me-md-4">
-        <div class="col-12 col-md-3 py-2 py-md-4 me-md-3 p-0">
-          <img class="ImgCard p-1 me-2" src="{{Storage::url($article->img)}}" alt="immagine">
-          <h2> <strong>{{substr($article->title, 0, 25)}}</strong></h2>
-          <h6 class="text-secondary">{{substr($article->subtitle, 0, 25)}}</h6>
-          <p class="font-sizeS">{{substr($article->body , 0 , 50)}}</p>
-          <div class="d-flex justify-content-end"><button class="btnArticle me-2 "><a href="{{route('article.show', compact('article'))}}" class="text-white">Dettaglio</a></button></div>
-        </div> --}}
-          <!--qui  -->
-      {{-- </div>
-  </div>  
-</div> --}}
-
-
-
-{{-- NON TOCCARE --}}
-
-{{-- <div class="container-fluid px-5 mt-5 d-none d-md-block margine-prova">
-  <div class="row sfondoCard justify-content-between  primacard ">
-    <div class="col-12 flex-column articleCellular justify-content-center aling-items-center col-md-3">
-      <div class="col-3 cerchio my-4 ms-2 my-md-5 ms-md-3">
-      </div> --}}
-      <!-- <div class="articleCellular"> -->
-<<<<<<< HEAD
-      {{-- <span class="col-3"><h5 class="text-center pe-md-4 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
-      <span class="col-3"><p class="text-center text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p>
-        </span>
-=======
-      <span class="col-3"><h5 class="text-center pe-md-4 text-bold"><a href="{{route('article.byUser', ['user' => $article->user->id])}}">{{$article->user->name}}</a></h5></span>
-      {{-- Mettiamo un @if per le categorie per evitare problemi quando si modificano/elimonano --}}
-      @if ($article->category)
-        <span class="col-3"><p class="text-center text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p></span>
-      @else
-        <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
-      @endif
-      
-        <p class="">
-          @foreach ($article->tags as $tag)
-              #{{$tag->name}}
-          @endforeach
-        </p>
->>>>>>> 891e3492a0c899eecc5dc7f215d20fe9bd215098
-      <span class="col-3"><p class="text-center pe-md-4">publicato: {{$article->created_at->format('d/m/y')}}</p></span>
-    </div> --}}
-  <!-- </div> -->
-      {{-- <div class="col-12 col-md-5 pt-5 mt-md-3 me-md-4">
-        <h2> <strong>{{substr($article->title, 0, 25)}}</strong></h2>
-        <h6 class="text-secondary">{{substr($article->subtitle, 0, 25)}}</h6>
-        <p class="font-sizeS">{{substr($article->body , 0 , 150)}}</p>
-      
-       <button class="btnArticle"><a href="{{route('article.show', compact('article'))}}" class="text-white font-bold">Dettaglio</a></button>
-      </div>
-        <div class="col-12 col-md-3 h-100 py-md-4 me-md-3 p-0">
-          <img class="ImgCard p-3 me-2" src="{{Storage::url($article->img)}}" alt="immagine">
-        </div>
-     </div> 
-  </div> --}}

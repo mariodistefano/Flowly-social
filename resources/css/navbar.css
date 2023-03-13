@@ -127,6 +127,8 @@
       height: 100vh;
       padding: 2rem;
       transition: .3s;
+      z-index: 999;
+      padding-inline: 25px;
     }
     .nav__logo {
       display: flex;
@@ -194,5 +196,9 @@
   
   #nav-index {
     z-index: 20;
+  }
+
+  .indexprova{
+    z-index: 21;
   }
   

@@ -55,7 +55,7 @@ class PublicController extends Controller
             $user->update();
 
 
-        return redirect(route('homepage'))->with('message', 'Grazie per averci Contattato!');
+        return redirect(route('homepage'))->with('message', 'Thank you contacting us');
 
     }
                    

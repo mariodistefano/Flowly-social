@@ -1,11 +1,29 @@
 console.log('ciao');
 
-const scrollingWrapper = document.querySelector('.scrolling-wrapper');
+// const scrollingWrapper = document.querySelector('.scrolling-wrapper');
 
-scrollingWrapper.addEventListener('wheel', (event) => {
-  event.preventDefault();
-  scrollingWrapper.scrollLeft += event.deltaY;
-});
+// scrollingWrapper.addEventListener('wheel', (event) => {
+//   event.preventDefault();
+//   scrollingWrapper.scrollLeft += event.deltaY;
+// });
+
+
+
+
+
+// spinner js
+
+window.addEventListener("load", () => {
+    const loader = document.querySelector(".loader");
+    loader.classList.add("loader-hidden");
+
+    loader.addEventListener("transitionend", () => {
+        loader.remove(".loader");
+    })
+})
+
+
+
 
 
 // js navbar
@@ -21,6 +39,8 @@ linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 const navBody = document.querySelector ('#body-div')
 
+// let navlente = document.getElementById('#navlente')
+// let navbarra = document.getElementById('#navbarra')
 /*=============== SHOW HIDDEN MENU ===============*/
 const showMenu = (toggleId, navbarId) =>{
     const toggle = document.getElementById(toggleId),
@@ -32,9 +52,38 @@ const showMenu = (toggleId, navbarId) =>{
             navbar.classList.toggle('show-menu')
             /* Rotate toggle icon */
             toggle.classList.toggle('rotate-icon')
+            // navlente.classList.toggle('d-none')
+            // navbarra.classList.toggle('d-none')
+
 
             navBody.classList.toggle('margin-body')
         })
     }
 }
 showMenu('nav-toggle','nav')
+
+
+
+
+
+
+
+// show js
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    $(".zoom img").css({
+    width: (100 + scroll/5)  + "%",
+    top: -(scroll/10)  + "%",
+    });
+    });
+  
+
+
+
+
+
+
+
+
+

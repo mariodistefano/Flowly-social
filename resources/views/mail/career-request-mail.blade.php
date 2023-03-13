@@ -7,11 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Abbiamo ricevuto una richiesta</h1>
-    <h4>richiesta per il ruolo di {{$info['role']}}</h4>
-    <p>ricevuta da {{$info['email']}}</p>
+    <h1>We have received your request</h1>
+    <h4>for the role of {{$info['role']}}</h4>
+    <p>sent by email {{$info['email']}}</p>
     
-    <h4>Messaggio:</h4>
+    <h4>whit the message:</h4>
     <p> {{$info['message']}} </p>
+
+    <form action="{{route('homepage')}}">
+        <button type="submit" class="btn btn-secondary">Back to the site</button>
+    </form>
+
 </body>
 </html>

@@ -6,26 +6,59 @@
       </div>
 
       <a href="{{route('homepage')}}" class="nav__logo">
-          <i class='bx bxs-heart' ></i>
-          <span class="nav__logo-name">Aulab Post</span>
+        <i class="fa-solid fa-house"></i>
+          <span class="nav__logo-name"> The FooL</span>
       </a>
 
       <div class="nav__list">
 
-        <a href="{{route('careers')}}" class="navlink">
-          <i class='bx bx-bar-chart-square' ></i>
-          <span class="navname">Lavora con noi</span>
+        
+          <a class="nav__link" id="navlente">
+            <i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="" class="nav__link" id="navbarra">
+            <form class="d-flex " method="GET" action="{{route('article.search')}}">
+              <input type="search" class=" form-control me-2 dropdown-item" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+            </form></a>
+           {{-- <span class="nav__name">Search</span> --}}
+          
+
+
+        {{-- <a href="" class="btn btn-secondary dropdown-toggle nav__link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-earth-europe"></i>
+          <div class="dropdown nav__link">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+          
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+            </ul>
+          </div>
+        </a> --}}
+
+
+
+
+
+        <a href="{{route('article.index')}}" class="nav__link">
+          <i class="fa-solid fa-earth-europe"></i>
+          <span class="nav__name">The Facts</span>
+        </a>
+
+        <a href="{{route('careers')}}" class="nav__link">
+          <i class="fa-regular fa-handshake"></i>
+          <span class="nav__name">Join us</span>
         </a>
 
         @auth
           @if (Auth::user()->is_admin)
-            <a href="{{route('admin.dashboard')}}" class="nav__link active-link">
-              <i class='bx bx-grid-alt'></i>
+            <a href="{{route('admin.dashboard')}}" class="nav__link">
+              <i class="fa-regular fa-folder-open"></i>
               <span class="nav__name">Dashboard Admin</span>
             </a>    
           @endif
           @if (Auth::user()->is_revisor)
-            <a href="{{route('revisor.dashboard')}}" class="nav__link active-link">
+            <a href="{{route('revisor.dashboard')}}" class="nav__link">  {{--active-link--}}
               <i class='bx bx-grid-alt'></i>
               <span class="nav__name">Dashboard Revisor</span>
             </a>    
@@ -34,37 +67,29 @@
         
         @guest
           <a href="{{route('register')}}" class="nav__link">
-              <i class='bx bx-file'></i>
-              <span class="nav__name">registrati</span>
+            <i class="fa-regular fa-address-card"></i>
+              <span class="nav__name">Registration</span>
           </a>
           <a href="{{route('login')}}" class="nav__link">
-            <i class='bx bx-file'></i>
-            <span class="nav__name">accedi</span>
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <span class="nav__name">Sign in</span>
           </a>
 
         @else
-          <a href="" class="nav__link active-link">
-            <i class='bx bx-grid-alt'></i>
-            <span class="nav__name">Benvenuto {{Auth::user()->name}}</span>
+          <a href="" class="nav__link">
+            <i class="fa-regular fa-user"></i>
+            <span class="nav__name">What's up <b>{{Auth::user()->name}}</b> ?</span>
           </a>    
 
           <a href="{{route('article.create')}}" class="nav__link">
-              <i class='bx bx-envelope' ></i>
-              <span class="nav__name">Crea Articolo</span>
+            <i class="fa-regular fa-pen-to-square"></i>
+              <span class="nav__name">Create Article</span>
           </a>
-
-          <a href="{{route('article.index')}}" class="nav__link">
-              <i class='bx bx-bar-chart-square' ></i>
-              <span class="nav__name">Articoli</span>
-          </a>
-
-         
-
 
           <form method="POST" id="form-logout" action="{{route('logout')}}" class="d-none"> @csrf</form>
 
           <a href="#" class="nav__link" onclick="event.preventDefault(); document.querySelector('#form-logout').submit();">
-            <i class='bx bx-cog' ></i>
+            <i class="fa-solid fa-right-from-bracket"></i>
             <span class="nav__name">Logout</span>
           </a>
             

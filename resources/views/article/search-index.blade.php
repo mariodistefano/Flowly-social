@@ -1,8 +1,10 @@
 <x-layout>
+    
+    <x-waves/>
+
     <x-header
     title='Tutti gli articoli per: {{$query}}'
     />
-
 
     <div class="container-fluid my-3">
         <div class="row justify-content-center text-center">
@@ -21,21 +23,18 @@
                             @if ($article->category)
                             <a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a>
                           @else
-                            <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
+                            <p class="small text-muted fst-italic text-capitalize">Not categorized</p>
                           @endif
                         </div>
+
                         <div class="card-footer text-muted d-flex justify-content-between align-content-center">
-                            <a href="{{route('article.byUser' , ['user' => $article->user->id])}}">Redatto il {{$article->created_at->format('d/m/y')}} da {{$article->user->name}}</a>
-                            <a href="{{route('article.show' , compact('article'))}}" class="btn btn-info text-white">Leggi</a>
+                            <a href="{{route('article.byUser' , ['user' => $article->user->id])}}">edited on {{$article->created_at->format('d/m/y')}} by {{$article->user->name}}</a>
+                            <a href="{{route('article.show' , compact('article'))}}" class="btn btn-info text-white btn-radius">Read</a>
                         </div>
                     </div>
                 </div>
             @endforeach
         </div>
     </div>
-
-
-
-
-
+    
 </x-layout>

@@ -1,6 +1,9 @@
 <x-layout>
+
+    <x-waves/>
+
     <x-header
-    title="Bentornato Amministratore"
+      title="Welcome to your Admin-Dashbord {{Auth::user()->name}}"
     />
     
     @if (session('message'))
@@ -27,7 +30,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Richieste del ruolo di Amministratore</h2>
+                <h2 class="text-secondary">Applications for the role of Administrator</h2>
                 <x-requests-table :roleRequests="$adminRequests" role="amministratore" />
             </div>
         </div>
@@ -36,7 +39,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Richieste del ruolo di Revisore</h2>
+                <h2 class="text-secondary">Applications for the role of Revisor</h2>
                 <x-requests-table :roleRequests="$revisorRequests" role="revisore" />
             </div>
         </div>
@@ -45,7 +48,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Richieste del ruolo di Redattore</h2>
+                <h2 class="text-secondary">Applications for the role of Author</h2>
                 <x-requests-table :roleRequests="$writerRequests" role="redattore" />
             </div>
         </div>
@@ -55,7 +58,7 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>I tags della piattaforma</h2>
+                <h2 class="text-secondary">tags</h2>
                 <x-metainfo-table :metaInfos="$tags" metaType="tags" />
             </div>
         </div>
@@ -64,13 +67,13 @@
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12">
-                <h2>Le categorie della piattaforma</h2>
+                <h2 class="text-secondary">Category</h2>
                 <x-metainfo-table :metaInfos="$categories" metaType="categorie" />
 
                 <form class="d-flex" action="{{route('admin.storeCategory')}}" method="POST">
                     @csrf
-                    <input type="text" name="name" class="form-control me-2" placeholder="Inserisi una nuova categoria">
-                    <button type="submit" class="btn btn-success text-white">Aggiungi</button>
+                    <input type="text" name="name" class="form-control me-2" placeholder="write here your new Category">
+                    <button type="submit" class="btn btn-info text-white btn-radius">Add</button>
                 </form>
             </div>
         </div>

@@ -65,7 +65,7 @@ class ArticleController extends Controller
             $articles->tags()->attach($newTag);
         }
 
-        return redirect(route('homepage'))->with('message', 'Il tuo articolo è stato inoltrato al Revisore');
+        return redirect(route('homepage'))->with('message', 'Your article is pushed to Revisor');
     }
 
     /**
