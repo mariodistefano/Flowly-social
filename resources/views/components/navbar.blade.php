@@ -14,11 +14,11 @@
 
         
           <a class="nav__link" id="navlente">
-            <i class="fa-solid fa-magnifying-glass"></i></a>
-            <a href="" class="nav__link" id="navbarra">
+            <i id="none-lente"class="fa-solid fa-magnifying-glass"></i>
             <form class="d-flex " method="GET" action="{{route('article.search')}}">
-              <input id="none-scritta" type="search" class=" form-control me-2 dropdown-item" name="query" placeholder="Cosa stai cercando?" aria-label="Search">
-            </form></a>
+              <input id="none-scritta" type="search" class=" form-control me-2 dropdown-item none-scritta border border-secondary name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+            </form>
+            </a>
            {{-- <span class="nav__name">Search</span> --}}
           
 

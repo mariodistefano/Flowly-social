@@ -39,6 +39,7 @@ linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 const navBody = document.querySelector ('#body-div')
 const nascondiScritta = document.querySelector ('#none-scritta')
+const nascondiLente = document.querySelector ('#none-lente')
 
 // let navlente = document.getElementById('#navlente')
 // let navbarra = document.getElementById('#navbarra')
@@ -56,8 +57,8 @@ const showMenu = (toggleId, navbarId) =>{
             // navlente.classList.toggle('d-none')
             // navbarra.classList.toggle('d-none')
 
-            nascondiScritta.classList.remove('display')
-
+            nascondiScritta.classList.toggle('none-scritta')
+            nascondiLente.classList.toggle('none-lente')
             navBody.classList.toggle('margin-body')
         })
     }
