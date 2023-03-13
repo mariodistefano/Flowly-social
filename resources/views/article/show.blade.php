@@ -31,12 +31,13 @@
                 
                 <h6 class="text-secondary">Date: {{$article->created_at->format('d/m/y')}} by: {{$article->user->name}}</h6>
                 <h6 class="text-secondary">{{$article->body}}</h6>
+                <img class="" src="{{Storage::url($article->img)}}" alt="">
 
-                <a href="{{route('article.index')}}" class="btn btn-radius btn-info pt-1 me-3"  ><-Back</a>
+                <a href="{{route('article.index')}}" class="btn btn-radius btn-info py-1 me-3"  ><-Back</a>
                 @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted != 1)
                     <div class="mt-3">
-                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-radius btn-info text-white">Accept article</a>
-                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-radius btn-info text-white">Reject article</a>
+                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-radius btn-info text-white pb-1">Accept article</a>
+                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-radius btn-info text-white pb-1">Reject article</a>
                     </div>
                 @endif
         </div>
