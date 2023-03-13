@@ -13,7 +13,7 @@
     @endif
 
     {{-- SNIPPED DEGLI ERRORI ????  --}}
-    <div class="col-12 col-md-6">
+    <div class="col-10 col-md-6">
         @if ($errors->any())
         <div class="alert alert-info">
             <ul>

@@ -7,7 +7,7 @@
         </a>
         <div class="postcard__text t-dark">
           <h2 class="postcard__title yellow">
-            <a href="#">{{$article->title}}</a>
+            <a href="{{route('article.show', compact('article'))}}">{{$article->title}}</a>
           </h2>
           <div class="postcard__subtitle small">
             <p class="mb-0">
