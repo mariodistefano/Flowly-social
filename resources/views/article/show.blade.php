@@ -1,45 +1,45 @@
 <x-layout>
-    <x-header
+    {{-- <x-header
     title="{{$article->name}}"
-    />
+    /> --}}
         {{-- title="Dettaglio Articolo: {{$article->title}}" --}}
     
 
-{{-- nuova show --}}
+{{-- show --}}
+{{-- <img src="https://unsplash.it/1200/800?image=838"> --}}
 
-<div class=bodyshow>
+{{-- <div class=bodyshow>
     <header class="headershow" class="zoom-me">
-        {{-- <img src="https://unsplash.it/1200/800?image=838"> --}}
+      
+           
+       
+</div> --}}
+
+
+    <header class="zoom">
         <img class="" src="{{Storage::url($article->img)}}" alt=""> 
     </header>
-    <main class="mainshow" role="main">
-        <div class="containedshow">
-            <h1 class="h1show text-center my-5">{{$article->title}}</h1>
-            <p>{{$article->subtitle}}</p>
-            @if ($article->category)
-                <span class="col-3"><p class="text-secondary pe-md-4"><a href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></p></span>
-            @else
-                <p class="small text-muted fst-italic text-capitalize">Non categorizzato</p>
-            @endif
-            
-            <p><small class="text-muted">Data: {{$article->created_at->format('d/m/y')}} Da: {{$article->user->name}} </small></p>
-            <p>{{$article->body}}</p>
+    <main role="main" class="mainShow">
+        <div class="contentShow">
+            <h1 class="text-center my-5 display-4"><strong>{{$article->title}}</strong></h1>
+            <h2 class="text-secondary">{{$article->subtitle}}</h2>
+                @if ($article->category)
+                    <h6 class="text-secondary pe-md-4"><a class="text-secondary" href="{{route('article.byCategory', ['category' => $article->category->id])}}">{{$article->category->name}}</a></h6>
+                @else
+                    <p class="text-warning">Not categorized</p>
+                @endif
+                
+                <h6 class="text-secondary">Date: {{$article->created_at->format('d/m/y')}} by: {{$article->user->name}}</h6>
+                <h6 class="text-secondary">{{$article->body}}</h6>
 
-            <a href="{{route('article.index')}}" class="btnshow btnshow-primary pt-1 me-3">Torna ad Articoli</a>
-            @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted != 1)
-                <div class="mt-3">
-                <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btnshow btn-info text-white">Accetta l'articolo</a>
-                <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btnshow btn-info text-white">Rifiuta l'articolo</a>
-                </div>
-            @endif
+                <a href="{{route('article.index')}}" class="btn btn-radius btn-info pt-1 me-3"  ><-Back</a>
+                @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted != 1)
+                    <div class="mt-3">
+                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-radius btn-info text-white">Accept article</a>
+                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-radius btn-info text-white">Reject article</a>
+                    </div>
+                @endif
         </div>
-        
     </main>
-    <div class="vh100">hjh</div>
-</div>
-
-
-
-
 
 </x-layout>

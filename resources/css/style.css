@@ -11,11 +11,27 @@
   background-color: rgb(235, 235, 239);
 }
 /* il nostro colore di sfondo card e footer */
+
 /* .naviconcolor{
   background-color: #ced9e6;
   background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.2), rgba(0, 118, 189, 0.2), transparent 50%);
 } */
 
+.btn-radius{
+  border-radius: 20px;
+  font-weight: bolder;
+  color: whitesmoke;
+
+}
+.btn-radius:hover{
+  color: gray;
+}
+
+.btn-secondary{
+  border-radius: 20px;
+  font-weight: bolder;
+  color: whitesmoke;
+}
 
 .body{
   margin-left: 500px;
@@ -245,195 +261,6 @@ a{
   50% { transform: scale(1.2) translateY(-400px)}
 }
 
-.btn{
-  color:#333;
-  border:2px solid;
-  border-radius:3px;
-  text-decoration:none;
-  display:inline-block;
-  padding:5px 10px;
-  font-weight:600
-}
-
-
-/* show css */
-
-.zoom-me {
-  overflow: hidden;
-}
-
-.zoom-me img {
-  transition: transform 0.2s ease-out;
-}
-.bodyshow {
-  width: 100%;
-  *zoom: 1;
-  display: block;
-}
-.bodyshow:before, body:after {
-  content: "";
-  display: table;
-}
-.bodyshow:after {
-  clear: both;
-}
-
-.btnshow {
-  display: inline-block;
-  padding: 6.6666666667px 10px;
-  line-height: 1.2;
-  font-weight: normal;
-  background-color: #BDBDBD;
-  border: 0;
-  border-radius: 6px;
-  margin-bottom: 0;
-  color: #fff;
-}
-
-.btnshow:hover, a .btnshow:hover, .btn.active {
-  background-color: #a4a4a4;
-  border-color: #a4a4a4;
-  text-decoration: none;
-}
-
-.btnshow-primary {
-  color: #fff;
-}
-
-.btn-secondary {
-  background-color: #9E9E9E;
-  border-color: #9E9E9E;
-  color: #fff;
-  border-radius: 17px;
-}
-.btn-radius {
-  border-radius: 17px;
-}
-
-.btn-secondary:hover, a .btn-secondary:hover, .btn-secondary.active {
-  background-color: #787878;
-  border-color: #787878;
-}
-
-.btnshow:active, .btnshow.active {
-  outline: 0;
-}
-
-.btnshow.disabled, .btnshow[disabled] {
-  pointer-events: none;
-  cursor: not-allowed;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  box-shadow: none;
-}
-
-.btnshow.full {
-  width: 100%;
-}
-
-.btn-skinny {
-  padding: 0.5em 1em;
-  font-size: 0.75em;
-  line-height: normal;
-}
-.btn-skinny.full {
-  width: 100%;
-}
-
-.btn-large {
-  padding: 0.75em 2em;
-  font-size: 1em;
-  line-height: normal;
-}
-.btn-large.full {
-  width: 100%;
-}
-
-.btn-block, input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].btn-block {
-  display: block;
-  width: 100%;
-  margin-right: 0;
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.buttonshow, .btnshow {
-  cursor: pointer;
-  text-align: center;
-  vertical-align: middle;
-  background-image: none;
-  /* -webkit-appearance: none; */
-}
-
-.btnshow:last-child,
-input.btn {
-  margin-right: 0;
-}
-
-.imgshow {
-  vertical-align: middle;
-  max-width: 100%;
-}
-
-/*General Styles*/
-.bodyshow {
-  color: #333;
-  font-size: 18px;
-  line-height: 24px;
-}
-
-.h1show {
-  font-size: 50px;
-  line-height: 1.125;
-}
-
-.containedshow {
-  margin: 0 auto;
-  width: 90%;
-}
-@media (min-width: 500px) {
-  .containedshow {
-    width: 80%;
-  }
-}
-@media (min-width: 600px) {
-  .containedshow {
-    width: 60%;
-  }
-}
-
-.mainshow {
-  padding: 1em 0;
-  position: relative;
-  background: #f5f5f5;
-  box-shadow: 0px -10px 60px rgba(0, 0, 0, 0.25);
-}
-
-/*Important Styles*/
-.headershow {
-  overflow: hidden;
-  padding-bottom: 55%;
-}
-@media (min-width: 600px) {
-  .headershow {
-    padding-bottom: 50%;
-  }
-}
-@media (min-width: 700px) {
-  .headershow {
-    padding-bottom: 45%;
-  }
-}
-
-.headershow img {
-  width: 100%;
-  max-width: none;
-  position: fixed;
-  top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 
 
 
@@ -635,6 +462,10 @@ footer{
 
 
 
+
+
+
+
 /* meteo widget */
 .meteo{
   position: absolute;
@@ -663,4 +494,54 @@ footer{
     justify-content: center;
     width: 100%;
   }
+}
+
+
+
+
+
+
+
+/* show css */
+
+.contentShow{
+	margin: 0 auto;
+	max-width: 90%;
+	width: 720px;
+}
+.mainShow{
+	padding: 1% 0;
+	position: relative;
+	background: rgb(235, 235, 239);
+	box-shadow: 0px -10px 60px rgba(0,0,0,0.25);
+		height: 100%;
+}
+
+.zoom{
+	overflow: hidden;
+	padding-bottom: 55%;
+}
+.zoom img{
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	max-width: 200%;
+	width: 100%;
+	transform: translateX(-50%);
+
+}
+@media (max-width: 667px) {
+	
+	.content{
+		margin: 0 auto;
+		max-width: 90%;
+		width: 100%;
+		height: 100%;
+		text-align: justify;
+	}
+	.zoom{
+		overflow: hidden;
+		padding-bottom: 75%;
+	}
+
 }

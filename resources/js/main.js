@@ -69,21 +69,18 @@ showMenu('nav-toggle','nav')
 
 
 // show js
-// window.addEventListener('scroll', function() {
-//     let scroll = window.pageYOffset;
-//     let zoomImage = document.querySelector('.zoom-me img');
-//     zoomImage.style.width = (100 + scroll/5) + '%';
-//     zoomImage.style.top = -(scroll/10) + '%';
-//     zoomImage.style.webkitFilter = 'blur(' + (scroll/200) + 'px)';
-//     zoomImage.style.filter = 'blur(' + (scroll/200) + 'px)';
-//   });
-window.addEventListener('scroll', function() {
-    let scroll = window.pageYOffset;
-    let zoomImage = document.querySelector('.zoom-me img');
-    let zoom = 1 + scroll/1000;
-    zoomImage.style.transform = 'scale(' + zoom + ')';
-  });
+
+$(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+    $(".zoom img").css({
+    width: (100 + scroll/5)  + "%",
+    top: -(scroll/10)  + "%",
+    });
+    });
   
+
+
+
 
 
 
