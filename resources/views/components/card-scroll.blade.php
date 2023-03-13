@@ -8,20 +8,22 @@
     <div class="col-6 col-md-2">
         <div class="card l-bg-blue-dark">
             <div class="card-statistic-3 p-4">
-                <div class="card-icon card-icon-large"><i class="fas fa-users pe-2"></i></div>
-                <div class="mb-4">
-                    <h6 class="mb-0 text-white text-start text-bold"> <a class="text-white" href="{{route('article.byCategory', ['category' => $category->id])}}">{{$category->name}} </a> </h6>
-                </div>
-                <div class="row align-items-center mb-2 d-flex">
-                    <div class="col-10 ">
-                        <h5 class="text-white mb-0">
-                            15
-                        </h5>
+                <a class="text-white" href="{{route('article.byCategory', ['category' => $category->id])}}">
+                    <div class="card-icon card-icon-large"><i class="fas fa-users pe-2"></i></div>
+                    <div class="mb-4">
+                        <h6 class="mb-0 text-white text-start text-bold"> {{$category->name}}</h6>
                     </div>
-                </div>
-                <div class="progress mt-1 " style="height: 8px;">
-                    <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
-                </div>
+                </a>
+                    <div class="row align-items-center mb-2 d-flex">
+                        <div class="col-10 ">
+                            <h5 class="text-white mb-0">
+                                {{count($category->articles)}}
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="progress mt-1 " style="height: 8px;">
+                        <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                    </div>
             </div>
         </div>
     </div>
