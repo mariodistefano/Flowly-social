@@ -10,7 +10,7 @@
           <form method="POST" action="{{route('login')}}" id="form" class="col-12 formRegLog col-md-5 px-4">
             @csrf
             <div class="flex-column align-items-center justify-content-center">
-              <h3 class="mt-4 text-center text-secondary">Sing In</h3>
+              <h3 class="mt-4 text-center text-secondary">Sign In</h3>
               <p class="text-center text-secondary">enter with your email</p>
             </div>
             <div class="px-md-5 p-0 pt-4">

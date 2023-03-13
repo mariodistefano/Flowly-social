@@ -229,7 +229,6 @@ a, a:hover {
   position: relative;
   color: #ffffff;
 }
-
 .postcard.dark {
   background-color: #18151f;
 }
@@ -359,10 +358,11 @@ a, a:hover {
     left: -12px !important;
     transform: rotate(4deg);
   }
-  .postcard2:nth-child(2n+1) .postcard__text::before {
+  .postcard:nth-child(2n+0) .postcard__text::before {
     right: -12px !important;
     transform: rotate(-4deg);
   }
+
 }
 @media screen and (min-width: 1024px) {
   .postcard__text {
@@ -386,23 +386,6 @@ a, a:hover {
     background: #e1e5ea;
   }
 }
-
-
-
-.postcard2 {
-  display: flex;
-  flex-direction: column;
-}
-
-.postcard2__img {
-  order: 2;
-}
-
-.postcard2__text {
-  order: 1;
-}
-
-
 
 /* COLORS */
 

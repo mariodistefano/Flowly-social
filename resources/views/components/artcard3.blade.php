@@ -39,8 +39,8 @@
   
       <article class="postcard light yellow">
         <a class="postcard__img_link" href="#">
-          <img class="postcard__img" src="{{Storage::url($article->img)}}" alt="Image Title" />
-        </a>
+            <img class="postcard__img" src="{{Storage::url($article->img)}}" alt="Image Title" />
+          </a>
         <div class="postcard__text t-dark">
           <h1 class="postcard__title yellow"><a href="#">{{$article->title}}</a></h1>
           <div class="postcard__subtitle small">
