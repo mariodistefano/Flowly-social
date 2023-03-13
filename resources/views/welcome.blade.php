@@ -26,7 +26,7 @@
   {{-- </div> --}}
 
   <x-header
-    title="Mi sono sminchiato totale ... tutta la notte davanti a sto coso...ma io barcollo ma non mollo !!!!!!! xD"
+    title="Discover the future of design, fashion, and technology with us. Get inspired by our selection of modern articles."
    />
 
      {{-- barra meteo --}}
@@ -34,7 +34,7 @@
     <div id="ww_6971ad2a075c4" v='1.3' loc='id' a='{"t":"horizontal","lang":"en","sl_lpl":1,"ids":["wl2405"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"rgba(96,189,233,0)","cl_font":"#FFFFFF","cl_cloud":"rgba(255,255,255,0.86)","cl_persp":"rgba(129,212,250,0.85)","cl_sun":"rgba(255,193,7,0.85)","cl_moon":"rgba(255,193,7,0.85)","cl_thund":"#FF5722","el_phw":3,"el_whr":3}'>Weather Data Source: <a href="https://meteolongue.com/rome_meteo_25_jours/" id="ww_6971ad2a075c4_u" target="_blank">Rome meteo 25 jours</a></div><script async src="https://app1.weatherwidget.org/js/?id=ww_6971ad2a075c4"></script>
   </div>
 
-  <h1 class="text-center fs-1">Last Fact</h1>
+  <h1 class="text-center fs-1">Last Facts</h1>
 
   {{-- articoli con scrol --}}
   {{-- <div class="scrolling-wrapper px-3 pt-1">

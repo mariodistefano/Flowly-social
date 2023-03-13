@@ -35,6 +35,7 @@
 
 .body{
   margin-left: 500px;
+  transition: 0.2s all ease-in-out;
 }
 @media (max-width: 768px) {
   .body{
@@ -544,5 +545,10 @@ footer{
 		overflow: hidden;
 		padding-bottom: 75%;
 	}
+
+}
+.focus{
+  background: linear-gradient(120deg , rgba(0,0,0,1) , rgba(0,0,0,1)) !important;
+  opacity: 0.2;
 
 }

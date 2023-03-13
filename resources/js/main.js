@@ -54,12 +54,17 @@ const showMenu = (toggleId, navbarId) =>{
             navbar.classList.toggle('show-menu')
             /* Rotate toggle icon */
             toggle.classList.toggle('rotate-icon')
+             navBody.classList.toggle('focus')
+
+           
             // navlente.classList.toggle('d-none')
             // navbarra.classList.toggle('d-none')
 
             nascondiScritta.classList.toggle('none-scritta')
             nascondiLente.classList.toggle('none-lente')
             navBody.classList.toggle('margin-body')
+         
+
         })
     }
 }
@@ -84,7 +89,9 @@ $(window).scroll(function() {
 
 
 
+// let ToggleNavBar = document.querySelector('#ToggleNavBar')
 
+//     ToggleNavBar.addEventListener('click')
 
 
 
