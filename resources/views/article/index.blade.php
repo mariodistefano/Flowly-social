@@ -44,15 +44,23 @@
       {{-- card articoli --}}
       <div class="container light py-4">
           <div class="row">
-              @if ($articles->isNotEmpty())
-                  <div class="col-12">
-                      @foreach ($articles as $article)
-                          <x-article-card
-                              :article="$article"
-                          />
-                      @endforeach
-                  </div>
-             @endif
+               @if ($articles->isNotEmpty())
+                    @foreach ($articles as $article)
+                        @if($loop->odd)
+                            <div class="col-12">
+                                <x-article-card
+                                    :article="$article"
+                                />
+                            </div>
+                        @elseif($loop->even)
+                            <div class="col-12">
+                                <x-article-card2
+                                    :article="$article"
+                                />
+                            </div>
+                        @endif
+                    @endforeach
+               @endif
           </div>
       </div>
     </div>

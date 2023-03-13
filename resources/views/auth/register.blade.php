@@ -5,7 +5,7 @@
   {{-- form giusto --}}
 
   <div class="row align-items-center  justify-content-center mt-5">
-    <form method="POST" action="{{route('register')}}" id="form" class="col-12 formRegLog col-md-5 px-4">
+    <form method="POST" action="{{route('register')}}" id="form" class="col-12 formRegLog col-md-5 px-2">
       @csrf
       <div class="flex-column align-items-center justify-content-center">
         <h4 class="mt-4 text-center pt-5 pt-md-2 text-secondary">Sing Up</h4>

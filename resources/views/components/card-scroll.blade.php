@@ -10,13 +10,13 @@
             <div class="card-statistic-3 p-4">
                 <div class="card-icon card-icon-large"><i class="fas fa-users pe-2"></i></div>
                 <div class="mb-4">
-                    <h4 class="mb-0 text-white text-start text-bold"> <a class="text-white" href="{{route('article.byCategory', ['category' => $category->id])}}">{{$category->name}} </a> </h4>
+                    <h6 class="mb-0 text-white text-start text-bold"> <a class="text-white" href="{{route('article.byCategory', ['category' => $category->id])}}">{{$category->name}} </a> </h6>
                 </div>
                 <div class="row align-items-center mb-2 d-flex">
                     <div class="col-10 ">
-                        <h3 class="text-white mb-0">
+                        <h5 class="text-white mb-0">
                             15
-                        </h3>
+                        </h5>
                     </div>
                 </div>
                 <div class="progress mt-1 " style="height: 8px;">

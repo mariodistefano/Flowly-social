@@ -45,10 +45,10 @@
 }
 
 @media screen and (max-width: 721px) {
-  .waves {
-    width: 300px;
-    height: 100px;
-  }
+    .waves {
+      width: 280px;
+      height: 100px;
+    }
   .sdnotshow{
     display: none;
   }
@@ -126,7 +126,7 @@
 
 
 
-/* header css */
+/* waves css */
 
 .waves {
 	top: 0;
@@ -175,6 +175,7 @@ a{
 }
 .header{
   position:relative;
+  top: -24px;
   overflow:hidden;
   display:flex;
   flex-wrap: wrap;
@@ -183,7 +184,7 @@ a{
   align-content: flex-start;
   height:80vw;
   min-height:400px;
-  max-height:550px;
+  max-height:600px;
   min-width:300px;
   color:#eee;
 }

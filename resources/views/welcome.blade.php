@@ -1,6 +1,5 @@
 <x-layout>
-  {{-- spinner --}}
-  <div class="loader"></div>
+ 
 
   {{-- error message --}}
   @if (session('message'))
@@ -9,7 +8,7 @@
     </div>
   @endif
 
-  <div class="container-fluid">
+  {{-- <div class="container-fluid"> --}}
     <div class="header">
       <div>
         <h1 class="text-white text-center mt-5 display-1">"The FooL"</h1>
@@ -24,7 +23,7 @@
             <p>...</p>
       </div>
     </div>
-  </div>
+  {{-- </div> --}}
 
   <x-header
     title="Mi sono sminchiato totale ... tutta la notte davanti a sto coso...ma io barcollo ma non mollo !!!!!!! xD"
@@ -57,7 +56,7 @@
         @if ($articles->isNotEmpty())
           <div class="col-12">
             @foreach ($articles as $article)
-              <x-article-card
+              <x-artcard3
                 :article="$article"
               />
             @endforeach
@@ -66,6 +65,8 @@
     </div>
   </div>
 
+{{-- spinner --}}
+<div class="loader"></div>
 {{-- footer --}}
 <x-footer/>
 
