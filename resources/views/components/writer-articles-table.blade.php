@@ -28,8 +28,9 @@
             <td>
                   <a href="{{route('article.show', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius mb-1">Read</a>
                   <a href="{{route('article.edit', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius mb-1">Update</a>
-                  <form class="d-inline" action="">
+                  <form class="d-inline" action="{{route('article.destroy', compact('article'))}}" method="post">
                     @csrf
+                    @method('delete')
                     <button type="submit" class="btn btn-colorPersonal2">Delete</button>
                   </form>
             </td>
