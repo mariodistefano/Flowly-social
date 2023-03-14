@@ -495,7 +495,9 @@ footer{
 
 
 /* show css */
-
+.altezza{
+  height: 50vh;
+}
 .contentShow{
 	margin: 0 auto;
 	max-width: 90%;

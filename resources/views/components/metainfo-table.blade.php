@@ -2,7 +2,7 @@
     <thead class="table-white text-center">
         <tr>
             <th scope="col" style="width: 5%" >#</th>
-            <th scope="col" style="width: 35%">Tag<br>name</th>
+            <th scope="col" style="width: 35%">Name</th>
             <th scope="col" style="width: 5%">N° articles</th>
             <th scope="col" style="width: 50%">Refresh</th>
             <th scope="col" style="width: 5%">Delete</th>
