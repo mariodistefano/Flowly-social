@@ -63,6 +63,12 @@
               <span class="nav__name">Dashboard Revisor</span>
             </a>    
           @endif
+          @if (Auth::user()->is_writer)
+          <a href="{{route('writer.dashboard')}}" class="nav__link">  {{--active-link--}}
+            <i class='bx bx-grid-alt'></i>
+            <span class="nav__name">Dashboard Author</span>
+          </a>    
+          @endif
         @endauth
         
         @guest

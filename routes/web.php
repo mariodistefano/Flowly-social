@@ -4,6 +4,7 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PublicController;
+use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\RevisorController;
@@ -69,6 +70,12 @@ Route::middleware('revisor')->group(function(){
     Route::get('/revisor/{article}undo', [RevisorController::class, 'undoArticle'])->name('revisor.undoArticle');
 });
 
+// rotta dashboard writer
+
+Route::middleware('writer')->group(function(){
+    Route::get('/writer/dashboard', [WriterController::class, 'dashboard'])->name('writer.dashboard');
+    Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+});
 
 
 
