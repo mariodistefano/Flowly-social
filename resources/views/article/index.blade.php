@@ -8,7 +8,7 @@
 
     <div class="container-fluid">
         <x-header
-        title="... è notte fonda e sono sveglio e voi dormite lossò... con la bolla al naso... vi odio tutti...io odio il mondo!!!"
+        title=""
       />
   
       <div class="meteo2">
