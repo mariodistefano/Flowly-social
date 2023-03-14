@@ -31,7 +31,7 @@
                   <form class="d-inline" action="{{route('article.destroy', compact('article'))}}" method="post">
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-colorPersonal2">Delete</button>
+                    <button type="submit" class="btn btn-colorPersonal2 btn-radius mb-1"> <i class="fa-solid fa-trash"></i> </button>
                   </form>
             </td>
         </tr>
