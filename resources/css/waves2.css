@@ -4,7 +4,7 @@
 .header {
   position: relative;
   text-align:center;
-  background: linear-gradient(60deg, rgba(84,58,183,1) 0%, rgb(255, 0, 55) 100%);
+  background: linear-gradient(60deg, rgb(92, 52, 255) 0%, rgb(255, 0, 21) 100%);
   color:white;
   bottom: 1.5rem;
 

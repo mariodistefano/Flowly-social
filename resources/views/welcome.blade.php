@@ -1,12 +1,7 @@
 <x-layout>
   
   
-  {{-- error message --}}
-  @if (session('message'))
-  <div class="alert alert-info text-center">
-    {{session('message')}}
-  </div>
-  @endif
+
   
   {{-- <div class="container-fluid"> --}}
     {{-- <div class="header">
@@ -58,6 +53,12 @@
       </div>
       <!--Header ends-->
       
+        {{-- error message --}}
+  @if (session('message'))
+  <div class="alert alert-info text-center">
+    {{session('message')}}
+  </div>
+  @endif
       
       
       <x-header
