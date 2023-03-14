@@ -31,7 +31,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2 class="text-secondary">Applications for Administrator</h2>
-                <x-requests-table :roleRequests="$adminRequests" role="amministratore" />
+                <x-requests-table :roleRequests="$adminRequests" role="admin" />
             </div>
         </div>
     </div>
@@ -40,7 +40,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2 class="text-secondary">Applications for Revisor</h2>
-                <x-requests-table :roleRequests="$revisorRequests" role="revisore" />
+                <x-requests-table :roleRequests="$revisorRequests" role="revisor" />
             </div>
         </div>
     </div>
@@ -49,7 +49,7 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h2 class="text-secondary">Applications for Author</h2>
-                <x-requests-table :roleRequests="$writerRequests" role="redattore" />
+                <x-requests-table :roleRequests="$writerRequests" role="author" />
             </div>
         </div>
     </div>
@@ -73,7 +73,7 @@
                     <input type="text" name="name" class="form-control me-2" placeholder="write here your new Category">
                     <button type="submit" class="btn btn-secondary text-white btn-radius">Add</button>
                 </form>
-                <x-metainfo-table :metaInfos="$categories" metaType="categorie" />
+                <x-metainfo-table :metaInfos="$categories" metaType="categories" />
             </div>
         </div>
     </div>

@@ -29,23 +29,13 @@ Route::post('/careers/submit', [PublicController::class, 'careersSubmit'])->name
 // ARTICOLI
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 // Dettaglio articolo
-Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/article/show/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 // filtro per categoria
 Route::get('/article/category/{category}' , [ArticleController::class, 'byCategory'])->name('article.byCategory');
 // filtro per user
 Route::get('/article/user{user}' , [ArticleController::class, 'byUser'])->name('article.byUser');
-// MIDDLEWARE REDATTORE
-Route::middleware('writer')->group(function(){
-    // rotta articolo
-    Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
-    // la rotta post di store salva nel database
-    Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
-});
 // rotta tnt
 Route::get('/article/search', [ArticleController::class, 'articleSearch'])->name('article.search');
-
-
-
 
 
 
@@ -71,14 +61,14 @@ Route::middleware('revisor')->group(function(){
 });
 
 // rotta dashboard writer
-
 Route::middleware('writer')->group(function(){
     Route::get('/writer/dashboard', [WriterController::class, 'dashboard'])->name('writer.dashboard');
     Route::get('/article/{article}/edit', [ArticleController::class, 'edit'])->name('article.edit');
+    Route::put('/article/{article}/update', [ArticleController::class, 'update'])->name('article.update');
+    Route::delete('/article/{article}/destroy', [ArticleController::class, 'destroy'])->name('article.destroy');
+    Route::get('/article/create', [ArticleController::class, 'create'])->name('article.create');
+    Route::post('/article/store', [ArticleController::class, 'store'])->name('article.store');
 });
-
-
-
 
 
 

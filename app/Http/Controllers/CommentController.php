@@ -44,7 +44,7 @@ class CommentController extends Controller
             'user_id'=>Auth::user()->id,
         ]);
 
-        return redirect(route('article.show'))->with('message', 'Il tuo commento è stato pubblicato');
+        return redirect(route('article.show'))->with('message', 'your comment è stato pubblicato');
     }
 
     /**

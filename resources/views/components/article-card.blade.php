@@ -18,6 +18,8 @@
             </p>
           </div>
           <div class="postcard__bar"></div>
+          {{-- TEMPO DI LETTURA --}}
+          <div class="text-muted medium">- time to read {{$article->readDuration()}} min</div>
           <div class="postcard__preview-txt">{{substr($article->body, 0, 250)}}</div>
           <ul class="postcard__tagbox">
             <li class="tag__item"><i class="fas fa-clock mr-2"></i>

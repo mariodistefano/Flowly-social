@@ -10,7 +10,7 @@
         <form method="POST" action="{{route('register')}}" id="form" class="col-12 formRegLog col-md-5 px-2">
           @csrf
           <div class="flex-column align-items-center justify-content-center">
-            <h4 class="mt-4 text-center pt-5 pt-md-2 text-secondary">Sign Up</h4>
+            <h3 class="mt-4 text-center pt-5 pt-md-2 text-secondary">Sign Up</h3>
             <p class="text-center text-secondary mt-1">create a free account with your email</p>
           </div>
           <div class="px-md-5 p-0 pt-3">

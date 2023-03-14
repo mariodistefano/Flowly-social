@@ -28,7 +28,7 @@ class CareerRequestMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Richiesta di lavoro ricevuta',
+            subject: 'Job application received',
         );
     }
 

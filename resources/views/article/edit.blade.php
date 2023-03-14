@@ -47,7 +47,7 @@
                     {{-- TAGS --}}
                     <div class="mb-3">
                         <label for="tags" class="form-label text-secondary">Tags:</label>
-                        <input name="tags" id="tags" class="form-control" value="{{$aricle->tags->implode('name', ', ')}}">
+                        <input name="tags" id="tags" class="form-control" value="{{$article->tags->implode('name', ', ')}}">
                         <span class="small fst-italic text-secondary">Separate each tag with a comma</span>
                         </select>
                     </div>

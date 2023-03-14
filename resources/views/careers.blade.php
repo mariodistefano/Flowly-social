@@ -29,7 +29,7 @@
                 <form method="POST" action="{{route('careers.submit')}}">
                     @csrf
                     <div class="mb-3">
-                        <label for="role" class="from-label">What role you're raunning for?</label>
+                        <label for="role" class="from-label">What role you're running for?</label>
                       <select name="role" id="role" class="form-control ">
                         <option value=""></option>
                         <option value="admin">Administrator</option>

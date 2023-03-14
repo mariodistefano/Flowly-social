@@ -1,10 +1,10 @@
 <table class="table table-striped table-hover border">
     <thead class="table-secondary text-center">
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Email</th>
-            <th scope="col">Action</th>
+            <th scope="col" style="width: 5%">#</th>
+            <th scope="col" style="width: 38%" >Name</th>
+            <th scope="col" style="width: 40%">Email</th>
+            <th scope="col" style="width: 17%">Action</th>
         </tr>
     </thead>
 
@@ -12,19 +12,19 @@
 
         @foreach($roleRequests as $user)
         <tr>
-            <th scope="row"> {{$user->id}} </th>
-            <td> {{$user->name}} </td>
-            <td> {{$user->email}} </td>
-            <td>
+            <th class="text-center" scope="row"> {{$user->id}} </th>
+            <td class="text-center">{{$user->name}} </td>
+            <td class="text-center">{{substr($user->email, 0 , 15)}} </td>
+            <td class="text-center">
                 @switch($role)
-                    @case('amministratore')
-                        <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-colorPersonal">Activate {{$role}}</a>
+                    @case('admin')
+                        <a href="{{route('admin.setAdmin', compact('user'))}}" class="btn btn-colorPersonal btn-radius">Do {{$role}}</a>
                         @break
-                    @case('revisore')
-                        <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-colorPersonal">Activate {{$role}}</a>
+                    @case('revisor')
+                        <a href="{{route('admin.setRevisor', compact('user'))}}" class="btn btn-colorPersonal btn-radius">Do {{$role}}</a>
                         @break
-                    @case('redattore')
-                        <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-colorPersonal">Activate {{$role}}</a>
+                    @case('author')
+                        <a href="{{route('admin.setWriter', compact('user'))}}" class="btn btn-colorPersonal btn-radius">Do {{$role}}</a>
                         @break
                     @default
                 @endswitch
