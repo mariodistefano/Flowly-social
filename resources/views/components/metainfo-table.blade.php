@@ -2,10 +2,10 @@
     <thead class="table-white text-center">
         <tr>
             <th scope="col" style="width: 5%" >#</th>
-            <th scope="col" style="width: 20%">Tag<br>name</th>
+            <th scope="col" style="width: 35%">Tag<br>name</th>
             <th scope="col" style="width: 5%">N° articles</th>
             <th scope="col" style="width: 50%">Refresh</th>
-            <th scope="col" style="width: 15%">Delete</th>
+            <th scope="col" style="width: 5%">Delete</th>
         </tr>
     </thead>
 
@@ -14,7 +14,7 @@
         @foreach($metaInfos as $metaInfo)
         <tr class="text-center">
             <th scope="row">{{$metaInfo->id}}</th>
-            <td>>{{$metaInfo->name}}</td>
+            <td>{{$metaInfo->name}}</td>
             <td>{{count($metaInfo->articles)}}</td>
 
            @if ($metaType == "tags")
@@ -23,7 +23,7 @@
                         @csrf
                         @method('put')
                         <input type="text" name="name" placeholder="tag's new name" class="form-control w-50 d-inline">
-                        <button type="submit" class="btn btn-colorPersonal text-white btn-radius">Refresh</button>
+                        <button type="submit" class="btn btn-colorPersonal text-white btn-radius">Up</button>
                     </form>
                 </td>
 
@@ -31,7 +31,9 @@
                     <form action="{{route('admin.deleteTag', ['tag'=> $metaInfo])}}" method="POST">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-colorPersonal2 text-white btn-radius">Delete</button>
+                        <button type="submit" class="btn btn-colorPersonal2 text-white btn-radius">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
                     </form>
                 </td>
             @else
@@ -40,7 +42,7 @@
                         @csrf
                         @method('put')
                         <input type="text" name="name" placeholder="Category's new name" class="form-control w-50 d-inline">
-                        <button type="submit" class="btn btn-colorPersonal text-white btn-radius">Refresh</button>
+                        <button type="submit" class="btn btn-colorPersonal text-white btn-radius">Up</button>
                     </form>
                 </td>
                 
@@ -48,7 +50,9 @@
                     <form action="{{route('admin.deleteCategory', ['category' => $metaInfo])}}" method="POST">
                         @csrf
                         @method('delete')
-                        <button type="submit" class="btn btn-colorPersonal2 text-white btn-radius">Delete</button>
+                        <button type="submit" class="btn btn-colorPersonal2 text-white btn-radius">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
                     </form>
                 </td> 
             @endif    
