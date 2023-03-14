@@ -105,7 +105,6 @@
       column-gap: 20px; 
     }
   }
-  
   /* For medium devices */
   @media screen and (min-width: 576px) {
     .nav__list {
@@ -127,7 +126,7 @@
       height: 100vh;
       padding: 2rem;
       transition: .3s;
-      z-index: 9999;
+      /* z-index: 99; */
       padding-inline: 25px;
     }
     .nav__logo {
@@ -194,12 +193,9 @@
     }
   }
   
-  #nav-index {
-    z-index: 20;
-  }
 
   .indexprova{
-    z-index: 21;
+    z-index: 999;
   }
   
   .none-scritta {
@@ -211,3 +207,6 @@
     display: none;
   }
   
+  .nav {
+    z-index: 99 !important;
+  }
