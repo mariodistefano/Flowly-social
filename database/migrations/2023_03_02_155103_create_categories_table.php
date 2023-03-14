@@ -19,7 +19,7 @@ return new class extends Migration
         });
 
         $categories = [
-            'Sport', 'Tech', 'Food&Drink', 'Viaggi', 'Natura', 'Benessere', 'Moda', 'Giardinaggio'         
+            'Sport', 'News', 'Film-Music', 'Anime', 'Videogames', 'Tech', 'Food-Drink', 'Books', 'Trips', 'Fashion',        
         ];
 
         foreach ($categories as $category) {

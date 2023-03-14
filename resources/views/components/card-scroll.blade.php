@@ -11,13 +11,13 @@
                 <a class="text-white" href="{{route('article.byCategory', ['category' => $category->id])}}">
                     <div class="card-icon card-icon-large"><i class="fas fa-users pe-2"></i></div>
                     <div class="mb-4">
-                        <h6 class="mb-0 text-white text-start text-bold"> {{$category->name}}</h6>
+                        <h5 class="mb-0 text-white text-start text-bold"> {{$category->name}}</h5>
                     </div>
                 </a>
                     <div class="row align-items-center mb-2 d-flex">
                         <div class="col-10 ">
                             <h5 class="text-white mb-0">
-                                {{count($category->articles)}}
+                                {{count($category->articles)}} articles
                             </h5>
                         </div>
                     </div>
