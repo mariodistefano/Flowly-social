@@ -1,8 +1,4 @@
 <x-layout>
-    {{-- <x-header
-    title="{{$article->name}}"
-    /> --}}
-        {{-- title="Dettaglio Articolo: {{$article->title}}" --}}
     
 
 {{-- show --}}
@@ -33,14 +29,16 @@
                 <h6 class="text-secondary">{{$article->body}}</h6>
                 {{-- <img style="width: 300px; height:300px" class="my-5" src="{{Storage::url($article->img)}}" alt=""> --}}
 
-                <a href="{{route('article.index')}}" class="btn btn-radius btn-info py-1 me-3"  ><-Back</a>
+                <a href="{{route('article.index')}}" class="btn btn-radius py-1 me-3 btn-secondary"  ><-Back</a>
                 @if (Auth::user() && Auth::user()->is_revisor && $article->is_accepted != 1)
                     <div class="mt-3">
-                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-radius btn-info text-white pb-1">Accept article</a>
-                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-radius btn-info text-white pb-1">Reject article</a>
+                    <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-radius text-white pb-1 btn-colorPersonal">Accept article</a>
+                    <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-radius  text-white pb-1 btn-colorPersonal2">Reject article</a>
                     </div>
                 @endif
         </div>
     </main>
+
+    {{-- <x-footer/> --}}
 
 </x-layout>

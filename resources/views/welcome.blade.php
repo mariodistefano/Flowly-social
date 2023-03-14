@@ -16,7 +16,7 @@
       </div>
       <div class="info">
         <p href="" target="_b" class="author"></p>
-        <h4><a href="#category">DESIGN by</a></h4>
+        <h6><a href="#category">DESIGN by</a></h6>
             <p class="mx-0">
               <a href="" target="_b" class="underlineTitol">4 RunAway From Home</a> on March 11, 2023
             </p>

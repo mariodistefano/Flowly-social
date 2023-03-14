@@ -19,11 +19,11 @@
             <td>{{$article->user->name}}</td>
             <td>
                 @if (is_null($article->is_accepted))
-                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-info text-white btn-radius">Read article</a>
-                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-info text-white btn-radius">Accept article</a>
-                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-warning text-white btn-radius">Reject article</a>
+                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius mb-1">Read</a>
+                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius mb-1">Accept</a>
+                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-colorPersonal2 text-white btn-radius">Reject</a>
                 @else
-                  <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-info text-white btn-radius">Return to review</a>
+                  <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius"><-review</a>
                 @endif
             </td>
         </tr>
