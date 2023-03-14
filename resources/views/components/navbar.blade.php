@@ -13,15 +13,16 @@
       <div class="nav__list">
 
         
-          <a class="nav__link" id="navlente">
+          {{-- <a class="nav__link" id="navlente">
             <i id="none-lente"class="fa-solid fa-magnifying-glass"></i>
             <form class="d-flex " method="GET" action="{{route('article.search')}}">
               <input id="none-scritta" type="search" class=" form-control me-2 dropdown-item none-scritta border border-secondary" name="query" placeholder="search" aria-label="Search">
             </form>
-            </a>
-           {{-- <span class="nav__name">Search</span> --}}
-          
+            </a> --}}
 
+
+
+           {{-- <span class="nav__name">Search</span> --}}
 
         {{-- <a href="" class="btn btn-secondary dropdown-toggle nav__link" role="button" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-solid fa-earth-europe"></i>
@@ -50,7 +51,7 @@
           <span class="nav__name">Join us</span>
         </a>
 
-        @auth
+        {{-- @auth
           @if (Auth::user()->is_admin)
             <a href="{{route('admin.dashboard')}}" class="nav__link">
               <i class="fa-regular fa-folder-open"></i>
@@ -58,18 +59,18 @@
             </a>    
           @endif
           @if (Auth::user()->is_revisor)
-            <a href="{{route('revisor.dashboard')}}" class="nav__link">  {{--active-link--}}
+            <a href="{{route('revisor.dashboard')}}" class="nav__link">
               <i class='bx bx-grid-alt'></i>
               <span class="nav__name">Dashboard Revisor</span>
             </a>    
           @endif
           @if (Auth::user()->is_writer)
-          <a href="{{route('writer.dashboard')}}" class="nav__link">  {{--active-link--}}
+          <a href="{{route('writer.dashboard')}}" class="nav__link">  
             <i class='bx bx-grid-alt'></i>
             <span class="nav__name">Dashboard Author</span>
           </a>    
           @endif
-        @endauth
+        @endauth --}}
         
         @guest
           <a href="{{route('register')}}" class="nav__link">
