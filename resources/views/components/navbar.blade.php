@@ -16,7 +16,7 @@
           <a class="nav__link" id="navlente">
             <i id="none-lente"class="fa-solid fa-magnifying-glass"></i>
             <form class="d-flex " method="GET" action="{{route('article.search')}}">
-              <input id="none-scritta" type="search" class=" form-control me-2 dropdown-item none-scritta border border-secondary name="query" placeholder="Cosa stai cercando?" aria-label="Search">
+              <input id="none-scritta" type="search" class=" form-control me-2 dropdown-item none-scritta border border-secondary" name="query" placeholder="search" aria-label="Search">
             </form>
             </a>
            {{-- <span class="nav__name">Search</span> --}}
@@ -76,7 +76,7 @@
           </a>
 
         @else
-          <a href="" class="nav__link">
+          <a href="{{route('homepage')}}" class="nav__link">
             <i class="fa-regular fa-user"></i>
             <span class="nav__name">What's up <b>{{Auth::user()->name}}</b> ?</span>
           </a>    

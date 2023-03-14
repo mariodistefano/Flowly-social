@@ -12,4 +12,7 @@
           :article="$article"
       />
     @endforeach
+    
+  <x-footer/>
+
 </x-layout>

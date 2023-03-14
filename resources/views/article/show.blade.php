@@ -39,6 +39,6 @@
         </div>
     </main>
 
-    {{-- <x-footer/> --}}
+    <x-footer/>
 
 </x-layout>
