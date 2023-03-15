@@ -185,10 +185,10 @@
 
 
 
-
+/* !!!!!!!!!!!!!! importante font del sito */
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 /* card */
 
-@import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 /* This pen */
 body {
   font-family: "Baloo 2", cursive;
@@ -318,6 +318,15 @@ a, a:hover {
   width: 100px;
 }
 
+@media screen and (max-width: 768px) {
+.postcard {
+  z-index: 0;
+}
+section{
+  z-index: 0;
+}
+}
+
 @media screen and (min-width: 769px) {
   .postcard {
     flex-wrap: inherit;
@@ -363,8 +372,9 @@ a, a:hover {
     right: -12px !important;
     transform: rotate(-4deg);
   }
-
 }
+
+
 @media screen and (min-width: 1024px) {
   .postcard__text {
     padding: 2rem 3.5rem;
@@ -387,6 +397,14 @@ a, a:hover {
     background: #e1e5ea;
   }
 }
+
+
+
+
+
+
+
+
 
 /* COLORS */
 

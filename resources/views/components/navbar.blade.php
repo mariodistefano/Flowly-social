@@ -83,7 +83,7 @@
           </a>
 
         @else
-          <a href="{{route('homepage')}}" class="nav__link">
+          <a href="{{route('homepage')}}" class="nav__link omino">
             <i class="fa-regular fa-user"></i>
             <span class="nav__name">What's up <b>{{Auth::user()->name}}</b> ?</span>
           </a>    

@@ -106,7 +106,7 @@
 }
 
 .l-bg-cyan {
-  background: linear-gradient(135deg, #289cf5, #84c0ec) !important;
+  background: linear-gradient(135deg, #289cf5, rgb(132, 192, 236)) !important;
   color: #fff;
 }
 
@@ -314,7 +314,7 @@ footer{
   background-image: linear-gradient(-30deg, rgba(189, 187, 73, 0.2), rgba(0, 118, 189, 0.2), transparent 50%);
   padding: 30px 0 8px;
   border-top-right-radius: 75px ;
-  
+
   /* font-size:18px; */
   /* line-height:20px; */
 }
@@ -326,22 +326,26 @@ footer{
   /* flex-wrap: wrap; */
   align-items: flex-start;
   justify-content: space-between;
+  z-index: 999;
 } 
 
 .colonna{
 
   padding: 1px;
   color: gray;
+  z-index: 999;
 }
 /* prima sezione */
 .icona{
   height: 50px;
   width: 35px;
+  z-index: 999;
 }
 
 .indirizzo{
   text-decoration: none;
   color: gray;
+  z-index: 999;
 }
 
 .indirizzo:hover{
@@ -351,6 +355,7 @@ footer{
 .hackademy{
   color: gray;
   text-decoration: none;
+  z-index: 999;
 }
 
 .hackademy:hover{
@@ -361,10 +366,12 @@ footer{
   position: relative;
   right: 35%;
   width: 98%;
+  z-index: 999;
 }
 /* seconda sezione e animazioni */
 .informazioni{
   text-align: center;
+  z-index: 999;
 }
 
 .underline{
@@ -374,12 +381,14 @@ footer{
   border-radius: 3px;
   margin-left: 0%;
   margin-bottom: 5%;
+  z-index: 999;
 }
 
 #movimento{
   animation-name: moving;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  z-index: 999;
 }
 @keyframes moving {
   0%{
@@ -401,6 +410,7 @@ footer{
   background: #efeeee;
   border-radius: 3px;
   margin-left: 40%;
+  z-index: 999;
   
 }
 
@@ -408,12 +418,14 @@ footer{
   color: gray;
   font-size: medium;
   direction:rtl ;
+  z-index: 999;
 }
 
 .immagine{
   width: 90%;
   display: flex;
   justify-content: center;
+  z-index: 999;
   
 }
 
@@ -427,6 +439,7 @@ footer{
 
 .network:visited{
   color:white
+
 }
 
 /* media queries */
@@ -434,18 +447,22 @@ footer{
   .posizione{
       position: relative;
       right: 23%;
+      z-index: 999;
   }
 
   .logofooter{
       display: none;
+      z-index: 999;
   }
   .social {
       display: flex;
       justify-content: center;
       margin: auto;
+      z-index: 999;
   }
   .profilo {
       display: none;
+      z-index: 999;
 
   }
   
@@ -544,3 +561,88 @@ footer{
   opacity: 0.2;
 
 }
+
+
+
+
+
+
+
+
+
+
+/* searchbar */
+/*** COLORS ***/
+/*** DEMO ***/
+
+body {
+  background: rgba(86, 85, 86, 0.912);
+  font: 13px;
+  color: rgb(143, 185, 214)
+}
+
+.cntr {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.cntr .cntr-innr {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+/*** STYLES ***/
+.search {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid rgba(86, 85, 86, 0.912);
+  border-radius: 25px;
+  transition: all 200ms ease;
+  cursor: text;
+}
+.search:after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 20px;
+  right: -5px;
+  top: 21px;
+  background: rgba(86, 85, 86, 0.912);
+  border-radius: 3px;
+  transform: rotate(-45deg);
+  transition: all 200ms ease;
+}
+.search.active,
+.search:hover {
+  width: 700px;
+  margin-right: 0px;
+}
+@media (max-width: 500px){
+  .search.active,
+  .search:hover {
+    width: 300px;
+    margin-right: 0px;
+    
+  }
+}
+
+.search.active:after,
+.search:hover:after {
+  height: 0px;
+}
+.search input {
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  font-family: Helvetica;
+  font-size: 15px;
+  color: inherit;
+  background: transparent;
+  outline-width: 0px;
+}
+

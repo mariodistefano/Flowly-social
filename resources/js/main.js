@@ -37,7 +37,7 @@ function colorLink(){
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
-// const navBody = document.querySelector ('#body-div')
+const navBody = document.querySelector ('#body-div')
 // const nascondiScritta = document.querySelector ('#none-scritta')
 // const nascondiLente = document.querySelector ('#none-lente')
 
@@ -54,7 +54,7 @@ const showMenu = (toggleId, navbarId) =>{
             navbar.classList.toggle('show-menu')
             /* Rotate toggle icon */
             toggle.classList.toggle('rotate-icon')
-            //  navBody.classList.toggle('focus')
+             navBody.classList.toggle('focus')
 
            
             // navlente.classList.toggle('d-none')
@@ -96,4 +96,109 @@ $(window).scroll(function() {
 
 
 
+// card scrolling
 
+// let scrollTimer = null;
+// const delay = 2000; // Tempo di attesa in millisecondi
+// let autoScroll = true;
+
+// function startAutoScroll() {
+//   scrollTimer = setInterval(function() {
+//     const container = document.querySelector('.card-container');
+//     container.scrollLeft += 1;
+
+//     if (container.scrollLeft >= (container.scrollWidth - container.offsetWidth)) {
+//       // Quando raggiungi la fine delle card, riposiziona alla prima card
+//       container.scrollLeft = 0;
+//     }
+//   }, 10);
+// }
+
+// function stopAutoScroll() {
+//   clearInterval(scrollTimer);
+// }
+
+// const container = document.querySelector('.card-container');
+// container.addEventListener('mouseover', stopAutoScroll);
+// container.addEventListener('mouseout', function() {
+//   if (autoScroll) {
+//     startAutoScroll();
+//   }
+// });
+
+// container.addEventListener('scroll', function() {
+//   // Ferma lo scorrimento automatico quando l'utente scorre manualmente
+//   autoScroll = false;
+// });
+
+// startAutoScroll();
+
+
+let scrollTimer = null;
+const delay = 2000; // Tempo di attesa in millisecondi
+let autoScroll = true;
+let scrollDirection = 'right'; // Direzione di scorrimento
+
+function startAutoScroll() {
+  scrollTimer = setInterval(function() {
+    const container = document.querySelector('.card-container');
+    if (scrollDirection === 'right') {
+      container.scrollLeft += 1;
+    } else {
+      container.scrollLeft -= 1;
+    }
+    
+    if (container.scrollLeft >= (container.scrollWidth - container.offsetWidth)) {
+      // Quando raggiungi la fine delle card in una direzione, inverti la direzione di scorrimento
+      scrollDirection = 'left';
+    } else if (container.scrollLeft === 0) {
+      // Quando raggiungi la fine delle card in un'altra direzione, inverti la direzione di scorrimento
+      scrollDirection = 'right';
+    }
+  }, 10);
+}
+
+function stopAutoScroll() {
+  clearInterval(scrollTimer);
+}
+
+const container = document.querySelector('.card-container');
+container.addEventListener('mouseover', stopAutoScroll);
+container.addEventListener('mouseout', function() {
+  if (autoScroll) {
+    startAutoScroll();
+  }
+});
+
+container.addEventListener('scroll', function() {
+  // Ferma lo scorrimento automatico quando l'utente scorre manualmente
+  autoScroll = false;
+});
+
+startAutoScroll();
+
+
+
+
+
+
+// searchbar
+$("#inpt_search").on('focus', function () {
+	$(this).parent('label').addClass('active');
+});
+
+$("#inpt_search").on('blur', function () {
+	if($(this).val().length == 0)
+		$(this).parent('label').removeClass('active');
+});
+
+
+// fa sparire l'omino
+$(document).ready(function() {
+    // Verifica se la pagina è visualizzata in modalità cellulare
+    if ($(window).width() < 768) {
+      // Se la pagina è in modalità cellulare, aggiungi la classe "d-none" all'elemento
+      $('.omino').addClass('d-none');
+    }
+  });
+  
