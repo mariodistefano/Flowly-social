@@ -77,9 +77,6 @@
       transition: .4s;
       z-index: 99;
     }
-    .omino {
-      display: none;
-    }
   }
   
   .nav__link {

@@ -20,19 +20,19 @@
                 @if (Auth::user()->is_admin)
                     <a href="{{route('admin.dashboard')}}" class="nav__link ">
                         <i class="fa-regular fa-folder-open"></i>
-                        <span class="nav__nam ms-1 me-2">Admin</span>
+                        <span class="nav__name ms-1 me-2">Admin</span>
                     </a>    
                 @endif
                 @if (Auth::user()->is_revisor)
                     <a href="{{route('revisor.dashboard')}}" class="nav__link ">
                         <i class='bx bx-grid-alt'></i>
-                        <span class="nav__nam ms-1 me-2 ">Revisor</span>
+                        <span class="nav__name ms-1 me-2 ">Revisor</span>
                     </a>    
                 @endif
                 @if (Auth::user()->is_writer)
                     <a href="{{route('writer.dashboard')}}" class="nav__link ">
                         <i class='bx bx-grid-alt'></i>
-                        <span class="nav__nam ms-1 me-2">Author</span>
+                        <span class="nav__name ms-1 me-2">Author</span>
                     </a>    
                 @endif
             @endauth
