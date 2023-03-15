@@ -8,8 +8,8 @@
                     <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
             </div>
-
-        </div>
+                
+        </div>        
     </div>
 </div> --}}
 
@@ -18,22 +18,22 @@
         <div class="col-12 d-flex justify-content-around">
             @auth
                 @if (Auth::user()->is_admin)
-                    <a href="{{route('admin.dashboard')}}" class="navlink ">
+                    <a href="{{route('admin.dashboard')}}" class="nav__link ">
                         <i class="fa-regular fa-folder-open"></i>
-                        <span class="navnam ms-1 me-2">Admin</span>
-                    </a>
+                        <span class="nav__name ms-1 me-2">Admin</span>
+                    </a>    
                 @endif
                 @if (Auth::user()->is_revisor)
-                    <a href="{{route('revisor.dashboard')}}" class="navlink ">
+                    <a href="{{route('revisor.dashboard')}}" class="nav__link ">
                         <i class='bx bx-grid-alt'></i>
-                        <span class="navnam ms-1 me-2 ">Revisor</span>
-                    </a>
+                        <span class="nav__name ms-1 me-2 ">Revisor</span>
+                    </a>    
                 @endif
                 @if (Auth::user()->is_writer)
-                    <a href="{{route('writer.dashboard')}}" class="navlink ">
+                    <a href="{{route('writer.dashboard')}}" class="nav__link ">
                         <i class='bx bx-grid-alt'></i>
-                        <span class="navnam ms-1 me-2">Author</span>
-                    </a>
+                        <span class="nav__name ms-1 me-2">Author</span>
+                    </a>    
                 @endif
             @endauth
         </div>
