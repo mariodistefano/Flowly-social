@@ -137,6 +137,7 @@
   margin: 250px 10vw;
   max-width: 60vw;
   background-color: transparent;
+  text-shadow: 1px 1px 2px #4f4e4edc;
 }
 .underlineTitol {
 text-decoration: underline;
@@ -470,21 +471,27 @@ footer{
   top: 225px;
   right: 20px;
   width: 250px;
+  background-color: rgba(72, 70, 70, 0);
+  text-shadow: 1px 1px 2px #4f4e4edc;
 }
 @media not screen and (min-width: 721px) {
   .meteo{
     position: static;
-    background-color: rgba(72, 70, 70, 0.487);
+    /* background-color: rgba(72, 70, 70, 0.487); */
+    background-color: rgba(72, 70, 70, 0);
+    text-shadow: 1px 1px 2px #4f4e4edc;
+
     display: flex;
     justify-content: center;
     width: 100%;
   }
   .meteo2{
     position: static;
-    background-color: rgba(72, 70, 70, 0.487);
+    background-color: rgba(72, 70, 70, 0);
     display: flex;
     justify-content: center;
     width: 100%;
+    text-shadow: 1px 1px 2px #4f4e4edc;
   }
 }
 

@@ -23,7 +23,7 @@
     {{-- titolo --}}
     <div class="container-fluid">
         <x-header
-        title="Articles"
+        title="Discover the future of design, fashion, and technology with us. Get inspired by our selection of modern articles."
       />
         
       {{-- sottotitolo x scroll --}}

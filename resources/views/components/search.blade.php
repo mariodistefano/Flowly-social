@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid mb-5">
     <div class="row justify-content-center align-items-center">
         <div class="col-12 col-md-8 col-lg-6">
             {{-- <div class="mb-3">
