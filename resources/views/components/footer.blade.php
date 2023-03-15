@@ -17,7 +17,7 @@
               <img class="immagine" src="logo-aulab-hackademy-horizontal.png" alt=""> {{--immagine logo--}}
           </div>
            <div class="col-6 col-md-2 colonna social justify-content-start">
-              <h2 class="profilo">The FooL</h2>
+              <h2 class="profilo">Flowly</h2>
               <a href="https://www.instagram.com/aulab_it/" rel="noopener noreferrer" target="_blank"><i class="bi bi-instagram ms-2 network"></i></a>
               <a href="https://twitter.com/auLAB_it/header_photo" target="_blank" rel="noopener noreferrer"><i class="bi bi-twitter ms-2 network"></i></a>
               <a href="https://discord.com/" rel="noopener noreferrer" target="_blank"><i class="bi bi-discord ms-2 network"></i></a>
