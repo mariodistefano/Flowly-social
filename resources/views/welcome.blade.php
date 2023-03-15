@@ -74,7 +74,7 @@
     <x-search />
     
     <x-header
-    title="Discover the future of design, fashion, and technology with us. Get inspired by our selection of modern articles."
+    title="Explore our wide range of articles covering everything from technology to lifestyle and find the information you need to enrich your life."
     />
     
     {{-- barra meteo --}}
