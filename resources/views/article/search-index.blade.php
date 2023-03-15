@@ -2,9 +2,13 @@
     
     <x-waves/>
 
+    <x-dashboard-search class="mt-3" />
+
     <x-header
     title='Tutti gli articoli per: {{$query}}'
     />
+
+    <x-search />
 
     <div class="container-fluid my-3">
         <div class="row justify-content-center text-center">

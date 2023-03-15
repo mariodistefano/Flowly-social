@@ -59,8 +59,10 @@
     {{session('message')}}
   </div>
   @endif
-      
-  <x-dashboard-search />
+
+      <x-dashboard-search />
+  
+      <x-search />
       
       <x-header
       title="Discover the future of design, fashion, and technology with us. Get inspired by our selection of modern articles."
