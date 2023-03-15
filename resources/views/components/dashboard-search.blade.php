@@ -25,13 +25,14 @@
                 @endif
                 @if (Auth::user()->is_revisor)
                     <a href="{{route('revisor.dashboard')}}" class="nav__link ">
-                        <i class='bx bx-grid-alt'></i>
+                        <i class="fa fa-line-chart" aria-hidden="true"></i>
                         <span class="nav__name ms-1 me-2 ">Revisor</span>
                     </a>    
                 @endif
                 @if (Auth::user()->is_writer)
                     <a href="{{route('writer.dashboard')}}" class="nav__link ">
-                        <i class='bx bx-grid-alt'></i>
+                        {{-- <i class='bx bx-grid-alt'></i> --}}
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
                         <span class="nav__name ms-1 me-2">Author</span>
                     </a>    
                 @endif

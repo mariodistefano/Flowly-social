@@ -36,8 +36,8 @@
       </div>
           
       {{-- card categorie scroll --}}
-      <div class="container">
-        <div class="card-container light py-4 d-flex container mx-5">
+      <div class="container-fluid d-flex justify-content-center">
+        <div class="card-container light py-1 d-flex container mx-3">
             {{-- <div class="row justify-content-start"> --}}
                 @foreach ($categories as $category)
                     <x-card-scroll 
