@@ -75,7 +75,10 @@
       align-items: center;
       column-gap: 36px;
       transition: .4s;
-      z-index: 8;
+      z-index: 99;
+    }
+    .omino {
+      display: none;
     }
   }
   

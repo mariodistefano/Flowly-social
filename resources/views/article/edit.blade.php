@@ -2,6 +2,8 @@
 
     <x-waves/>
     
+    <x-dashboard-search />
+    
     <x-header
         title="Edit your Article"
     />
@@ -22,7 +24,7 @@
                 <form method="post" action="{{route('article.store')}}" enctype="multipart/form-data" class="p-5"> 
                     @csrf
                     <div class="mb-3">
-                        <label class="form-label text-secondary">Titolo</label>
+                        <label class="form-label text-secondary">Title</label>
                         <input type="text" class="form-control"  name="title" id="title" value="{{$article->title}}">
                     </div>
 
@@ -32,7 +34,7 @@
                     </div>
 
                     <div class="mb-3">
-                        <label class="form-label text-secondary">Immagine</label>
+                        <label class="form-label text-secondary">Image</label>
                         <input type="file" class="form-control" name="img" id="image">
                     </div>
 
