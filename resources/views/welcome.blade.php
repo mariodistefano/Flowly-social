@@ -27,7 +27,7 @@
         <!--Content before waves-->
         <div class="inner-header flex">
           <div>
-            <h1 id="intestazione-header" class="text-light mb-5">Flowly</h1>
+            <h1 id="intestazione-header" class="text-light">Flowly</h1>
             <h2 id="sottointestazione-header" class="text-light">"Follow the flow of your ideas"</h2>
             </div>
           </div>
@@ -59,8 +59,10 @@
     {{session('message')}}
   </div>
   @endif
-      
-  <x-dashboard-search />
+
+      <x-dashboard-search />
+  
+      <x-search />
       
       <x-header
       title="Discover the future of design, fashion, and technology with us. Get inspired by our selection of modern articles."

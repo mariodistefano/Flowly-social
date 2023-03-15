@@ -12,7 +12,6 @@
 
 .inner-header {
   height:45vh;
-  width:100%;
   margin: 0;
   padding: 0;
 }
@@ -42,6 +41,7 @@
 
 #intestazione-header {
     font-size: 8rem;
+    font-family: 'Unbounded', cursive;
 }
 
 #sottointestazione-header {
@@ -86,4 +86,10 @@
     height:30vh;
   }
 
+  #intestazione-header {
+    font-size: 4rem;
+}
+#sottointestazione-header {
+  font-size: 1rem;
+}
 }

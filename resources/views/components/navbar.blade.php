@@ -7,7 +7,7 @@
 
       <a href="{{route('homepage')}}" class="nav__logo">
         <i class="fa-solid fa-house"></i>
-          <span class="nav__logo-name"> The FooL</span>
+          <span class="nav__logo-name">Flowly</span>
       </a>
 
       <div class="nav__list">
@@ -73,6 +73,11 @@
         @endauth --}}
         
         @guest
+          <a href="{{route('homepage')}}" class="nav__link d-md-none">
+            <i class="fa-solid fa-house"></i>
+            <span class="nav__name"><b>Home</b></span>
+          </a> 
+
           <a href="{{route('register')}}" class="nav__link">
             <i class="fa-regular fa-address-card"></i>
               <span class="nav__name">Registration</span>
@@ -83,10 +88,15 @@
           </a>
 
         @else
-          <a href="{{route('homepage')}}" class="nav__link omino">
-            <i class="fa-regular fa-user"></i>
-            <span class="nav__name">What's up <b>{{Auth::user()->name}}</b> ?</span>
-          </a>    
+          <a href="{{route('homepage')}}" class="nav__link d-none d-md-block">
+            <i class="fa-regular fa-user "></i>
+            <span class="nav__name ms-3"> What's up <b>{{Auth::user()->name}}</b> ?</span>
+          </a>  
+          
+          <a href="{{route('homepage')}}" class="nav__link d-md-none">
+            <i class="fa-solid fa-house"></i>
+            <span class="nav__name"><b>Home</b></span>
+          </a> 
 
           <a href="{{route('article.create')}}" class="nav__link">
             <i class="fa-regular fa-pen-to-square"></i>
