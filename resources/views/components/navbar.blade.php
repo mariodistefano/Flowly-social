@@ -7,7 +7,7 @@
 
       <a href="{{route('homepage')}}" class="nav__logo">
         <i class="fa-solid fa-house"></i>
-          <span class="nav__logo-name"> The FooL</span>
+          <span class="nav__logo-name">Flowly</span>
       </a>
 
       <div class="nav__list">

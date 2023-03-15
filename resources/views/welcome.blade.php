@@ -27,7 +27,7 @@
         <!--Content before waves-->
         <div class="inner-header flex">
           <div>
-            <h1 id="intestazione-header" class="text-light mb-5">Flowly</h1>
+            <h1 id="intestazione-header" class="text-light">Flowly</h1>
             <h2 id="sottointestazione-header" class="text-light">"Follow the flow of your ideas"</h2>
             </div>
           </div>

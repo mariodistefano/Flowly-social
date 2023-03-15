@@ -37,7 +37,7 @@ function colorLink(){
 
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
-// const navBody = document.querySelector ('#body-div')
+const navBody = document.querySelector ('#body-div')
 // const nascondiScritta = document.querySelector ('#none-scritta')
 // const nascondiLente = document.querySelector ('#none-lente')
 
@@ -54,7 +54,7 @@ const showMenu = (toggleId, navbarId) =>{
             navbar.classList.toggle('show-menu')
             /* Rotate toggle icon */
             toggle.classList.toggle('rotate-icon')
-            //  navBody.classList.toggle('focus')
+             navBody.classList.toggle('focus')
 
            
             // navlente.classList.toggle('d-none')
