@@ -22,7 +22,7 @@
     <!--Hey! This is the original version
       of Simple CSS Waves-->
       
-      <div class="header">
+      <div class="header gradient-animato">
         
         <!--Content before waves-->
         <div class="inner-header flex">
