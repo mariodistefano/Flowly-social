@@ -39,13 +39,21 @@
             <div class="card-grid-space">
             <a class="card ax backgroundX" href="{{route('article.byCategory', ['category' => $category->id])}}" style="">
                 <div>
-                <h2>{{$category->name}}</h2>
-                <p><small>articles</small></p>
+                <h2 class="mb-4">{{$category->name}}</h2>
+               
                 <div class="date"></div>
-                <div class="tags">
-                    <div class="tag">{{count($category->articles)}}</div>
+                <div class="d-flex mt-4">
+                    <div class="tags">
+                        <div class="tag fw-semibold">{{count($category->articles)}}</div>
+                    </div>
+                    <div class="ms-1"><small>articles</small></div>
                 </div>
+                
+                    <div class="progress mt-1 " style="height: 8px;">
+                            <div class="progress-bar l-bg-orange" role="progressbar" data-width="25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                    </div>
                 </div>
+                
             </a>
             </div>
             {{-- <div class="card-grid-space">

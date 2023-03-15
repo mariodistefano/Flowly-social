@@ -58,8 +58,11 @@
                         <label class="form-label text-secondary">Article</label>
                         <textarea name="body" id="" cols="30" rows="10" class="form-control">{{$article->body}}</textarea>
                     </div>
-                    <button type="submit" class="btn btn-secondary">Send</button>
-                        <p><a class="btn btn-info" href="{{route('homepage')}}">Home</a></p>
+                    <div class="d-flex align">
+                        <p>
+                        <button type="submit" class="btn btn-secondary me-3">Send</button></p>
+                            <p><a class="btn btn-colorPersonal text-white btn-radius" href="{{route('homepage')}}">Home</a></p>
+                    </div>
                 </form>
             </div>
         </div>

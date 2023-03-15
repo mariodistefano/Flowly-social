@@ -273,7 +273,7 @@ img, svg {
   justify-content: center;
   align-items: center;
   background-color: rgb(255, 255, 255);
-  transition: opacity 5s, visibility 3.5s;
+  transition: opacity 2.6s, visibility 2.4s;
 }
 
 .loader-hidden{
@@ -288,8 +288,7 @@ img, svg {
   border: 15px solid #dddddd;
   border-top-color: #a22222;
   border-radius: 50%;
-  animation: loading 3s ease infinite;
-  transition: opacity 3s, visibility 2s;
+  animation: loading 2.5s;
 }
 
 @keyframes loading {
@@ -326,26 +325,22 @@ footer{
   /* flex-wrap: wrap; */
   align-items: flex-start;
   justify-content: space-between;
-  z-index: 999;
 } 
 
 .colonna{
 
   padding: 1px;
   color: gray;
-  z-index: 999;
 }
 /* prima sezione */
 .icona{
   height: 50px;
   width: 35px;
-  z-index: 999;
 }
 
 .indirizzo{
   text-decoration: none;
   color: gray;
-  z-index: 999;
 }
 
 .indirizzo:hover{
@@ -355,7 +350,6 @@ footer{
 .hackademy{
   color: gray;
   text-decoration: none;
-  z-index: 999;
 }
 
 .hackademy:hover{
@@ -366,12 +360,10 @@ footer{
   position: relative;
   right: 35%;
   width: 98%;
-  z-index: 999;
 }
 /* seconda sezione e animazioni */
 .informazioni{
   text-align: center;
-  z-index: 999;
 }
 
 .underline{
@@ -381,14 +373,12 @@ footer{
   border-radius: 3px;
   margin-left: 0%;
   margin-bottom: 5%;
-  z-index: 999;
 }
 
 #movimento{
   animation-name: moving;
   animation-duration: 5s;
   animation-iteration-count: infinite;
-  z-index: 999;
 }
 @keyframes moving {
   0%{
@@ -410,7 +400,6 @@ footer{
   background: #efeeee;
   border-radius: 3px;
   margin-left: 40%;
-  z-index: 999;
   
 }
 
@@ -418,14 +407,12 @@ footer{
   color: gray;
   font-size: medium;
   direction:rtl ;
-  z-index: 999;
 }
 
 .immagine{
   width: 90%;
   display: flex;
   justify-content: center;
-  z-index: 999;
   
 }
 
@@ -447,22 +434,18 @@ footer{
   .posizione{
       position: relative;
       right: 23%;
-      z-index: 999;
   }
 
   .logofooter{
       display: none;
-      z-index: 999;
   }
   .social {
       display: flex;
       justify-content: center;
       margin: auto;
-      z-index: 999;
   }
   .profilo {
       display: none;
-      z-index: 999;
 
   }
   

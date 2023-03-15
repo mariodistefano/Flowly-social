@@ -85,15 +85,16 @@
 
 .card .tags {
   display: flex;
+  align-items: center;
 }
 
 .card .tags .tag {
   font-size: 0.75em;
-  background: rgba(255,255,255,0.5);
+  background: rgba(255, 255, 255, 0.182);
   border-radius: 0.3rem;
   padding: 0 0.5em;
-  margin-right: 0.5em;
-  line-height: 1.5em;
+  /* margin-right: 0.5em; */
+  /* line-height: 1.5em; */
   transition: all, var(--transition-time);
 }
 
@@ -169,7 +170,7 @@
 }
 
 .backgroundX{
-    background: linear-gradient(to left, rgba(196, 199, 200, 0.851),  rgba(110, 157, 195, 0.705));
+    background: linear-gradient(to left, rgba(196, 199, 200, 0.851),  rgba(110, 157, 195, 0.850));
     border-color: rgb(204, 204, 204);
     border: 10px;
 }

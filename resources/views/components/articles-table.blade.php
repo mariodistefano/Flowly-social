@@ -19,9 +19,9 @@
             <td>{{$article->user->name}}</td>
             <td>
                 @if (is_null($article->is_accepted))
-                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius mb-1">Read</a>
-                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius mb-1">Accept</a>
-                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-colorPersonal2 text-white btn-radius mb-1">Reject</a>
+                  <a href="{{route('article.show', compact('article'))}}" class="btn btn-secondary text-white btn-radius mb-1">Read</a>
+                  <a href="{{route('revisor.acceptArticle', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius mb-1"><i class="fa-solid fa-check"></i></a>
+                  <a href="{{route('revisor.rejectArticle', compact('article'))}}" class="btn btn-colorPersonal2 text-white btn-radius mb-1"><i class="fa-solid fa-trash"></i></a>
                 @else
                   <a href="{{route('revisor.undoArticle', compact('article'))}}" class="btn btn-colorPersonal text-white btn-radius"><-review</a>
                 @endif
