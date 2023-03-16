@@ -21,8 +21,9 @@
                     </div>
                 @endif
             
-                <form method="post" action="{{route('article.store')}}" enctype="multipart/form-data" class="p-5"> 
+                <form method="post" action="{{route('article.update', compact('article'))}}" enctype="multipart/form-data" class="p-5"> 
                     @csrf
+                    @method('put')
                     <div class="mb-3">
                         <label class="form-label text-secondary">Title</label>
                         <input type="text" class="form-control"  name="title" id="title" value="{{$article->title}}">

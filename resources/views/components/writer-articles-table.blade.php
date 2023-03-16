@@ -16,7 +16,7 @@
         @foreach($articles as $article)
         <tr class="text-center">
             <th scope="row">{{$article->id}}</th>
-            <td>>{{substr($article->title, 0, 20)}}</td>
+            <td>{{substr($article->title, 0, 20)}}</td>
             <td>{{substr($article->subtitle, 0, 20)}}</td>
             <td>{{$article->category->name ?? 'Not categorized'}}</td>
             <td>
