@@ -96,7 +96,7 @@ class ArticleController extends Controller
             'title' => 'required|min:5|unique:articles,title,' . $article->id,
             'subtitle' => 'required|min:5|unique:articles,subtitle,' . $article->id,
             'body' => 'required|min:10',
-            'img' => 'img',   //forse si togli
+            'image' => 'image',   //forse si togli
             'category' => 'required',
             'tags' => 'required',
         ]);

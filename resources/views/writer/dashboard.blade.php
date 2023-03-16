@@ -2,6 +2,8 @@
 
     <x-waves/>
 
+    <x-dashboard-search />
+
     <x-header
       title="Welcome to your Author-Dashbord {{Auth::user()->name}}"
     />
