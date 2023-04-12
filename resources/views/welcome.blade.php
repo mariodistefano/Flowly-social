@@ -28,7 +28,7 @@
         <div class="inner-header flex">
           <div class="mt-5">
             <h1 id="intestazione-header" class="text-light">Flowly</h1>
-            <h2 id="sottointestazione-header" class="text-light">"Follow the flow of your ideas"</h2>
+            <h2 id="sottointestazione-header" class="text-light">"Follow the FLOW of your ideas"</h2>
             <div class="mt-5">
               <p href="" target="_b" class="author"></p>
               <h6>DESIGN by</h6>
