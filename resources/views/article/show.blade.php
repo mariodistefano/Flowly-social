@@ -1,19 +1,18 @@
 <x-layout>
-    
+
 
 {{-- show --}}
 {{-- <img src="https://unsplash.it/1200/800?image=838"> --}}
 
 {{-- <div class=bodyshow>
     <header class="headershow" class="zoom-me">
-      
-           
-       
+
+
+
 </div> --}}
-
-
-    <header class="zoom">
-        <img class="" src="{{Storage::url($article->img)}}" alt=""> 
+<div class="d-flex justify-content-center align-items-center h-100 pt-5 mt-5">
+    <header >
+        <img class="" src="{{Storage::url($article->img)}}" alt="">
     </header>
     <main role="main" class="mainShow">
         <div class="contentShow">
@@ -24,7 +23,7 @@
                 @else
                     <p class="text-warning">Not categorized</p>
                 @endif
-                
+
                 <h6 class="text-secondary">Date: {{$article->created_at->format('d/m/y')}} by: {{$article->user->name}}</h6>
                 <h6 class="text-secondary">{{$article->body}}</h6>
                 {{-- <img style="width: 300px; height:300px" class="my-5" src="{{Storage::url($article->img)}}" alt=""> --}}
@@ -38,7 +37,6 @@
                 @endif
         </div>
     </main>
-
    <div class="altezza">.</div>
-
+</div>
 </x-layout>
